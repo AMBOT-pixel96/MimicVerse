@@ -15,6 +15,9 @@ matplotlib
 # NLTK data fix
 nltk
 
+# Pre-bundle punkt for Streamlit Cloud
+nltk-data
+
 # Sentiment & Emotion Engines
 text2emotion
 nrclex
