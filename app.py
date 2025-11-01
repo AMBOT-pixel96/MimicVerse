@@ -20,23 +20,25 @@ MODEL_DIR = Path("models/goemotions_model")
 MODEL_ZIP_PATH = Path("models/goemotions_model.zip")
 MODEL_DIR.parent.mkdir(parents=True, exist_ok=True)
 
+def download_from_drive(url, destination):
+    """Bypass Google Drive's virus scan + confirmation redirect for large files."""
+    session = requests.Session()
+    response = session.get(url, stream=True)
+    # Find confirm token if Drive tries to show "can't scan for viruses"
+    for k, v in response.cookies.items():
+        if k.startswith('download_warning'):
+            url = url + f"&confirm={v}"
+            response = session.get(url, stream=True)
+            break
+    with open(destination, "wb") as f:
+        for chunk in response.iter_content(32768):
+            if chunk:
+                f.write(chunk)
+
 if not MODEL_DIR.exists():
     st.warning("📦 Downloading GoEmotions model from Drive (first run)... Please wait ⏳")
     try:
-        response = requests.get(MODEL_ZIP_URL, stream=True)
-        response.raise_for_status()
-        total = int(response.headers.get('content-length', 0))
-        block_size = 8192
-        progress = st.progress(0)
-        downloaded = 0
-        with open(MODEL_ZIP_PATH, "wb") as f:
-            for data in response.iter_content(block_size):
-                downloaded += len(data)
-                f.write(data)
-                if total > 0:
-                    progress.progress(min(downloaded / total, 1.0))
-        progress.empty()
-
+        download_from_drive(MODEL_ZIP_URL, MODEL_ZIP_PATH)
         with zipfile.ZipFile(MODEL_ZIP_PATH, 'r') as zip_ref:
             zip_ref.extractall(MODEL_DIR.parent)
         os.remove(MODEL_ZIP_PATH)
