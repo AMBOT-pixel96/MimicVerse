@@ -142,8 +142,38 @@ def analyze_emotion(text):
         final[k] = 0.3 * base[k] + 0.7 * ge_reduced.get(k,0)
 
     return final
-
 # ============================================================
+# 🧭 Mood Mix of the World 🌍
+# ============================================================
+
+st.markdown("### 🧭 Mood Mix of the World 🌍")
+
+emotions = {k: 0 for k in ['joy','anger','fear','sadness','surprise']}
+sample_texts = df["title"].fillna('').tolist()[:150]
+
+progress = st.progress(0)
+for i, t in enumerate(sample_texts):
+    emo = analyze_emotion(t)
+    for k in emotions:
+        emotions[k] += emo.get(k, 0)
+    progress.progress((i + 1) / len(sample_texts))
+progress.empty()
+
+# Normalize and visualize
+total = sum(emotions.values()) or 1
+for k in emotions:
+    emotions[k] = round(100 * emotions[k] / total, 2)
+
+emo_data = pd.DataFrame({"Emotion": emotions.keys(), "Value": emotions.values()})
+chart = alt.Chart(emo_data).mark_arc(innerRadius=60).encode(
+    theta="Value",
+    color="Emotion",
+    tooltip=["Emotion", "Value"]
+)
+st.altair_chart(chart, use_container_width=True)
+st.dataframe(emo_data)
+
+# ============================================
 # 📈 Trend Pulse (Top Emerging Keywords)
 st.markdown("### 📈 Trend Pulse")
 kw_model = KeyBERT(model='all-MiniLM-L6-v2')
