@@ -23,6 +23,7 @@ jobs:
       - name: 🧠 Pre-download NLP models
         run: |
           python cache_models.py
+
           echo "⚡ Downloading spaCy model..."
           python -m spacy download en_core_web_sm
 
