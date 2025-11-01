@@ -12,7 +12,7 @@ from pathlib import Path
 from collections import Counter
 
 # ============================================================
-# ☁️ GoEmotions Model Loader (Google Drive Safe Download)
+# ☁️ GoEmotions Model Loader (GitHub Release Safe Download)
 # ============================================================
 
 MODEL_ZIP_URL = "https://github.com/AMBOT-pixel96/MimicVerse/releases/download/v1.2-model/goemotions_model.zip"
@@ -34,7 +34,8 @@ if not MODEL_DIR.exists():
     try:
         download_from_release(MODEL_ZIP_URL, MODEL_ZIP_PATH)
         with zipfile.ZipFile(MODEL_ZIP_PATH, 'r') as zip_ref:
-            zip_ref.extractall(MODEL_DIR.parent)
+            # Always flatten into 'models/'
+            zip_ref.extractall("models")
         os.remove(MODEL_ZIP_PATH)
         st.success("✅ GoEmotions model extracted successfully!")
     except Exception as e:
@@ -121,12 +122,21 @@ st.sidebar.write(f"**Harvested:** {meta.get('date', datetime.now().strftime('%Y-
 
 @st.cache_resource
 def load_goemotions():
-    model_name = "models/goemotions_model"
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModelForSequenceClassification.from_pretrained(model_name)
+    base_path = Path("models/goemotions_model")
+    model_path = base_path
+
+    # 🔍 Detect nested folder issue automatically
+    if not (base_path / "config.json").exists():
+        nested = base_path / "goemotions_model"
+        if nested.exists() and (nested / "config.json").exists():
+            model_path = nested
+
+    tokenizer = AutoTokenizer.from_pretrained(str(model_path))
+    model = AutoModelForSequenceClassification.from_pretrained(str(model_path))
     return tokenizer, model
 
 tokenizer, model = load_goemotions()
+
 go_labels = [
     'admiration','amusement','anger','annoyance','approval','caring','confusion',
     'curiosity','desire','disappointment','disapproval','disgust','embarrassment',
