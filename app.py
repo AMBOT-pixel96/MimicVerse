@@ -1,5 +1,5 @@
 # ============================================================
-# 🌌 MimicVerse v1.2.1 — The Global Reddit Mood Dashboard (GoEmotions Persistent Hybrid)
+# 🌌 MimicVerse v1.2.2 — The Global Reddit Mood Dashboard (GoEmotions Hybrid - Stable)
 # ============================================================
 
 import streamlit as st
@@ -20,7 +20,7 @@ MODEL_DIR = Path("models/goemotions_model")
 MODEL_ZIP_PATH = Path("models/goemotions_model.zip")
 MODEL_DIR.parent.mkdir(parents=True, exist_ok=True)
 
-@st.cache_resource(show_spinner="Downloading & caching GoEmotions model (first time only)... ⏳")
+@st.cache_resource(show_spinner="📦 Downloading & caching GoEmotions model... ⏳")
 def prepare_goemotions_model():
     """Download once, cache forever."""
     if MODEL_DIR.exists() and any(MODEL_DIR.iterdir()):
@@ -29,16 +29,14 @@ def prepare_goemotions_model():
 
     st.warning("📦 Fetching GoEmotions model from GitHub release... Please wait ⏳")
     try:
-        # Download model zip
         with requests.get(MODEL_ZIP_URL, stream=True) as r:
             r.raise_for_status()
             with open(MODEL_ZIP_PATH, "wb") as f:
                 for chunk in r.iter_content(chunk_size=32768):
                     f.write(chunk)
 
-        # Extract safely
         with zipfile.ZipFile(MODEL_ZIP_PATH, 'r') as zip_ref:
-            zip_ref.extractall(MODEL_DIR.parent)
+            zip_ref.extractall(MODEL_DIR)
         os.remove(MODEL_ZIP_PATH)
         st.success("✅ GoEmotions model extracted successfully!")
         return str(MODEL_DIR)
@@ -47,7 +45,6 @@ def prepare_goemotions_model():
         st.error(f"❌ Failed to prepare GoEmotions model: {e}")
         st.stop()
 
-# Run once (cached between restarts)
 prepare_goemotions_model()
 
 # ============================================================
@@ -94,30 +91,29 @@ import torch
 import torch.nn.functional as F
 
 # ============================================================
-# 🧠 Load GoEmotions Model (Local Only)
+# 🧠 Load GoEmotions Model (Flat or Nested Safe)
 # ============================================================
 
 @st.cache_resource
 def load_goemotions():
     base_dir = Path("models/goemotions_model")
-    candidates = [
-        base_dir,
-        base_dir / "goemotions_model",
-        base_dir / "GoEmotions",
-    ]
-    model_path = None
-    for c in candidates:
-        if (c / "config.json").exists():
-            model_path = c
-            break
 
-    if not model_path:
-        raise FileNotFoundError("GoEmotions model files not found after extraction.")
+    # ✅ Direct flat structure
+    if (base_dir / "config.json").exists():
+        st.success("📁 Found GoEmotions model (flat structure).")
+        tokenizer = AutoTokenizer.from_pretrained(str(base_dir), local_files_only=True)
+        model = AutoModelForSequenceClassification.from_pretrained(str(base_dir), local_files_only=True)
+        return tokenizer, model
 
-    st.write(f"📁 Using local model path: `{model_path}`")
-    tokenizer = AutoTokenizer.from_pretrained(str(model_path), local_files_only=True)
-    model = AutoModelForSequenceClassification.from_pretrained(str(model_path), local_files_only=True)
-    return tokenizer, model
+    # 🔍 Nested fallback
+    for subdir in base_dir.iterdir():
+        if subdir.is_dir() and (subdir / "config.json").exists():
+            st.success(f"📁 Found GoEmotions model inside nested folder: {subdir}")
+            tokenizer = AutoTokenizer.from_pretrained(str(subdir), local_files_only=True)
+            model = AutoModelForSequenceClassification.from_pretrained(str(subdir), local_files_only=True)
+            return tokenizer, model
+
+    raise FileNotFoundError("⚠️ No valid GoEmotions model found in models/goemotions_model/")
 
 tokenizer, model = load_goemotions()
 
@@ -125,8 +121,8 @@ tokenizer, model = load_goemotions()
 # 🧭 Page Config
 # ============================================================
 
-st.set_page_config(page_title="🌌 MimicVerse v1.2.1", page_icon="🧠", layout="wide")
-st.title("🌌 **MimicVerse v1.2.1 – The Global Reddit Mood Dashboard**")
+st.set_page_config(page_title="🌌 MimicVerse v1.2.2", page_icon="🧠", layout="wide")
+st.title("🌌 **MimicVerse v1.2.2 – The Global Reddit Mood Dashboard**")
 st.caption("AI that listens to humanity's collective chatter and translates it into emotion ⚡")
 
 # ============================================================
@@ -218,6 +214,8 @@ st.dataframe(emo_data)
 
 # ============================================================
 # 📈 Trend Pulse
+# ============================================================
+
 st.markdown("### 📈 Trend Pulse")
 kw_model = KeyBERT(model='all-MiniLM-L6-v2')
 docs = df["title"].dropna().tolist()
@@ -264,4 +262,4 @@ st.image(wordcloud.to_array(), use_container_width=True)
 
 # 📦 Footer
 st.markdown("---")
-st.caption("© 2025 MimicVerse | Built by Amlan Mishra 🧠 | Global Mood Engine v1.2.1 (Persistent Hybrid Core)")
+st.caption("© 2025 MimicVerse | Built by Amlan Mishra 🧠 | Global Mood Engine v1.2.2 (Stable Hybrid Core)")
