@@ -4,18 +4,18 @@
 # ============================================================
 
 import praw
+import streamlit as st
 import pandas as pd
 import json
 import datetime
 import os
 
 # ------------------------------------------------------------
-# 🔑 Reddit API credentials
-# (Replace with your actual client_id and secret)
+# 🔐 Load Reddit credentials from Streamlit Secrets
 reddit = praw.Reddit(
-    client_id="YOUR_CLIENT_ID",
-    client_secret="YOUR_SECRET",
-    user_agent="MimicVerse v0.3 by Amlan"
+    client_id=st.secrets["reddit"]["client_id"],
+    client_secret=st.secrets["reddit"]["client_secret"],
+    user_agent=st.secrets["reddit"]["user_agent"]
 )
 
 # ------------------------------------------------------------
