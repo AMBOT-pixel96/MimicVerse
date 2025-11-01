@@ -1,0 +1,36 @@
+name: 🌙 MimicVerse Nightly Harvest
+on:
+  schedule:
+    - cron: "0 0 * * *"   # runs every midnight UTC
+  workflow_dispatch:      # manual trigger option
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run harvester
+        env:
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USER_AGENT: MimicVerse-GitHubAction
+        run: |
+          python mimicverse_harvest.py
+
+      - name: Commit and push updated data
+        run: |
+          git config user.name "MimicVerse Bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/
+          git commit -m "🌙 Nightly data harvest on $(date)"
+          git push
