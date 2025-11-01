@@ -5,6 +5,9 @@ on:
     - cron: "0 0 * * *"   # runs every midnight UTC
   workflow_dispatch:      # manual trigger option
 
+permissions:
+  contents: write         # allow GitHub Actions to push changes to repo
+
 jobs:
   harvest:
     runs-on: ubuntu-latest
@@ -18,9 +21,9 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies (hybrid stable mode)
+      - name: Install dependencies (hybrid mode)
         run: |
-          echo "🚀 Installing dependencies (using prebuilt binaries if available)..."
+          echo "🚀 Installing dependencies..."
           pip install --upgrade pip
           pip install --only-binary=:all: -r requirements.txt || pip install -r requirements.txt
           echo "✅ Dependencies installed successfully."
@@ -39,7 +42,9 @@ jobs:
           echo "📦 Committing harvested data..."
           git config user.name "MimicVerse Bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/ || echo "No new data files detected."
-          git diff --quiet && echo "✅ No new data to commit." || git commit -m "🌙 Nightly harvest on $(date)"
-          git push || echo "⚠️ No changes to push or authentication skipped."
+          git pull --rebase
+          git add -A
+          git status
+          git commit -am "🌙 Nightly harvest on $(date)" || echo "✅ No new data to commit."
+          git push
           echo "🎉 MimicVerse harvest completed successfully."
