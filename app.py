@@ -1,103 +1,114 @@
 # ============================================================
-# 🌀 MimicVerse v0.3 — World Pulse Edition 🌎
-# The Reddit-Trained Chaos Oracle
+# 🌌 MimicVerse Dashboard v0.1
+# Streamlit UI for global Reddit sentiment + trend analysis
 # ============================================================
 
 import streamlit as st
 import pandas as pd
-import markovify
 import json
-import glob
-import random
+import os
+from textblob import TextBlob
+from wordcloud import WordCloud
 import matplotlib.pyplot as plt
+from datetime import datetime
 
 # ------------------------------------------------------------
-# 🧠 LOAD COMBINED MEMORY
-# ------------------------------------------------------------
-st.set_page_config(page_title="MimicVerse 🌎", layout="wide")
+# 🎨 Streamlit Page Setup
+st.set_page_config(
+    page_title="MimicVerse Dashboard",
+    page_icon="🌙",
+    layout="wide"
+)
 
-data_files = sorted(glob.glob("data/reddit_*.csv"))
-if data_files:
-    df = pd.concat([pd.read_csv(f) for f in data_files], ignore_index=True)
-    st.sidebar.success(f"🧠 Loaded {len(df):,} Reddit posts/comments from {len(data_files)} data files")
-else:
-    st.sidebar.warning("No data files found. Upload or generate Reddit CSVs first!")
-    df = pd.DataFrame(columns=["title", "selftext"])
+st.title("🌌 MimicVerse Dashboard")
+st.caption("AI that interprets the global subconscious — one subreddit at a time.")
 
 # ------------------------------------------------------------
-# 🎨 HEADER
-# ------------------------------------------------------------
-st.title("🌀 MimicVerse — The Reddit-Trained Chaos Oracle")
-st.caption("A self-learning mirror of humanity’s collective mood — powered by Reddit 🧠")
+# 🧭 Load Latest Dataset
+DATA_DIR = "data"
+csv_files = sorted([f for f in os.listdir(DATA_DIR) if f.endswith(".csv")])
+
+if not csv_files:
+    st.warning("No harvested data found yet. Wait for the next nightly run 🌙")
+    st.stop()
+
+latest_csv = os.path.join(DATA_DIR, csv_files[-1])
+st.success(f"Loaded dataset: `{latest_csv}`")
+
+df = pd.read_csv(latest_csv)
 
 # ------------------------------------------------------------
-# 💬 MIMIC ENGINE
-# ------------------------------------------------------------
-def train_markov_model(texts):
-    text_blob = " ".join([str(t) for t in texts if isinstance(t, str)])
-    return markovify.Text(text_blob)
+# 💭 Sentiment Analysis
+st.header("🧠 Mood Mix of the World 🌍")
 
-if not df.empty:
-    model = train_markov_model(df["title"].dropna().tolist() + df["selftext"].dropna().tolist())
-else:
-    model = None
+def get_sentiment(text):
+    if not isinstance(text, str) or text.strip() == "":
+        return None
+    blob = TextBlob(text)
+    return blob.sentiment.polarity
 
-st.subheader("💭 Ask the Internet Brain:")
-prompt = st.text_input("What do you want to ask the collective consciousness?")
-if prompt and model:
-    with st.spinner("The hive mind is thinking..."):
-        reply = model.make_sentence(tries=100)
-        if not reply:
-            reply = "Bro, Reddit’s silent on that one 💀"
-    st.success(f"🤖 **MimicVerse:** {reply}")
+df["sentiment"] = df["title"].apply(get_sentiment)
+sentiment_score = df["sentiment"].dropna()
 
-# ------------------------------------------------------------
-# 🌍 MOOD MIX OF THE WORLD
-# ------------------------------------------------------------
-st.markdown("---")
-st.subheader("🌍 Mood Mix of the World")
-
-if not df.empty:
-    # quick sentiment proxy by keyword frequency
-    emotions = {
-        "Joy 😁": df["selftext"].str.count("love|happy|joy|fun").sum(),
-        "Anger 😡": df["selftext"].str.count("hate|angry|rage|annoy").sum(),
-        "Sadness 😢": df["selftext"].str.count("sad|cry|hurt|lonely").sum(),
-        "Sarcasm 😏": df["selftext"].str.count("lol|lmao|smh|idk").sum(),
-        "Lust 😳": df["selftext"].str.count("hot|sexy|crush|date").sum(),
-        "Neutral 😐": len(df)
+if len(sentiment_score) > 0:
+    mood_mix = {
+        "Positive": (sentiment_score > 0.1).sum(),
+        "Neutral": ((sentiment_score >= -0.1) & (sentiment_score <= 0.1)).sum(),
+        "Negative": (sentiment_score < -0.1).sum()
     }
 
-    total = sum(emotions.values())
-    if total == 0: total = 1
-    sizes = [round((v/total)*100, 1) for v in emotions.values()]
-
     fig, ax = plt.subplots()
-    ax.pie(sizes, labels=emotions.keys(), autopct="%1.1f%%", startangle=90)
-    ax.axis("equal")
+    ax.pie(
+        mood_mix.values(),
+        labels=mood_mix.keys(),
+        autopct='%1.1f%%',
+        startangle=90,
+        shadow=True
+    )
     st.pyplot(fig)
-    st.caption("Sentiment distribution based on keyword analysis — updated automatically 🔄")
 else:
-    st.info("No mood data available yet. Fetch Reddit data first!")
+    st.info("No sentiment data available in the current dataset.")
 
 # ------------------------------------------------------------
-# 🧭 TREND TRACKER (TOP SUBREDDITS)
-# ------------------------------------------------------------
-st.markdown("---")
-st.subheader("🧭 Trend Tracker — Top 500 Subreddits")
+# 🔤 Trending Words (WordCloud)
+st.header("🔮 Trending Words")
+all_text = " ".join(df["title"].dropna().tolist())
 
-try:
-    with open("data/metadata.json") as f:
+if len(all_text) > 100:
+    wordcloud = WordCloud(width=800, height=400, background_color="black", colormap="viridis").generate(all_text)
+    fig, ax = plt.subplots()
+    ax.imshow(wordcloud, interpolation="bilinear")
+    ax.axis("off")
+    st.pyplot(fig)
+else:
+    st.info("Not enough text data for word cloud generation.")
+
+# ------------------------------------------------------------
+# 🕓 Activity Timeline
+st.header("📅 Evolution Timeline")
+df["created_utc"] = pd.to_datetime(df["created_utc"], unit="s", errors="coerce")
+df["date"] = df["created_utc"].dt.date
+timeline = df.groupby("date").size().reset_index(name="posts")
+
+if not timeline.empty:
+    st.line_chart(timeline, x="date", y="posts", use_container_width=True)
+else:
+    st.info("Timeline not available yet.")
+
+# ------------------------------------------------------------
+# 🌐 Source Subreddits
+st.header("🌐 Source Tracker")
+meta_file = os.path.join(DATA_DIR, "metadata.json")
+
+if os.path.exists(meta_file):
+    with open(meta_file, "r") as f:
         meta = json.load(f)
-        date = meta.get("date", "unknown date")
-        subs = meta.get("subreddits", [])
-        st.write(f"**Top 500 Subreddits as on {date}:**")
-        st.text_area("Source", "\n".join(subs), height=200)
-except Exception:
-    st.warning("⚠️ No metadata.json found yet. Run your harvester first!")
+    st.write(f"**Top subreddits as of {meta['date']}**")
+    st.dataframe(pd.DataFrame(meta["subreddits"], columns=["Subreddit"]))
+else:
+    st.info("Metadata not found.")
 
 # ------------------------------------------------------------
-# 🕰️ FOOTER / CREDITS
-# ------------------------------------------------------------
+# 🪩 Footer
 st.markdown("---")
-st.caption("✨ Built with ❤️ and chaos by Amlan Mishra | MimicVerse v0.3")
+st.caption("🪄 Built by **ripped_geek** | Powered by the collective consciousness of Reddit")
