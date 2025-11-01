@@ -1,5 +1,5 @@
 # ============================================================
-# 🌌 MimicVerse v1.0 — Global Reddit Mood Dashboard
+# 🌌 MimicVerse v1.0 — Global Reddit Mood Dashboard (Patched)
 # ============================================================
 
 import streamlit as st
@@ -16,6 +16,19 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import NMF
 import markovify
 from collections import Counter
+
+# ============================================================
+# 🧩 NLTK Punkt Safety Patch (for Streamlit Cloud)
+import nltk
+
+NLTK_DIR = os.path.join(os.path.expanduser("~"), "nltk_data")
+os.makedirs(NLTK_DIR, exist_ok=True)
+nltk.data.path.append(NLTK_DIR)
+
+try:
+    nltk.data.find("tokenizers/punkt")
+except LookupError:
+    nltk.download("punkt", download_dir=NLTK_DIR)
 
 # ============================================================
 # 🧭 Page Config
@@ -59,8 +72,12 @@ df["sentiment"] = df["text"].apply(get_sentiment)
 
 emotions = {"Happy": 0, "Angry": 0, "Surprise": 0, "Sad": 0, "Fear": 0}
 for t in df["text"].sample(min(100, len(df))):  # sample for speed
-    emo = te.get_emotion(t)
-    for k in emo: emotions[k] += emo[k]
+    try:
+        emo = te.get_emotion(t)
+        for k in emo:
+            emotions[k] += emo[k]
+    except Exception:
+        continue
 
 # Pie chart
 emo_data = pd.DataFrame({"Emotion": emotions.keys(), "Value": emotions.values()})
@@ -81,7 +98,7 @@ for text in random.sample(docs, min(50, len(docs))):
     try:
         kws = kw_model.extract_keywords(text, top_n=3)
         keywords.extend([k[0] for k in kws])
-    except:
+    except Exception:
         pass
 freq = Counter(keywords)
 top_kw = pd.DataFrame(freq.most_common(10), columns=["Keyword", "Frequency"])
@@ -94,7 +111,7 @@ joined = ". ".join(df["title"].dropna().tolist()[:500])
 try:
     text_model = markovify.Text(joined)
     st.info(f"🗣️ *“{text_model.make_sentence() or 'Feels like everyone’s tired but still pretending to hustle.'}”*")
-except:
+except Exception:
     st.info("🗣️ *No quote generated this time (insufficient data)*")
 
 # ============================================================
