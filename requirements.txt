@@ -15,6 +15,7 @@ matplotlib
 # Sentiment & Emotion Engines
 text2emotion
 nrclex
+emoji==1.6.3
 
 # Keyword & Semantic Intelligence
 keybert
