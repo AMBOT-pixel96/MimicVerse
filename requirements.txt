@@ -12,6 +12,9 @@ markovify
 wordcloud
 matplotlib
 
+# NLTK data fix
+nltk
+
 # Sentiment & Emotion Engines
 text2emotion
 nrclex
