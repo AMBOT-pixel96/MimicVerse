@@ -15,7 +15,7 @@ from collections import Counter
 # ☁️ GoEmotions Model Loader (Google Drive Safe Download)
 # ============================================================
 
-MODEL_ZIP_URL = "https://drive.google.com/uc?id=1B2Ho0jKjXyWXFOohVLk1z7SvVqHcW52l"
+MODEL_ZIP_URL = "https://drive.google.com/uc?export=download&id=1B2Ho0jKjXyWXFOohVLk1z7SvVqHcW52l"
 MODEL_DIR = Path("models/goemotions_model")
 MODEL_ZIP_PATH = Path("models/goemotions_model.zip")
 MODEL_DIR.parent.mkdir(parents=True, exist_ok=True)
