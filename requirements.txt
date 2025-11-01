@@ -1,7 +1,28 @@
+# Core Infrastructure
 streamlit
-praw
 pandas
-markovify
-textblob
 numpy
 scikit-learn
+altair
+
+# Data Harvesting & Processing
+praw
+textblob
+markovify
+wordcloud
+matplotlib
+
+# Sentiment & Emotion Engines
+text2emotion
+nrclex
+
+# Keyword & Semantic Intelligence
+keybert
+spacy
+bertopic
+sentence-transformers
+transformers
+torch
+
+# Optional Enhancements / Stability
+pyarrow
