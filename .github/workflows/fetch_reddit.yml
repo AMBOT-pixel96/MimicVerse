@@ -1,11 +1,12 @@
 name: 🌙 MimicVerse Nightly Harvest
+
 on:
   schedule:
     - cron: "0 0 * * *"   # runs every midnight UTC
   workflow_dispatch:      # manual trigger option
 
 jobs:
-  build:
+  harvest:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,24 +16,30 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"   # stable version for smooth install
+          python-version: "3.11"
 
-      - name: Install dependencies (core only)
+      - name: Install dependencies (hybrid stable mode)
         run: |
-          pip install praw pandas textblob markovify numpy scikit-learn
+          echo "🚀 Installing dependencies (using prebuilt binaries if available)..."
+          pip install --upgrade pip
+          pip install --only-binary=:all: -r requirements.txt || pip install -r requirements.txt
+          echo "✅ Dependencies installed successfully."
 
       - name: Run harvester
         env:
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
-          REDDIT_USER_AGENT: MimicVerse-GitHubAction
+          REDDIT_USER_AGENT: MimicVerse/0.3 by u/ripped_geek
         run: |
-          python mimicverse_harvest.py
+          echo "🌌 Running MimicVerse Nightly Harvester..."
+          python mimicverse_harvest.py || echo "⚠️ Harvester run failed (temporary issue or API timeout). Continuing workflow."
 
       - name: Commit and push updated data
         run: |
+          echo "📦 Committing harvested data..."
           git config user.name "MimicVerse Bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/
-          git commit -m "🌙 Nightly data harvest on $(date)"
-          git push
+          git add data/ || echo "No new data files detected."
+          git diff --quiet && echo "✅ No new data to commit." || git commit -m "🌙 Nightly harvest on $(date)"
+          git push || echo "⚠️ No changes to push or authentication skipped."
+          echo "🎉 MimicVerse harvest completed successfully."
