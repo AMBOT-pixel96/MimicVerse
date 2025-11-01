@@ -10,9 +10,15 @@ import altair as alt
 from datetime import datetime
 from textblob import TextBlob
 import nltk
-nltk.download('punkt')
-nltk.download('wordnet')
-nltk.download('omw-1.4')
+import nltk
+NLTK_DIR = os.path.join(os.path.expanduser("~"), "nltk_data")
+os.makedirs(NLTK_DIR, exist_ok=True)
+nltk.data.path.append(NLTK_DIR)
+for pkg in ["punkt", "wordnet", "omw-1.4"]:
+    try:
+        nltk.data.find(f"tokenizers/{pkg}")
+    except LookupError:
+        nltk.download(pkg, download_dir=NLTK_DIR)
 from nrclex import NRCLex
 from wordcloud import WordCloud
 from keybert import KeyBERT
