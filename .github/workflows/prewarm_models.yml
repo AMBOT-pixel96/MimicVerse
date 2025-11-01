@@ -1,0 +1,48 @@
+name: ⚡ MimicVerse Model Prewarm
+on:
+  workflow_dispatch:   # Manual trigger only (won't interfere with harvester)
+
+jobs:
+  prewarm:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧭 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: ⚙️ Install core dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 🧠 Pre-download NLP models
+        run: |
+          echo "⚡ Downloading spaCy model..."
+          python -m spacy download en_core_web_sm
+
+          echo "⚡ Caching SentenceTransformer (MiniLM)..."
+          python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('all-MiniLM-L6-v2')"
+
+          echo "⚡ Preloading KeyBERT..."
+          python -c "from keybert import KeyBERT; KeyBERT('all-MiniLM-L6-v2')"
+
+          echo "⚡ Preloading BERT Summarizer..."
+          python -c "from transformers import pipeline; pipeline('summarization', model='facebook/bart-large-cnn')"
+
+      - name: 📦 Commit cached models (optional)
+        run: |
+          mkdir -p models_cache
+          echo "✅ Models prewarmed on $(date)" > models_cache/info.txt
+          git config user.name "MimicVerse Bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add models_cache/
+          git commit -m "⚡ Models prewarmed and cached"
+          git push || echo "⚠️ No changes to push or skipped auth"
+
+      - name: 🎉 Done
+        run: echo "🔥 MimicVerse models are now prewarmed and ready for deployment."
