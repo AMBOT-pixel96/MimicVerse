@@ -9,6 +9,10 @@ import json, os, random
 import altair as alt
 from datetime import datetime
 from textblob import TextBlob
+import nltk
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 from nrclex import NRCLex
 from wordcloud import WordCloud
 from keybert import KeyBERT
