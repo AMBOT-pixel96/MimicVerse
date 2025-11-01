@@ -1,23 +1,28 @@
 # ============================================================
-# 🌌 MimicVerse Data Harvester v0.6 — Infinite-Day Mode (Stable)
-# Handles multiple harvests/day + auto Streamlit redeploy triggers
+# 🌌 MimicVerse Data Harvester v0.7 — Controlled Power-Up Edition
+# ------------------------------------------------------------
+# Collects emotional Reddit data across 100 subreddits, with
+# safety throttling and timestamped filenames for multiple runs.
 # ============================================================
 
 import os
 import json
+import time
+import random
 import datetime
 import pandas as pd
 import praw
 
-print("🚀 Starting MimicVerse Harvester v0.6 (Infinite-Day Mode)")
-
-# ------------------------------------------------------------
-# 🔐 Load Reddit credentials (dual-source: Streamlit / GH Actions)
+# Optional Streamlit import
 try:
     import streamlit as st
 except ImportError:
     st = None
 
+print("🚀 Starting MimicVerse Harvester v0.7 (Controlled Power-Up Edition)")
+
+# ------------------------------------------------------------
+# 🔐 Load Reddit credentials (from Streamlit or environment)
 CLIENT_ID = CLIENT_SECRET = USER_AGENT = None
 
 if st and hasattr(st, "secrets"):
@@ -26,7 +31,7 @@ if st and hasattr(st, "secrets"):
             CLIENT_ID = st.secrets["reddit"]["client_id"]
             CLIENT_SECRET = st.secrets["reddit"]["client_secret"]
             USER_AGENT = st.secrets["reddit"]["user_agent"]
-            print("🔑 Using Streamlit secrets for credentials")
+            print("🔑 Using Streamlit Secrets for credentials")
     except Exception as e:
         print(f"⚠️ Streamlit secrets unavailable: {e}")
 
@@ -51,39 +56,38 @@ print("✅ Reddit authentication successful.")
 
 # ------------------------------------------------------------
 # 🗓 Setup paths & filenames
-TODAY = datetime.date.today().strftime("%Y-%m-%d")
-TIME_NOW = datetime.datetime.now().strftime("%H%M")  # adds unique timestamp
+now = datetime.datetime.now()
+timestamp = now.strftime("%Y-%m-%d_%H%M")
 DATA_DIR = "data"
 os.makedirs(DATA_DIR, exist_ok=True)
-
-csv_name = f"{DATA_DIR}/reddit_{TODAY}_{TIME_NOW}.csv"
+csv_name = f"{DATA_DIR}/reddit_{timestamp}.csv"
 meta_name = f"{DATA_DIR}/metadata.json"
-history_log = f"{DATA_DIR}/harvest_history.json"
+history_name = f"{DATA_DIR}/harvest_history.json"
 
 # ------------------------------------------------------------
-# 🌎 Discover top subreddits
+# 🌍 Discover popular subreddits
 top_subs = []
 try:
-    print("🌍 Discovering top subreddits...")
-    for sub in reddit.subreddits.popular(limit=10):
+    print("🌍 Discovering subreddits...")
+    for sub in reddit.subreddits.popular(limit=100):  # Increased limit
         top_subs.append(sub.display_name)
-    print(f"✅ Found {len(top_subs)} subreddits: {', '.join(top_subs[:5])} ...")
+    print(f"✅ Found {len(top_subs)} subreddits (sample): {top_subs[:10]}")
 except Exception as e:
     print(f"⚠️ Could not fetch subreddit list: {e}")
     top_subs = ["AskReddit", "worldnews", "technology"]
 
 # ------------------------------------------------------------
-# 🔍 Harvest posts
+# 🔍 Fetch threads + comments with throttling
 data_rows = []
 for sub_name in top_subs:
     try:
         subreddit = reddit.subreddit(sub_name)
         print(f"🔍 Harvesting: {sub_name}")
-        for submission in subreddit.hot(limit=10):  # adjustable batch size
+        for submission in subreddit.hot(limit=25):  # Increased threads per subreddit
             if submission.stickied:
                 continue
             submission.comments.replace_more(limit=0)
-            comments = [c.body for c in submission.comments[:5] if hasattr(c, "body")]
+            comments = [c.body for c in submission.comments[:20] if hasattr(c, "body")]
             data_rows.append({
                 "subreddit": sub_name,
                 "title": submission.title,
@@ -92,6 +96,10 @@ for sub_name in top_subs:
                 "score": submission.score,
                 "created_utc": submission.created_utc
             })
+            # 🧠 Random sleep to dodge API rate limits
+            time.sleep(random.uniform(0.5, 1.5))
+        # brief cooldown between subreddits
+        time.sleep(random.uniform(2, 4))
     except Exception as e:
         print(f"⚠️ Error in {sub_name}: {e}")
         continue
@@ -99,7 +107,7 @@ for sub_name in top_subs:
 # ------------------------------------------------------------
 # 💾 Save harvested data
 if not data_rows:
-    print("⚠️ No posts found. Reddit may have rate-limited the bot or credentials are invalid.")
+    print("⚠️ No posts found. Reddit may have rate-limited or credentials invalid.")
 else:
     df = pd.DataFrame(data_rows)
     df.to_csv(csv_name, index=False, encoding="utf-8")
@@ -108,39 +116,40 @@ else:
 # ------------------------------------------------------------
 # 🧭 Update metadata
 metadata = {
-    "date": TODAY,
-    "time": TIME_NOW,
+    "timestamp": timestamp,
     "subreddits": top_subs,
-    "records": len(data_rows)
+    "post_count": len(data_rows)
 }
 with open(meta_name, "w", encoding="utf-8") as f:
     json.dump(metadata, f, indent=2)
-print("🧭 Metadata updated successfully.")
+print("🧭 Metadata updated.")
 
 # ------------------------------------------------------------
-# 🧾 Append to harvest history log
+# 📜 Update harvest history
 history_entry = {
-    "timestamp": f"{TODAY} {TIME_NOW}",
-    "file": os.path.basename(csv_name),
+    "run_timestamp": timestamp,
+    "subreddits": len(top_subs),
     "posts": len(data_rows)
 }
-history = []
-if os.path.exists(history_log):
-    try:
-        with open(history_log, "r", encoding="utf-8") as f:
+
+try:
+    if os.path.exists(history_name):
+        with open(history_name, "r", encoding="utf-8") as f:
             history = json.load(f)
-    except json.JSONDecodeError:
+    else:
         history = []
-history.append(history_entry)
-with open(history_log, "w", encoding="utf-8") as f:
-    json.dump(history[-50:], f, indent=2)  # keep last 50 runs
-print("📊 Harvest history updated.")
+    history.append(history_entry)
+    with open(history_name, "w", encoding="utf-8") as f:
+        json.dump(history, f, indent=2)
+    print("🗓 Harvest history updated.")
+except Exception as e:
+    print(f"⚠️ Could not update harvest history: {e}")
 
 # ------------------------------------------------------------
-# 🧹 Optional cleanup (keep 30 newest CSVs)
-files = sorted([f for f in os.listdir(DATA_DIR) if f.startswith("reddit_") and f.endswith(".csv")])
+# 🧹 Optional: prune old CSVs (keep last 30)
+files = sorted([f for f in os.listdir(DATA_DIR) if f.endswith(".csv")])
 if len(files) > 30:
     os.remove(os.path.join(DATA_DIR, files[0]))
     print(f"🧹 Purged oldest dataset: {files[0]}")
 
-print("🌙 Harvester complete — data safely stored and ready for MimicVerse.")
+print("🌙 Harvester complete. Doug has fed well tonight.")
