@@ -31,7 +31,15 @@ for pkg in ["punkt", "wordnet", "omw-1.4"]:
         nltk.download(pkg, download_dir=NLTK_DIR)
 
 # Ensure TextBlob has all its corpora in the same place
-download_corpora.download_all(download_dir=NLTK_DIR)
+# download_corpora.download_all() no longer takes arguments
+os.environ["TEXTBLOB_DATA_DIR"] = NLTK_DIR
+try:
+    download_corpora.download_all()
+except TypeError:
+    # fallback if version mismatched
+    nltk.download('punkt')
+    nltk.download('wordnet')
+    nltk.download('omw-1.4')
 
 # ============================================================
 # 🧩 Main Imports (after patch)
