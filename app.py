@@ -80,55 +80,68 @@ st.sidebar.write(f"**Subreddits:** {len(df['subreddit'].unique())}")
 st.sidebar.write(f"**Harvested:** {meta.get('date', datetime.now().strftime('%Y-%m-%d'))}")
 
 # ============================================================
-# 🧠 Hybrid Sentiment + Emotion Engine
+# 🧠 Hybrid Emotion Engine (NRCLex + GoEmotions)
+# ============================================================
+
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+import torch
+import torch.nn.functional as F
+
+@st.cache_resource
+def load_goemotions():
+    model_name = "bhadresh-savani/distilbert-base-uncased-go-emotions"
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = AutoModelForSequenceClassification.from_pretrained(model_name)
+    return tokenizer, model
+
+tokenizer, model = load_goemotions()
+go_labels = [
+    'admiration','amusement','anger','annoyance','approval','caring',
+    'confusion','curiosity','desire','disappointment','disapproval',
+    'disgust','embarrassment','excitement','fear','gratitude','grief',
+    'joy','love','nervousness','optimism','pride','realization',
+    'relief','remorse','sadness','surprise','neutral'
+]
+
 def analyze_emotion(text):
     text = str(text).strip()
     if not text:
-        return {"Happy": 0, "Angry": 0, "Fear": 0, "Sad": 0, "Surprise": 0}
-    
-    blob = TextBlob(text)
-    polarity = blob.sentiment.polarity
+        return {k: 0 for k in ['joy','anger','fear','sadness','surprise']}
 
-    # NRCLex adds word-based emotion tagging
-    emotion_scores = NRCLex(text).raw_emotion_scores
-    base = {"Happy": 0, "Angry": 0, "Fear": 0, "Sad": 0, "Surprise": 0}
-    for e in emotion_scores:
-        if e.lower() in ["joy", "positive"]: base["Happy"] += emotion_scores[e]
-        elif e.lower() in ["anger", "disgust"]: base["Angry"] += emotion_scores[e]
-        elif e.lower() in ["fear"]: base["Fear"] += emotion_scores[e]
-        elif e.lower() in ["sadness", "negative"]: base["Sad"] += emotion_scores[e]
-        elif e.lower() in ["anticipation", "surprise"]: base["Surprise"] += emotion_scores[e]
+    # ---------- NRCLex (lexical) ----------
+    nrc = NRCLex(text)
+    nrc_scores = nrc.raw_emotion_scores
 
-    # fallback: polarity-weighted tone adjustment
-    if sum(base.values()) == 0:
-        if polarity > 0.2: base["Happy"] = 1
-        elif polarity < -0.2: base["Sad"] = 1
-        else: base[random.choice(["Fear", "Angry", "Surprise"])] = 1
+    lex_map = {'joy':'joy','positive':'joy','anger':'anger','disgust':'anger',
+               'fear':'fear','sadness':'sadness','negative':'sadness','surprise':'surprise'}
+    base = {v:0 for v in ['joy','anger','fear','sadness','surprise']}
+    for e, val in nrc_scores.items():
+        if e in lex_map:
+            base[lex_map[e]] += val
 
-    return base
+    # ---------- GoEmotions (contextual) ----------
+    inputs = tokenizer(text, return_tensors="pt", truncation=True)
+    with torch.no_grad():
+        logits = model(**inputs).logits
+        probs = F.softmax(logits, dim=1).cpu().numpy()[0]
+    ge_dict = {go_labels[i]: float(probs[i]) for i in range(len(go_labels))}
 
-st.markdown("### 🧭 Mood Mix of the World 🌍")
+    # Collapse GoEmotions 27 → 5 major categories
+    collapse_map = {
+        'joy': ['joy','amusement','excitement','optimism','love','relief','gratitude','pride'],
+        'anger': ['anger','annoyance','disapproval','disgust'],
+        'fear': ['fear','nervousness'],
+        'sadness': ['sadness','grief','remorse','disappointment'],
+        'surprise': ['surprise','realization','curiosity']
+    }
+    ge_reduced = {k: sum(ge_dict.get(e,0) for e in v) for k,v in collapse_map.items()}
 
-emotions = {"Happy": 0, "Angry": 0, "Fear": 0, "Sad": 0, "Surprise": 0}
-sample_texts = df["title"].fillna('').tolist()[:150]
-for t in sample_texts:
-    emo = analyze_emotion(t)
-    for k in emotions:
-        emotions[k] += emo.get(k, 0)
+    # ---------- Merge ----------
+    final = {}
+    for k in base:
+        final[k] = 0.3 * base[k] + 0.7 * ge_reduced.get(k,0)
 
-# Normalize to percentages
-total = sum(emotions.values()) or 1
-for k in emotions:
-    emotions[k] = round(100 * emotions[k] / total, 2)
-
-emo_data = pd.DataFrame({"Emotion": emotions.keys(), "Value": emotions.values()})
-chart = alt.Chart(emo_data).mark_arc(innerRadius=60).encode(
-    theta="Value",
-    color="Emotion",
-    tooltip=["Emotion", "Value"]
-)
-st.altair_chart(chart, use_container_width=True)
-st.dataframe(emo_data)
+    return final
 
 # ============================================================
 # 📈 Trend Pulse (Top Emerging Keywords)
