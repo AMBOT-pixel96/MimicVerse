@@ -16,7 +16,7 @@ matplotlib
 nltk
 
 # Pre-bundle punkt for Streamlit Cloud
-nltk-data
+# nltk-data
 
 # Sentiment & Emotion Engines
 text2emotion
