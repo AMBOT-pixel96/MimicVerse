@@ -1,6 +1,6 @@
 # ============================================================
-# 🌌 MimicVerse Data Harvester v0.4 — Hybrid Mode
-# Works seamlessly in Streamlit Cloud & GitHub Actions
+# 🌌 MimicVerse Data Harvester v0.5 — Failsafe Hybrid
+# Handles both Streamlit Cloud & GitHub Actions seamlessly
 # ============================================================
 
 import os
@@ -9,28 +9,36 @@ import datetime
 import pandas as pd
 import praw
 
-# Try to import Streamlit if available
+# Optional Streamlit import (not mandatory)
 try:
     import streamlit as st
-    USE_STREAMLIT = True
 except ImportError:
-    USE_STREAMLIT = False
+    st = None
 
-print("🚀 Starting MimicVerse Harvester v0.4 (Hybrid Mode)")
+print("🚀 Starting MimicVerse Harvester v0.5 (Failsafe Mode)")
 
 # ------------------------------------------------------------
-# 🔐 Load Reddit credentials (dual source)
-if USE_STREAMLIT and "reddit" in st.secrets:
-    print("🔑 Using Streamlit Secrets for credentials")
-    CLIENT_ID = st.secrets["reddit"]["client_id"]
-    CLIENT_SECRET = st.secrets["reddit"]["client_secret"]
-    USER_AGENT = st.secrets["reddit"]["user_agent"]
-else:
-    print("🔑 Using Environment Variables (GitHub Actions)")
+# 🔐 Load Reddit credentials (with verification)
+CLIENT_ID = CLIENT_SECRET = USER_AGENT = None
+
+if st and hasattr(st, "secrets"):
+    try:
+        if "reddit" in st.secrets:
+            CLIENT_ID = st.secrets["reddit"]["client_id"]
+            CLIENT_SECRET = st.secrets["reddit"]["client_secret"]
+            USER_AGENT = st.secrets["reddit"]["user_agent"]
+            print("🔑 Using Streamlit Secrets for credentials")
+    except Exception as e:
+        print(f"⚠️ Streamlit secrets unavailable: {e}")
+
+# Fall back to environment vars if Streamlit secrets missing
+if not all([CLIENT_ID, CLIENT_SECRET, USER_AGENT]):
+    print("🔄 Falling back to GitHub Action environment secrets")
     CLIENT_ID = os.getenv("REDDIT_CLIENT_ID")
     CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET")
     USER_AGENT = os.getenv("REDDIT_USER_AGENT")
 
+# Final sanity check
 if not all([CLIENT_ID, CLIENT_SECRET, USER_AGENT]):
     print("❌ Missing Reddit credentials. Exiting.")
     exit(1)
@@ -53,43 +61,39 @@ csv_name = f"{DATA_DIR}/reddit_{TODAY}.csv"
 meta_name = f"{DATA_DIR}/metadata.json"
 
 # ------------------------------------------------------------
-# 🌎 Discover top 500 subreddits dynamically
+# 🌎 Discover top 10 subreddits (debug scale for Actions)
 top_subs = []
 try:
-    print("🌍 Discovering top 500 subreddits...")
-    for sub in reddit.subreddits.popular(limit=500):
+    print("🌍 Discovering subreddits...")
+    for sub in reddit.subreddits.popular(limit=10):
         top_subs.append(sub.display_name)
-    print(f"✅ Found {len(top_subs)} subreddits.")
+    print(f"✅ Found {len(top_subs)} subreddits: {top_subs[:5]}...")
 except Exception as e:
     print(f"⚠️ Could not fetch subreddit list: {e}")
     top_subs = ["AskReddit", "worldnews", "technology"]
 
 # ------------------------------------------------------------
-# 🔍 For each subreddit → get 50 threads + 30 comments
+# 🔍 Fetch threads + comments
 data_rows = []
 for sub_name in top_subs:
     try:
         subreddit = reddit.subreddit(sub_name)
-        for submission in subreddit.hot(limit=50):
+        print(f"🔍 Harvesting: {sub_name}")
+        for submission in subreddit.hot(limit=10):  # smaller limit for debug
             if submission.stickied:
                 continue
-            title = submission.title
-            selftext = submission.selftext or ""
-            comments = []
             submission.comments.replace_more(limit=0)
-            for c in submission.comments[:30]:
-                if hasattr(c, "body"):
-                    comments.append(c.body)
+            comments = [c.body for c in submission.comments[:5] if hasattr(c, "body")]
             data_rows.append({
                 "subreddit": sub_name,
-                "title": title,
-                "selftext": selftext,
+                "title": submission.title,
+                "selftext": submission.selftext or "",
                 "comments": " || ".join(comments),
                 "score": submission.score,
                 "created_utc": submission.created_utc
             })
     except Exception as e:
-        print(f"⚠️ Error in subreddit {sub_name}: {e}")
+        print(f"⚠️ Error in {sub_name}: {e}")
         continue
 
 # ------------------------------------------------------------
@@ -109,7 +113,7 @@ with open(meta_name, "w", encoding="utf-8") as f:
 print("🧭 Metadata updated.")
 
 # ------------------------------------------------------------
-# 🧹 Optional: prune if >30 CSVs (90-day rotation)
+# 🧹 Optional: prune old CSVs
 files = sorted([f for f in os.listdir(DATA_DIR) if f.endswith(".csv")])
 if len(files) > 30:
     os.remove(os.path.join(DATA_DIR, files[0]))
