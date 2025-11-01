@@ -15,30 +15,24 @@ from collections import Counter
 # ☁️ GoEmotions Model Loader (Google Drive Safe Download)
 # ============================================================
 
-MODEL_ZIP_URL = "https://drive.google.com/uc?export=download&id=1B2Ho0jKjXyWXFOohVLk1z7SvVqHcW52l"
+MODEL_ZIP_URL = "https://github.com/AMBOT-pixel96/MimicVerse/releases/download/v1.2-model/goemotions_model.zip"
 MODEL_DIR = Path("models/goemotions_model")
 MODEL_ZIP_PATH = Path("models/goemotions_model.zip")
 MODEL_DIR.parent.mkdir(parents=True, exist_ok=True)
 
-def download_from_drive(url, destination):
-    """Bypass Google Drive's virus scan + confirmation redirect for large files."""
+def download_from_release(url, destination):
+    """Download model ZIP directly from GitHub release."""
     session = requests.Session()
     response = session.get(url, stream=True)
-    # Find confirm token if Drive tries to show "can't scan for viruses"
-    for k, v in response.cookies.items():
-        if k.startswith('download_warning'):
-            url = url + f"&confirm={v}"
-            response = session.get(url, stream=True)
-            break
     with open(destination, "wb") as f:
         for chunk in response.iter_content(32768):
             if chunk:
                 f.write(chunk)
 
 if not MODEL_DIR.exists():
-    st.warning("📦 Downloading GoEmotions model from Drive (first run)... Please wait ⏳")
+    st.warning("📦 Downloading GoEmotions model from GitHub release (first run)... Please wait ⏳")
     try:
-        download_from_drive(MODEL_ZIP_URL, MODEL_ZIP_PATH)
+        download_from_release(MODEL_ZIP_URL, MODEL_ZIP_PATH)
         with zipfile.ZipFile(MODEL_ZIP_PATH, 'r') as zip_ref:
             zip_ref.extractall(MODEL_DIR.parent)
         os.remove(MODEL_ZIP_PATH)
