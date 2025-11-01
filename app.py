@@ -1,18 +1,18 @@
 # ============================================================
-# 🌌 MimicVerse v1.2 — The Global Reddit Mood Dashboard (GoEmotions Hybrid)
+# 🌌 MimicVerse v1.2.1 — The Global Reddit Mood Dashboard (GoEmotions Persistent Hybrid)
 # ============================================================
 
 import streamlit as st
 import pandas as pd
 import numpy as np
-import json, os, random, zipfile, io, requests
+import json, os, random, zipfile, requests
 import altair as alt
 from datetime import datetime
 from pathlib import Path
 from collections import Counter
 
 # ============================================================
-# ☁️ GoEmotions Model Loader (GitHub Release Safe Download)
+# ☁️ GoEmotions Model Loader (Persistent Cached Download)
 # ============================================================
 
 MODEL_ZIP_URL = "https://github.com/AMBOT-pixel96/MimicVerse/releases/download/v1.2-model/goemotions_model.zip"
@@ -20,29 +20,35 @@ MODEL_DIR = Path("models/goemotions_model")
 MODEL_ZIP_PATH = Path("models/goemotions_model.zip")
 MODEL_DIR.parent.mkdir(parents=True, exist_ok=True)
 
-def download_from_release(url, destination):
-    """Download model ZIP directly from GitHub release."""
-    session = requests.Session()
-    response = session.get(url, stream=True)
-    with open(destination, "wb") as f:
-        for chunk in response.iter_content(32768):
-            if chunk:
-                f.write(chunk)
+@st.cache_resource(show_spinner="Downloading & caching GoEmotions model (first time only)... ⏳")
+def prepare_goemotions_model():
+    """Download once, cache forever."""
+    if MODEL_DIR.exists() and any(MODEL_DIR.iterdir()):
+        st.info("✅ Cached GoEmotions model already available.")
+        return str(MODEL_DIR)
 
-if not MODEL_DIR.exists():
-    st.warning("📦 Downloading GoEmotions model from GitHub release (first run)... Please wait ⏳")
+    st.warning("📦 Fetching GoEmotions model from GitHub release... Please wait ⏳")
     try:
-        download_from_release(MODEL_ZIP_URL, MODEL_ZIP_PATH)
+        # Download model zip
+        with requests.get(MODEL_ZIP_URL, stream=True) as r:
+            r.raise_for_status()
+            with open(MODEL_ZIP_PATH, "wb") as f:
+                for chunk in r.iter_content(chunk_size=32768):
+                    f.write(chunk)
+
+        # Extract safely
         with zipfile.ZipFile(MODEL_ZIP_PATH, 'r') as zip_ref:
-            # Always flatten into 'models/'
-            zip_ref.extractall("models")
+            zip_ref.extractall(MODEL_DIR.parent)
         os.remove(MODEL_ZIP_PATH)
         st.success("✅ GoEmotions model extracted successfully!")
+        return str(MODEL_DIR)
+
     except Exception as e:
-        st.error(f"❌ Failed to download GoEmotions model: {e}")
+        st.error(f"❌ Failed to prepare GoEmotions model: {e}")
         st.stop()
-else:
-    st.info("✅ GoEmotions model already available locally.")
+
+# Run once (cached between restarts)
+prepare_goemotions_model()
 
 # ============================================================
 # 🧠 NLTK + TextBlob Global Patch
@@ -88,11 +94,39 @@ import torch
 import torch.nn.functional as F
 
 # ============================================================
+# 🧠 Load GoEmotions Model (Local Only)
+# ============================================================
+
+@st.cache_resource
+def load_goemotions():
+    base_dir = Path("models/goemotions_model")
+    candidates = [
+        base_dir,
+        base_dir / "goemotions_model",
+        base_dir / "GoEmotions",
+    ]
+    model_path = None
+    for c in candidates:
+        if (c / "config.json").exists():
+            model_path = c
+            break
+
+    if not model_path:
+        raise FileNotFoundError("GoEmotions model files not found after extraction.")
+
+    st.write(f"📁 Using local model path: `{model_path}`")
+    tokenizer = AutoTokenizer.from_pretrained(str(model_path), local_files_only=True)
+    model = AutoModelForSequenceClassification.from_pretrained(str(model_path), local_files_only=True)
+    return tokenizer, model
+
+tokenizer, model = load_goemotions()
+
+# ============================================================
 # 🧭 Page Config
 # ============================================================
 
-st.set_page_config(page_title="🌌 MimicVerse v1.2", page_icon="🧠", layout="wide")
-st.title("🌌 **MimicVerse v1.2 – The Global Reddit Mood Dashboard**")
+st.set_page_config(page_title="🌌 MimicVerse v1.2.1", page_icon="🧠", layout="wide")
+st.title("🌌 **MimicVerse v1.2.1 – The Global Reddit Mood Dashboard**")
 st.caption("AI that listens to humanity's collective chatter and translates it into emotion ⚡")
 
 # ============================================================
@@ -119,23 +153,6 @@ st.sidebar.write(f"**Harvested:** {meta.get('date', datetime.now().strftime('%Y-
 # ============================================================
 # 🧠 Hybrid Emotion Engine (NRCLex + GoEmotions)
 # ============================================================
-
-@st.cache_resource
-def load_goemotions():
-    base_path = Path("models/goemotions_model")
-    model_path = base_path
-
-    # 🔍 Detect nested folder issue automatically
-    if not (base_path / "config.json").exists():
-        nested = base_path / "goemotions_model"
-        if nested.exists() and (nested / "config.json").exists():
-            model_path = nested
-
-    tokenizer = AutoTokenizer.from_pretrained(str(model_path))
-    model = AutoModelForSequenceClassification.from_pretrained(str(model_path))
-    return tokenizer, model
-
-tokenizer, model = load_goemotions()
 
 go_labels = [
     'admiration','amusement','anger','annoyance','approval','caring','confusion',
@@ -247,4 +264,4 @@ st.image(wordcloud.to_array(), use_container_width=True)
 
 # 📦 Footer
 st.markdown("---")
-st.caption("© 2025 MimicVerse | Built by Amlan Mishra 🧠 | Global Mood Engine v1.2 (GoEmotions Hybrid Core)")
+st.caption("© 2025 MimicVerse | Built by Amlan Mishra 🧠 | Global Mood Engine v1.2.1 (Persistent Hybrid Core)")
