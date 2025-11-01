@@ -1,5 +1,5 @@
 # ============================================================
-# 🌌 MimicVerse v1.1 — Global Reddit Mood Dashboard (Overdrive)
+# 🌌 MimicVerse v1.1.3 — Global Reddit Mood Dashboard (Corpus Calming Update)
 # ============================================================
 
 import streamlit as st
@@ -8,17 +8,34 @@ import numpy as np
 import json, os, random
 import altair as alt
 from datetime import datetime
-from textblob import TextBlob
+
+# ============================================================
+# 🧠 NLTK + TextBlob Global Patch (prevents MissingCorpusError)
 import nltk
-import nltk
+from textblob import download_corpora
+from nltk.data import path as nltk_data_path
+
 NLTK_DIR = os.path.join(os.path.expanduser("~"), "nltk_data")
 os.makedirs(NLTK_DIR, exist_ok=True)
+
+# Make sure everyone (nltk + textblob + nrclex) uses the same directory
 nltk.data.path.append(NLTK_DIR)
+nltk_data_path.append(NLTK_DIR)
+os.environ["NLTK_DATA"] = NLTK_DIR
+
+# Download missing corpora safely
 for pkg in ["punkt", "wordnet", "omw-1.4"]:
     try:
         nltk.data.find(f"tokenizers/{pkg}")
     except LookupError:
         nltk.download(pkg, download_dir=NLTK_DIR)
+
+# Ensure TextBlob has all its corpora in the same place
+download_corpora.download_all(download_dir=NLTK_DIR)
+
+# ============================================================
+# 🧩 Main Imports (after patch)
+from textblob import TextBlob
 from nrclex import NRCLex
 from wordcloud import WordCloud
 from keybert import KeyBERT
@@ -29,8 +46,8 @@ from collections import Counter
 
 # ============================================================
 # 🧭 Page Config
-st.set_page_config(page_title="🌌 MimicVerse v1.1", page_icon="🧠", layout="wide")
-st.title("🌌 **MimicVerse v1.1 – The Global Reddit Mood Dashboard**")
+st.set_page_config(page_title="🌌 MimicVerse v1.1.3", page_icon="🧠", layout="wide")
+st.title("🌌 **MimicVerse v1.1.3 – The Global Reddit Mood Dashboard**")
 st.caption("AI that listens to humanity's collective chatter and translates it into emotion ⚡")
 
 # ============================================================
@@ -115,7 +132,7 @@ for text in random.sample(docs, min(75, len(docs))):
     try:
         kws = kw_model.extract_keywords(text, top_n=3)
         keywords.extend([k[0] for k in kws])
-    except:
+    except Exception:
         pass
 freq = Counter(keywords)
 top_kw = pd.DataFrame(freq.most_common(10), columns=["Keyword", "Frequency"])
@@ -129,7 +146,7 @@ try:
     text_model = markovify.Text(joined)
     quote = text_model.make_sentence()
     st.info(f"🗣️ *“{quote or 'The world mumbles truths between memes and midnight scrolls.'}”*")
-except:
+except Exception:
     st.info("🗣️ *Could not generate quote this time.*")
 
 # ============================================================
@@ -160,4 +177,4 @@ st.image(wordcloud.to_array(), use_container_width=True)
 # ============================================================
 # 📦 Footer
 st.markdown("---")
-st.caption("© 2025 MimicVerse | Built by Amlan Mishra 🧠 | Global Mood Engine v1.1 (Hybrid Emotion Core)")
+st.caption("© 2025 MimicVerse | Built by Amlan Mishra 🧠 | Global Mood Engine v1.1.3 (Corpus Calming Update)")
