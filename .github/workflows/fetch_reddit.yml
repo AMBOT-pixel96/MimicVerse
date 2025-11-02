@@ -1,51 +1,64 @@
-name: 🌙 MimicVerse Nightly Harvest
+name: 🌅🌇🌃 MimicVerse Triple Harvest Cycle
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # runs every midnight UTC
-  workflow_dispatch:      # manual trigger option
+    - cron: "0 0,8,16 * * *"     # runs every 8 hours (00:00, 08:00, 16:00 UTC)
+  workflow_dispatch:             # manual trigger option
 
 permissions:
-  contents: write         # allow GitHub Actions to push changes to repo
+  contents: write                # allow GitHub Actions to push changes to repo
 
 jobs:
   harvest:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: 🌀 Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # full history for rebase safety
+          fetch-depth: 0         # 🔒 Keep your original safety — full history for rebase
 
-      - name: Set up Python
+      - name: 🧠 Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install dependencies (hybrid mode)
+      - name: ⚙️ Install dependencies (hybrid mode)
         run: |
           echo "🚀 Installing dependencies..."
           pip install --upgrade pip
           pip install --only-binary=:all: -r requirements.txt || pip install -r requirements.txt
           echo "✅ Dependencies installed successfully."
 
-      - name: Run harvester
+      - name: 🌍 Identify Harvest Window
+        id: session
+        run: |
+          hour=$(date -u +"%H")
+          if [ $hour -lt 8 ]; then
+            echo "window=🌅 Morning Harvest" >> $GITHUB_OUTPUT
+          elif [ $hour -lt 16 ]; then
+            echo "window=🌇 Midday Harvest" >> $GITHUB_OUTPUT
+          else
+            echo "window=🌃 Night Harvest" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 🌌 Run MimicVerse Harvester
         env:
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           REDDIT_USER_AGENT: MimicVerse/0.3 by u/ripped_geek
         run: |
-          echo "🌌 Running MimicVerse Nightly Harvester..."
+          echo "🌐 Starting ${{ steps.session.outputs.window }}..."
           python mimicverse_harvest.py || echo "⚠️ Harvester run failed (temporary issue or API timeout). Continuing workflow."
+          echo "🧠 Harvesting phase complete for ${{ steps.session.outputs.window }}!"
 
-      - name: Commit and push updated data (failsafe)
+      - name: 📦 Commit and push updated data (failsafe)
         run: |
           echo "📦 Committing harvested data..."
           git config --global user.name "MimicVerse Bot"
           git config --global user.email "bot@users.noreply.github.com"
 
-          # Prevent rebase/stash issues
+          # 🧩 Preserve your original rebase + stash workflow
           git add -A
           git stash || true
           git pull --rebase --autostash || echo "⚠️ Pull failed, continuing with local changes..."
@@ -53,9 +66,15 @@ jobs:
 
           git add -A
           git status
-          git commit -am "🌙 Harvest on $(date '+%Y-%m-%d %H:%M:%S')" || echo "✅ No new data to commit."
+          git commit -am "🪶 ${{ steps.session.outputs.window }} — $(date '+%Y-%m-%d %H:%M:%S')" || echo "✅ No new data to commit."
 
-          # Double push fallback
+          # 🔁 Double push fallback intact
           git push || (git pull --rebase && git push) || echo "⚠️ Push skipped (no changes or permission issue)."
 
-          echo "🎉 MimicVerse harvest completed successfully."
+          echo "🎉 ${{ steps.session.outputs.window }} completed and committed successfully."
+
+      - name: 🧾 Update Harvest Scroll Log
+        run: |
+          echo "📜 Updating HarvestScroll.csv..."
+          python harvest_logger.py || echo "⚠️ Logger run skipped or no changes detected."
+          echo "✅ HarvestScroll update complete."
