@@ -1,5 +1,6 @@
 # ============================================================
-# 🌌 MimicVerse v1.2.2 — The Global Reddit Mood Dashboard (GoEmotions Hybrid - Stable)
+# 🌌 MimicVerse v1.3 — The Global Reddit Mood Dashboard
+# (Harvest Scroll–Aware + Emotion Delta Map)
 # ============================================================
 
 import streamlit as st
@@ -24,23 +25,17 @@ MODEL_DIR.parent.mkdir(parents=True, exist_ok=True)
 def prepare_goemotions_model():
     """Download once, cache forever."""
     if MODEL_DIR.exists() and any(MODEL_DIR.iterdir()):
-        st.info("✅ Cached GoEmotions model already available.")
         return str(MODEL_DIR)
-
-    st.warning("📦 Fetching GoEmotions model from GitHub release... Please wait ⏳")
     try:
         with requests.get(MODEL_ZIP_URL, stream=True) as r:
             r.raise_for_status()
             with open(MODEL_ZIP_PATH, "wb") as f:
                 for chunk in r.iter_content(chunk_size=32768):
                     f.write(chunk)
-
         with zipfile.ZipFile(MODEL_ZIP_PATH, 'r') as zip_ref:
             zip_ref.extractall(MODEL_DIR)
         os.remove(MODEL_ZIP_PATH)
-        st.success("✅ GoEmotions model extracted successfully!")
         return str(MODEL_DIR)
-
     except Exception as e:
         st.error(f"❌ Failed to prepare GoEmotions model: {e}")
         st.stop()
@@ -97,23 +92,16 @@ import torch.nn.functional as F
 @st.cache_resource
 def load_goemotions():
     base_dir = Path("models/goemotions_model")
-
-    # ✅ Direct flat structure
     if (base_dir / "config.json").exists():
-        st.success("📁 Found GoEmotions model (flat structure).")
-        tokenizer = AutoTokenizer.from_pretrained(str(base_dir), local_files_only=True)
-        model = AutoModelForSequenceClassification.from_pretrained(str(base_dir), local_files_only=True)
-        return tokenizer, model
-
-    # 🔍 Nested fallback
-    for subdir in base_dir.iterdir():
-        if subdir.is_dir() and (subdir / "config.json").exists():
-            st.success(f"📁 Found GoEmotions model inside nested folder: {subdir}")
-            tokenizer = AutoTokenizer.from_pretrained(str(subdir), local_files_only=True)
-            model = AutoModelForSequenceClassification.from_pretrained(str(subdir), local_files_only=True)
-            return tokenizer, model
-
-    raise FileNotFoundError("⚠️ No valid GoEmotions model found in models/goemotions_model/")
+        model_path = base_dir
+    else:
+        candidates = list(base_dir.glob("**/config.json"))
+        model_path = candidates[0].parent if candidates else None
+    if not model_path:
+        raise FileNotFoundError("⚠️ No valid GoEmotions model found.")
+    tokenizer = AutoTokenizer.from_pretrained(str(model_path), local_files_only=True)
+    model = AutoModelForSequenceClassification.from_pretrained(str(model_path), local_files_only=True)
+    return tokenizer, model
 
 tokenizer, model = load_goemotions()
 
@@ -121,30 +109,48 @@ tokenizer, model = load_goemotions()
 # 🧭 Page Config
 # ============================================================
 
-st.set_page_config(page_title="🌌 MimicVerse v1.2.2", page_icon="🧠", layout="wide")
-st.title("🌌 **MimicVerse v1.2.2 – The Global Reddit Mood Dashboard**")
-st.caption("AI that listens to humanity's collective chatter and translates it into emotion ⚡")
+st.set_page_config(page_title="🌌 MimicVerse v1.3", page_icon="🧠", layout="wide")
+st.title("🌌 **MimicVerse v1.3 – The Global Reddit Mood Dashboard**")
+st.caption("AI that listens to humanity’s chatter and tracks emotional evolution ⚡")
+
+# ============================================================
+# 🧾 Harvest Scroll Awareness
+# ============================================================
+
+DATA_DIR = "data"
+scroll_path = os.path.join(DATA_DIR, "HarvestScroll.csv")
+latest_csv = prev_csv = None
+
+if os.path.exists(scroll_path):
+    scroll_df = pd.read_csv(scroll_path)
+    if len(scroll_df) >= 1:
+        latest_csv = os.path.join(DATA_DIR, scroll_df.iloc[-1]["file_name"])
+    if len(scroll_df) >= 2:
+        prev_csv = os.path.join(DATA_DIR, scroll_df.iloc[-2]["file_name"])
+
+st.sidebar.header("🗓️ Harvest Scroll")
+if latest_csv:
+    st.sidebar.write(f"**Latest Harvest:** `{os.path.basename(latest_csv)}`")
+else:
+    st.sidebar.warning("⚠️ No harvest data found.")
+
+if prev_csv:
+    st.sidebar.write(f"**Previous Harvest:** `{os.path.basename(prev_csv)}`")
+else:
+    st.sidebar.info("Waiting for second harvest to compute delta map.")
 
 # ============================================================
 # 🧩 Load Latest Dataset
 # ============================================================
 
-DATA_DIR = "data"
-files = sorted([f for f in os.listdir(DATA_DIR) if f.endswith(".csv")], reverse=True)
-if not files:
-    st.warning("⚠️ No dataset found yet. Wait for the nightly harvester to run!")
+if not latest_csv or not os.path.exists(latest_csv):
+    st.warning("⚠️ Latest dataset not found. Run a harvest first.")
     st.stop()
 
-latest_csv = os.path.join(DATA_DIR, files[0])
-meta_file = os.path.join(DATA_DIR, "metadata.json")
 df = pd.read_csv(latest_csv)
-meta = json.load(open(meta_file)) if os.path.exists(meta_file) else {}
-
-st.sidebar.header("🗓️ Data Overview")
-st.sidebar.write(f"**Dataset:** {os.path.basename(latest_csv)}")
 st.sidebar.write(f"**Posts:** {len(df):,}")
-st.sidebar.write(f"**Subreddits:** {len(df['subreddit'].unique())}")
-st.sidebar.write(f"**Harvested:** {meta.get('date', datetime.now().strftime('%Y-%m-%d'))}")
+if "subreddit" in df.columns:
+    st.sidebar.write(f"**Subreddits:** {len(df['subreddit'].unique())}")
 
 # ============================================================
 # 🧠 Hybrid Emotion Engine (NRCLex + GoEmotions)
@@ -162,7 +168,6 @@ def analyze_emotion(text):
     if not text:
         return {k: 0 for k in ['joy','anger','fear','sadness','surprise']}
 
-    # NRCLex (lexical)
     nrc = NRCLex(text)
     lex_map = {'joy':'joy','positive':'joy','anger':'anger','disgust':'anger',
                'fear':'fear','sadness':'sadness','negative':'sadness','surprise':'surprise'}
@@ -170,7 +175,6 @@ def analyze_emotion(text):
     for e, val in nrc.raw_emotion_scores.items():
         if e in lex_map: base[lex_map[e]] += val
 
-    # GoEmotions (contextual)
     inputs = tokenizer(text, return_tensors="pt", truncation=True)
     with torch.no_grad():
         logits = model(**inputs).logits
@@ -211,6 +215,45 @@ chart = alt.Chart(emo_data).mark_arc(innerRadius=60).encode(
 )
 st.altair_chart(chart, use_container_width=True)
 st.dataframe(emo_data)
+
+# ============================================================
+# 🌈 Mood Delta Map — One File Ago Comparison
+# ============================================================
+
+st.markdown("### 🌈 Mood Delta Map – One File Ago Comparison")
+
+if prev_csv and os.path.exists(prev_csv):
+    try:
+        df_prev = pd.read_csv(prev_csv)
+
+        current_counts = df["subreddit"].value_counts(normalize=True) * 100
+        prev_counts = df_prev["subreddit"].value_counts(normalize=True) * 100
+
+        delta_df = pd.DataFrame({
+            "subreddit": sorted(set(current_counts.index) | set(prev_counts.index))
+        })
+        delta_df["latest"] = delta_df["subreddit"].map(current_counts).fillna(0)
+        delta_df["previous"] = delta_df["subreddit"].map(prev_counts).fillna(0)
+        delta_df["delta"] = delta_df["latest"] - delta_df["previous"]
+
+        chart = (
+            alt.Chart(delta_df)
+            .transform_fold(["previous", "latest"], as_=["Harvest", "Value"])
+            .mark_area(opacity=0.8)
+            .encode(
+                x=alt.X("Harvest:N", title="Harvest Comparison"),
+                y=alt.Y("Value:Q", title="Subreddit Representation (%)"),
+                color=alt.Color("subreddit:N", legend=alt.Legend(title="Subreddit")),
+                tooltip=["subreddit", "latest", "previous", "delta"]
+            )
+            .properties(title="🌈 Emotional Representation Shift", width=800, height=400)
+        )
+        st.altair_chart(chart, use_container_width=True)
+        st.dataframe(delta_df.sort_values("delta", ascending=False))
+    except Exception as e:
+        st.error(f"💥 Delta computation failed: {e}")
+else:
+    st.info("⏳ Waiting for multiple harvests to compute deltas.")
 
 # ============================================================
 # 📈 Trend Pulse
@@ -262,4 +305,4 @@ st.image(wordcloud.to_array(), use_container_width=True)
 
 # 📦 Footer
 st.markdown("---")
-st.caption("© 2025 MimicVerse | Built by Amlan Mishra 🧠 | Global Mood Engine v1.2.2 (Stable Hybrid Core)")
+st.caption("© 2025 MimicVerse | Built by Amlan Mishra 🧠 | Global Mood Engine v1.3 (Harvest Scroll Aware)")
