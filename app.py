@@ -1,11 +1,11 @@
 # ============================================================
-# 🌌 MimicVerse v1.3.1 — The Global Reddit Mood Dashboard (Delta Engine Stabilized)
+# 🌌 MimicVerse v1.3.2 — The Global Reddit Mood Dashboard (ChronoSync Core)
 # ============================================================
 
 import streamlit as st
 import pandas as pd
 import numpy as np
-import json, os, random, zipfile, requests
+import json, os, random, zipfile, requests, re
 import altair as alt
 from datetime import datetime
 from pathlib import Path
@@ -86,12 +86,12 @@ tokenizer, model = load_goemotions()
 # 🎛️ Page Config
 # ============================================================
 
-st.set_page_config(page_title="🌌 MimicVerse v1.3.1", page_icon="🧠", layout="wide")
-st.title("🌌 **MimicVerse v1.3.1 – The Global Reddit Mood Dashboard**")
+st.set_page_config(page_title="🌌 MimicVerse v1.3.2", page_icon="🧠", layout="wide")
+st.title("🌌 **MimicVerse v1.3.2 – The Global Reddit Mood Dashboard**")
 st.caption("AI that listens to humanity's collective chatter and translates it into emotion ⚡")
 
 # ============================================================
-# 🧾 Load Harvest Scroll
+# 🧾 Load Harvest Scroll + Detect Latest Files
 # ============================================================
 
 DATA_DIR = "data"
@@ -104,22 +104,40 @@ if not os.path.exists(scroll_path):
 scroll = pd.read_csv(scroll_path)
 scroll = scroll.sort_values(by="timestamp_utc", ascending=True).reset_index(drop=True)
 
-# 🧭 Sidebar Summary
-latest_entry = scroll.iloc[-1]
-latest_file = latest_entry["file_name"]
-latest_csv = os.path.join(DATA_DIR, latest_file)
+# 🧩 Use filename timestamps to identify correct latest/previous harvest
+def extract_timestamp(filename):
+    match = re.search(r"reddit_(\d{4}-\d{2}-\d{2})_(\d{4})\.csv", str(filename))
+    if match:
+        date_str, time_str = match.groups()
+        return datetime.strptime(f"{date_str} {time_str}", "%Y-%m-%d %H%M")
+    return datetime.min
 
-st.sidebar.header("📜 Harvest Scroll")
-st.sidebar.markdown(f"**Latest Harvest:** `{latest_file}`")
-st.sidebar.write(f"**Total Harvests Logged:** {len(scroll)}")
+csv_files = [f for f in os.listdir(DATA_DIR) if f.startswith("reddit_") and f.endswith(".csv")]
+csv_files = sorted(csv_files, key=extract_timestamp, reverse=True)
 
-if not os.path.exists(latest_csv):
-    st.error(f"Missing data file: {latest_csv}")
+if not csv_files:
+    st.error("⚠️ No reddit CSVs found in data/")
     st.stop()
 
+latest_file = csv_files[0]
+previous_file = csv_files[1] if len(csv_files) > 1 else None
+
+latest_csv = os.path.join(DATA_DIR, latest_file)
+prev_csv = os.path.join(DATA_DIR, previous_file) if previous_file else None
+
 df = pd.read_csv(latest_csv)
+
+# 🧭 Sidebar Summary
+st.sidebar.header("📜 Harvest Scroll")
+st.sidebar.markdown(f"**Latest Harvest:** `{latest_file}`")
+st.sidebar.write(f"**Total Harvests Logged:** {len(csv_files)}")
 st.sidebar.write(f"**Posts:** {len(df):,}")
 st.sidebar.write(f"**Subreddits:** {len(df['subreddit'].unique())}")
+
+if previous_file:
+    st.sidebar.info(f"📊 Comparing with previous harvest: `{previous_file}`")
+else:
+    st.sidebar.warning("⚙️ Waiting for at least two harvests to compute delta map.")
 
 # ============================================================
 # 🧠 Emotion Analyzer
@@ -136,9 +154,9 @@ def analyze_emotion(text):
     text = str(text).strip()
     if not text:
         return {k: 0 for k in ['joy','anger','fear','sadness','surprise']}
-
     nrc = NRCLex(text)
-    lex_map = {'joy':'joy','positive':'joy','anger':'anger','disgust':'anger','fear':'fear','sadness':'sadness','negative':'sadness','surprise':'surprise'}
+    lex_map = {'joy':'joy','positive':'joy','anger':'anger','disgust':'anger','fear':'fear',
+               'sadness':'sadness','negative':'sadness','surprise':'surprise'}
     base = {v:0 for v in ['joy','anger','fear','sadness','surprise']}
     for e, val in nrc.raw_emotion_scores.items():
         if e in lex_map: base[lex_map[e]] += val
@@ -182,38 +200,33 @@ st.dataframe(emo_data)
 # 🌈 Mood Delta Map
 # ============================================================
 
-if len(scroll) >= 2:
-    prev_file = scroll.iloc[-2]["file_name"]
-    prev_csv = os.path.join(DATA_DIR, prev_file)
-    if os.path.exists(prev_csv):
-        df_prev = pd.read_csv(prev_csv)
+if previous_file and os.path.exists(prev_csv):
+    df_prev = pd.read_csv(prev_csv)
 
-        def mood_snapshot(df):
-            emos = {k:0 for k in ['joy','anger','fear','sadness','surprise']}
-            for t in df["title"].fillna('').tolist()[:250]:
-                emo = analyze_emotion(t)
-                for k in emos: emos[k] += emo[k]
-            total = sum(emos.values()) or 1
-            return {k: emos[k]/total for k in emos}
+    def mood_snapshot(df):
+        emos = {k:0 for k in ['joy','anger','fear','sadness','surprise']}
+        for t in df["title"].fillna('').tolist()[:250]:
+            emo = analyze_emotion(t)
+            for k in emos: emos[k] += emo[k]
+        total = sum(emos.values()) or 1
+        return {k: emos[k]/total for k in emos}
 
-        m_latest = mood_snapshot(df)
-        m_prev = mood_snapshot(df_prev)
-        delta = {k: round(100*(m_latest[k]-m_prev[k]),2) for k in m_latest}
+    m_latest = mood_snapshot(df)
+    m_prev = mood_snapshot(df_prev)
+    delta = {k: round(100*(m_latest[k]-m_prev[k]),2) for k in m_latest}
 
-        st.markdown("### 🌈 Mood Delta Map (Latest vs Previous Harvest)")
-        delta_df = pd.DataFrame({"Emotion": delta.keys(), "Change (%)": delta.values()})
-        chart = alt.Chart(delta_df).mark_bar().encode(
-            x="Emotion",
-            y="Change (%)",
-            color=alt.condition(alt.datum["Change (%)"] > 0, alt.value("green"), alt.value("red")),
-            tooltip=["Emotion", "Change (%)"]
-        )
-        st.altair_chart(chart, use_container_width=True)
-        st.dataframe(delta_df)
-    else:
-        st.warning(f"Previous file missing: {prev_csv}")
+    st.markdown("### 🌈 Mood Delta Map (Latest vs Previous Harvest)")
+    delta_df = pd.DataFrame({"Emotion": delta.keys(), "Change (%)": delta.values()})
+    chart = alt.Chart(delta_df).mark_bar().encode(
+        x="Emotion",
+        y="Change (%)",
+        color=alt.condition(alt.datum["Change (%)"] > 0, alt.value("green"), alt.value("red")),
+        tooltip=["Emotion", "Change (%)"]
+    )
+    st.altair_chart(chart, use_container_width=True)
+    st.dataframe(delta_df)
 else:
-    st.info("Waiting for a second harvest to compute the delta map.")
+    st.info("Waiting for a previous harvest to compute the delta map.")
 
 # ============================================================
 # 📈 Trend Pulse / Word Cloud / Index
@@ -247,4 +260,4 @@ wc = WordCloud(width=1200, height=400, background_color="black", colormap="infer
 st.image(wc.to_array(), use_container_width=True)
 
 st.markdown("---")
-st.caption("© 2025 MimicVerse | Built by Amlan Mishra 🧠 | Global Mood Engine v1.3.1 (Delta Engine Stabilized)")
+st.caption("© 2025 MimicVerse | Built by Amlan Mishra 🧠 | Global Mood Engine v1.3.2 (ChronoSync Core)")
