@@ -1,73 +1,57 @@
-name: 🧾 Harvest Scroll Indexer
+name: 🧾 Harvest Logger (Smart Triggered Scroll)
 
 on:
-  workflow_dispatch:      # can be triggered manually or from other workflows
-  workflow_run:
-    workflows: ["🌙 MimicVerse Nightly Harvest"]
-    types: [completed]
+  workflow_dispatch:               # Manual run option
+  push:
+    paths:
+      - "data/reddit_*.csv"        # Trigger only when new harvest files appear
+    branches:
+      - main
 
 permissions:
   contents: write
 
 jobs:
-  update-log:
+  log_new_harvest:
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '📜 Logged new harvest')"  # prevents recursive triggers
 
     steps:
-      - name: Checkout repository
+      - name: 🧾 Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install pandas
-        run: pip install pandas
-
-      - name: Update Harvest Scroll Log
+      - name: 🔍 Detect new reddit CSVs
+        id: detect
         run: |
-          echo "📜 Updating HarvestScroll.csv ..."
-          python - <<'PYCODE'
-          import os, glob, pandas as pd, datetime
-          data_dir = "data"
-          os.makedirs(data_dir, exist_ok=True)
-          scroll_path = os.path.join(data_dir, "HarvestScroll.csv")
+          mkdir -p data
+          echo "🔎 Scanning data/ for reddit_*.csv..."
+          ls -lt data/reddit_*.csv | head -n 5 || echo "⚠️ No reddit_*.csv files found."
+          echo "latest_file=$(ls -t data/reddit_*.csv | head -1)" >> $GITHUB_OUTPUT
 
-          csv_files = sorted(glob.glob(f"{data_dir}/reddit_*.csv"))
-          if not csv_files:
-              print("⚠️ No harvest data found.")
-              raise SystemExit
+      - name: ✍️ Append new file to HarvestScroll.csv
+        run: |
+          mkdir -p data
+          FILE_NAME=$(basename "${{ steps.detect.outputs.latest_file }}")
+          TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M:%S')
+          POSTS=$(awk -F',' 'END{print NR-1}' "${{ steps.detect.outputs.latest_file }}")
+          SUBS=$(awk -F',' 'NR>1 {print $1}' "${{ steps.detect.outputs.latest_file }}" | sort | uniq | wc -l)
+          ENTRY=",$FILE_NAME,$TIMESTAMP,$POSTS,$SUBS,auto"
 
-          # get the newest file
-          latest_file = csv_files[-1]
-          file_stat = os.stat(latest_file)
-          ts = datetime.datetime.utcfromtimestamp(file_stat.st_mtime)
+          if [ ! -f data/HarvestScroll.csv ]; then
+            echo "seq_id,file_name,timestamp_utc,posts,subreddits,harvester_type" > data/HarvestScroll.csv
+            echo "1${ENTRY}" >> data/HarvestScroll.csv
+            echo "🆕 Created new HarvestScroll.csv"
+          else
+            LAST_SEQ=$(tail -n 1 data/HarvestScroll.csv | cut -d',' -f1)
+            NEXT_SEQ=$((LAST_SEQ + 1))
+            echo "${NEXT_SEQ}${ENTRY}" >> data/HarvestScroll.csv
+            echo "✅ Appended new entry to HarvestScroll.csv"
+          fi
 
-          # basic meta detection
-          df = pd.read_csv(latest_file)
-          posts = len(df)
-          subs = len(df["subreddit"].unique()) if "subreddit" in df.columns else 0
-
-          new_row = {
-              "seq_id": len(pd.read_csv(scroll_path)) + 1 if os.path.exists(scroll_path) else 1,
-              "file_name": os.path.basename(latest_file),
-              "timestamp_utc": ts.strftime("%Y-%m-%d %H:%M:%S"),
-              "posts": posts,
-              "subreddits": subs,
-              "harvester_type": "auto"
-          }
-
-          df_scroll = pd.read_csv(scroll_path) if os.path.exists(scroll_path) else pd.DataFrame()
-          df_scroll = pd.concat([df_scroll, pd.DataFrame([new_row])], ignore_index=True)
-          df_scroll.to_csv(scroll_path, index=False)
-          print(f"✅ HarvestScroll updated -> {scroll_path}")
-          PYCODE
-
-      - name: Commit and Push Scroll
+      - name: 🚀 Commit and push update
         run: |
           git config user.name "MimicVerse Bot"
           git config user.email "bot@users.noreply.github.com"
           git add data/HarvestScroll.csv
-          git commit -m "📜 Updated HarvestScroll log" || echo "✅ No changes to log"
+          git commit -m "📜 Logged new harvest in HarvestScroll.csv"
           git push
