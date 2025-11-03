@@ -1,5 +1,5 @@
 # ============================================================
-# 🌌 MimicVerse v1.3.2 — The Global Reddit Mood Dashboard (ChronoSync Core)
+# 🌌 MimicVerse v1.4.0 — The Global Reddit Mood Dashboard (Oracle Engine Awakens)
 # ============================================================
 
 import streamlit as st
@@ -62,7 +62,7 @@ from keybert import KeyBERT
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import NMF
 import markovify
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
 import torch
 import torch.nn.functional as F
 
@@ -83,11 +83,42 @@ def load_goemotions():
 tokenizer, model = load_goemotions()
 
 # ============================================================
+# 🔮 Oracle Engine — DistilGPT-2 Integration (Makarov Reborn)
+# ============================================================
+
+@st.cache_resource(show_spinner="🧠 Summoning Oracle Engine...")
+def summon_oracle():
+    try:
+        return pipeline("text-generation", model="distilgpt2")
+    except Exception as e:
+        st.warning(f"⚠️ Could not load DistilGPT-2 ({e}), fallback to Makarov.")
+        return None
+
+oracle_engine = summon_oracle()
+
+def makarov_oracle_quote(context="human emotion"):
+    """Generates a Reddit-style witty one-liner.
+       Uses DistilGPT-2 if available, else falls back to Markovify chaos."""
+    try:
+        if oracle_engine:
+            prompt = f"Write a short witty Reddit-style quote about {context}:"
+            result = oracle_engine(prompt, max_length=40, do_sample=True,
+                                   top_p=0.9, temperature=0.8)
+            return result[0]["generated_text"]
+        else:
+            joined = ". ".join(df["title"].dropna().tolist()[:400])
+            text_model = markovify.Text(joined)
+            quote = text_model.make_sentence()
+            return quote or "The world mumbles truths between memes and midnight scrolls."
+    except Exception:
+        return "Even silence has a punchline somewhere in the algorithm."
+
+# ============================================================
 # 🎛️ Page Config
 # ============================================================
 
-st.set_page_config(page_title="🌌 MimicVerse v1.3.2", page_icon="🧠", layout="wide")
-st.title("🌌 **MimicVerse v1.3.2 – The Global Reddit Mood Dashboard**")
+st.set_page_config(page_title="🌌 MimicVerse", page_icon="🧠", layout="wide")
+st.title("🌌 **MimicVerse – The Global Reddit Mood Dashboard**")
 st.caption("AI that listens to humanity's collective chatter and translates it into emotion ⚡")
 
 # ============================================================
@@ -104,7 +135,6 @@ if not os.path.exists(scroll_path):
 scroll = pd.read_csv(scroll_path)
 scroll = scroll.sort_values(by="timestamp_utc", ascending=True).reset_index(drop=True)
 
-# 🧩 Use filename timestamps to identify correct latest/previous harvest
 def extract_timestamp(filename):
     match = re.search(r"reddit_(\d{4}-\d{2}-\d{2})_(\d{4})\.csv", str(filename))
     if match:
@@ -121,13 +151,11 @@ if not csv_files:
 
 latest_file = csv_files[0]
 previous_file = csv_files[1] if len(csv_files) > 1 else None
-
 latest_csv = os.path.join(DATA_DIR, latest_file)
 prev_csv = os.path.join(DATA_DIR, previous_file) if previous_file else None
 
 df = pd.read_csv(latest_csv)
 
-# 🧭 Sidebar Summary
 st.sidebar.header("📜 Harvest Scroll")
 st.sidebar.markdown(f"**Latest Harvest:** `{latest_file}`")
 st.sidebar.write(f"**Total Harvests Logged:** {len(csv_files)}")
@@ -229,6 +257,15 @@ else:
     st.info("Waiting for a previous harvest to compute the delta map.")
 
 # ============================================================
+# 💬 Word on the Street — Oracle Mode
+# ============================================================
+
+st.markdown("### 💬 Word on the Street")
+dominant_emotion = max(emotions, key=emotions.get)
+quote = makarov_oracle_quote(dominant_emotion)
+st.info(f"🗣️ *“{quote.strip()}”*")
+
+# ============================================================
 # 📈 Trend Pulse / Word Cloud / Index
 # ============================================================
 
@@ -242,15 +279,6 @@ for text in random.sample(docs, min(75, len(docs))):
 freq = Counter(keywords)
 st.bar_chart(pd.DataFrame(freq.most_common(10), columns=["Keyword","Frequency"]).set_index("Keyword"))
 
-st.markdown("### 💬 Word on the Street")
-joined = ". ".join(df["title"].dropna().tolist()[:400])
-try:
-    text_model = markovify.Text(joined)
-    quote = text_model.make_sentence()
-    st.info(f"🗣️ *“{quote or 'The world mumbles truths between memes and midnight scrolls.'}”*")
-except:
-    st.info("🗣️ *Could not generate quote this time.*")
-
 st.markdown("### 🔥 Emotional Index by Subreddit")
 df["sentiment"] = df["title"].fillna('').apply(lambda x: TextBlob(x).sentiment.polarity)
 st.bar_chart(df.groupby("subreddit")["sentiment"].mean().sort_values(ascending=False).head(10))
@@ -259,5 +287,9 @@ st.markdown("### ☁️ Global Word Cloud")
 wc = WordCloud(width=1200, height=400, background_color="black", colormap="inferno").generate(" ".join(df["title"].astype(str)))
 st.image(wc.to_array(), use_container_width=True)
 
+# ============================================================
+# 📦 Footer
+# ============================================================
+
 st.markdown("---")
-st.caption("© 2025 MimicVerse | Built by Amlan Mishra 🧠 | Global Mood Engine v1.3.2 (ChronoSync Core)")
+st.caption("© 2025 MimicVerse | Built by [Amlan Mishra 🧠](https://www.reddit.com/u/ripped_geek/s/DCuDNlO8Lk) | Global Mood Engine v1.4.0 (Oracle Engine Awakens)")
