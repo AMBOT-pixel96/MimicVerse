@@ -1,5 +1,5 @@
 # ============================================================
-# 🌌 MimicVerse v1.4.0 — The Global Reddit Mood Dashboard (Oracle Engine Awakens)
+# 🌌 MimicVerse v1.4.1 — The Global Reddit Mood Dashboard (Oracle Engine Unleashed)
 # ============================================================
 
 import streamlit as st
@@ -67,7 +67,7 @@ import torch
 import torch.nn.functional as F
 
 # ============================================================
-# 🧠 Load Model
+# 🧠 Load GoEmotions Model
 # ============================================================
 
 @st.cache_resource
@@ -81,37 +81,6 @@ def load_goemotions():
     raise FileNotFoundError("GoEmotions model missing")
 
 tokenizer, model = load_goemotions()
-
-# ============================================================
-# 🔮 Oracle Engine — DistilGPT-2 Integration (Makarov Reborn)
-# ============================================================
-
-@st.cache_resource(show_spinner="🧠 Summoning Oracle Engine...")
-def summon_oracle():
-    try:
-        return pipeline("text-generation", model="distilgpt2")
-    except Exception as e:
-        st.warning(f"⚠️ Could not load DistilGPT-2 ({e}), fallback to Makarov.")
-        return None
-
-oracle_engine = summon_oracle()
-
-def makarov_oracle_quote(context="human emotion"):
-    """Generates a Reddit-style witty one-liner.
-       Uses DistilGPT-2 if available, else falls back to Markovify chaos."""
-    try:
-        if oracle_engine:
-            prompt = f"Write a short witty Reddit-style quote about {context}:"
-            result = oracle_engine(prompt, max_length=40, do_sample=True,
-                                   top_p=0.9, temperature=0.8)
-            return result[0]["generated_text"]
-        else:
-            joined = ". ".join(df["title"].dropna().tolist()[:400])
-            text_model = markovify.Text(joined)
-            quote = text_model.make_sentence()
-            return quote or "The world mumbles truths between memes and midnight scrolls."
-    except Exception:
-        return "Even silence has a punchline somewhere in the algorithm."
 
 # ============================================================
 # 🎛️ Page Config
@@ -166,6 +135,83 @@ if previous_file:
     st.sidebar.info(f"📊 Comparing with previous harvest: `{previous_file}`")
 else:
     st.sidebar.warning("⚙️ Waiting for at least two harvests to compute delta map.")
+
+# ============================================================
+# 💬 Oracle’s Whisper — Makarov v2.0 (Cynical Prophet Edition)
+# ============================================================
+
+st.markdown("### 💬 Black Mirror Whisper Echoes :")
+
+tone = st.radio(
+    "🎭 Choose Oracle Tone:",
+    ["Sarcastic", "Apocalyptic", "Cryptic"],
+    horizontal=True
+)
+
+def filter_context(texts):
+    cleaned = []
+    for t in texts:
+        t = str(t).strip()
+        if len(t.split()) < 3:
+            continue
+        if any(x in t.lower() for x in ["http", "www", "imgur", "reddit.com", "vote"]):
+            continue
+        cleaned.append(t)
+    return cleaned
+
+titles = filter_context(df["title"].dropna().tolist())
+comments = filter_context(df["comments"].dropna().tolist()) if "comments" in df.columns else []
+
+corpus = titles + comments
+random.shuffle(corpus)
+
+sample_size = max(150, min(800, len(corpus) // 8))
+sample_posts = random.sample(corpus, min(sample_size, len(corpus)))
+context_snippet = " | ".join(sample_posts[:80])[:3000]
+
+prompts = {
+    "Sarcastic": (
+        "Summarize today's internet mood sarcastically — a jaded Redditor "
+        "who’s seen too much. One poetic sentence only. Context:"
+    ),
+    "Apocalyptic": (
+        "Describe the emotional collapse of humanity in a single haunting line. "
+        "Be dark, prophetic, poetic. Context:"
+    ),
+    "Cryptic": (
+        "Whisper a surreal prophecy about human emotion today. "
+        "Keep it mysterious, concise, one-liner. Context:"
+    ),
+}
+
+prompt_seed = f"{prompts[tone]} {context_snippet}"
+
+# ⚡ Cached model loading for performance
+@st.cache_resource(show_spinner="🔮 Summoning the Oracle (DistilGPT-2)...")
+def summon_oracle():
+    from transformers import pipeline
+    return pipeline("text-generation", model="distilgpt2")
+
+try:
+    oracle = summon_oracle()
+    chaos = oracle(
+        prompt_seed,
+        max_length=60,
+        num_return_sequences=1,
+        do_sample=True,
+        top_k=70,
+        top_p=0.92,
+        temperature=0.95
+    )[0]['generated_text']
+
+    chaos = chaos.replace(prompt_seed, "").strip()
+    chaos = re.sub(r"\s+", " ", chaos)
+    chaos = re.sub(r"(\\n|\\r|\\t)+", " ", chaos)
+    chaos = chaos.split(".")[0].strip() + "."
+    st.info(f"🗣️ *“{chaos}”*")
+
+except Exception as e:
+    st.warning(f"⚠️ Oracle is silent: {e}")
 
 # ============================================================
 # 🧠 Emotion Analyzer
@@ -257,15 +303,6 @@ else:
     st.info("Waiting for a previous harvest to compute the delta map.")
 
 # ============================================================
-# 💬 Word on the Street — Oracle Mode
-# ============================================================
-
-st.markdown("### 💬 Word on the Street")
-dominant_emotion = max(emotions, key=emotions.get)
-quote = makarov_oracle_quote(dominant_emotion)
-st.info(f"🗣️ *“{quote.strip()}”*")
-
-# ============================================================
 # 📈 Trend Pulse / Word Cloud / Index
 # ============================================================
 
@@ -292,4 +329,4 @@ st.image(wc.to_array(), use_container_width=True)
 # ============================================================
 
 st.markdown("---")
-st.caption("© 2025 MimicVerse | Built by [Amlan Mishra 🧠](https://www.reddit.com/u/ripped_geek/s/DCuDNlO8Lk) | Global Mood Engine v1.4.0 (Oracle Engine Awakens)")
+st.caption("© 2025 MimicVerse | Built by [Amlan Mishra 🧠](https://www.reddit.com/u/ripped_geek/s/DCuDNlO8Lk) | Global Mood Engine v1.4.1 (Oracle Engine Unleashed)")
