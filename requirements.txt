@@ -33,3 +33,9 @@ torch
 
 # Optional Enhancements / Stability
 pyarrow
+
+# Oracle Engine (DistilGPT-2)
+huggingface-hub
+tokenizers
+safetensors
+accelerate
