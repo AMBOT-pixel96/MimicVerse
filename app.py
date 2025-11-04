@@ -137,57 +137,46 @@ else:
     st.sidebar.warning("⚙️ Waiting for at least two harvests to compute delta map.")
 
 # ============================================================
-# 💬 Oracle’s Whisper — Makarov v2.0 (Cynical Prophet Edition)
+# 💬 Word on the Street — Oracle Engine v3 (Doomsday Prophet Mode)
 # ============================================================
 
-st.markdown("### 💬 Black Mirror Whisper Echoes :")
-
-tone = st.radio(
-    "🎭 Choose Oracle Tone:",
-    ["Sarcastic", "Apocalyptic", "Cryptic"],
-    horizontal=True
-)
+st.markdown("### 💬 Word on the Street")
 
 def filter_context(texts):
     cleaned = []
     for t in texts:
         t = str(t).strip()
-        if len(t.split()) < 3:
+        if len(t.split()) < 4:
             continue
-        if any(x in t.lower() for x in ["http", "www", "imgur", "reddit.com", "vote"]):
+        if any(x in t.lower() for x in ["http", "www", "imgur", "reddit.com", "vote", "r/"]):
             continue
         cleaned.append(t)
     return cleaned
 
 titles = filter_context(df["title"].dropna().tolist())
 comments = filter_context(df["comments"].dropna().tolist()) if "comments" in df.columns else []
-
 corpus = titles + comments
 random.shuffle(corpus)
 
-sample_size = max(150, min(800, len(corpus) // 8))
+# adaptive sample for diversity
+sample_size = max(200, min(1000, len(corpus) // 6))
 sample_posts = random.sample(corpus, min(sample_size, len(corpus)))
-context_snippet = " | ".join(sample_posts[:80])[:3000]
 
-prompts = {
-    "Sarcastic": (
-        "Summarize today's internet mood sarcastically — a jaded Redditor "
-        "who’s seen too much. One poetic sentence only. Context:"
-    ),
-    "Apocalyptic": (
-        "Describe the emotional collapse of humanity in a single haunting line. "
-        "Be dark, prophetic, poetic. Context:"
-    ),
-    "Cryptic": (
-        "Whisper a surreal prophecy about human emotion today. "
-        "Keep it mysterious, concise, one-liner. Context:"
-    ),
-}
+# preprocess & theme extraction
+cleaned = [re.sub(r"http\S+|www\S+|[^a-zA-Z\s]", " ", t).strip() for t in sample_posts]
+from sklearn.feature_extraction.text import CountVectorizer
+vectorizer = CountVectorizer(stop_words="english", max_features=40)
+X = vectorizer.fit_transform(cleaned)
+themes = ", ".join(random.sample(vectorizer.get_feature_names_out().tolist(), min(10, len(vectorizer.get_feature_names_out()))))
 
-prompt_seed = f"{prompts[tone]} {context_snippet}"
+# unified tone — sarcastic + apocalyptic
+prompt_seed = (
+    f"Summarize humanity's collective emotion today as if written by a cynical prophet on Reddit. "
+    f"Mix sarcasm and apocalypse. Make it one poetic line, darkly funny, referencing themes like {themes}. "
+    f"No hashtags, no lists, just raw digital truth:"
+)
 
-# ⚡ Cached model loading for performance
-@st.cache_resource(show_spinner="🔮 Summoning the Oracle (DistilGPT-2)...")
+@st.cache_resource(show_spinner="🧠 Awakening the Prophet (DistilGPT-2)...")
 def summon_oracle():
     from transformers import pipeline
     return pipeline("text-generation", model="distilgpt2")
@@ -196,13 +185,13 @@ try:
     oracle = summon_oracle()
     chaos = oracle(
         prompt_seed,
-        max_length=60,
+        max_length=45,
         num_return_sequences=1,
         do_sample=True,
-        top_k=70,
+        top_k=60,
         top_p=0.92,
-        temperature=0.95
-    )[0]['generated_text']
+        temperature=0.93
+    )[0]["generated_text"]
 
     chaos = chaos.replace(prompt_seed, "").strip()
     chaos = re.sub(r"\s+", " ", chaos)
@@ -211,7 +200,7 @@ try:
     st.info(f"🗣️ *“{chaos}”*")
 
 except Exception as e:
-    st.warning(f"⚠️ Oracle is silent: {e}")
+    st.warning(f"⚠️ Oracle has entered radio silence: {e}")
 
 # ============================================================
 # 🧠 Emotion Analyzer
