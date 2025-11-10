@@ -1,5 +1,0 @@
-seq_id,file_name,timestamp_utc,posts,subreddits,harvester_type,size_bytes
-1,reddit_2025-11-01.csv,2025-11-02 05:34:35,533,,auto,86838
-2,reddit_2025-11-01_1531.csv,2025-11-02 05:34:35,554,,auto,84270
-3,reddit_2025-11-01_1614.csv,2025-11-02 05:34:35,43566,,auto,6834019
-4,reddit_2025-11-02_0158.csv,2025-11-02 05:34:35,43660,,auto,6853109
