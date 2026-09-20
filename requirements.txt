@@ -1,41 +1,15 @@
-# Core Infrastructure
 streamlit
 pandas
 numpy
-scikit-learn
 altair
-
-# Data Harvesting & Processing
 praw
 textblob
-markovify
-wordcloud
-matplotlib
-
-# NLTK data fix
-nltk
-
-# Pre-bundle punkt for Streamlit Cloud
-# nltk-data
-
-# Sentiment & Emotion Engines
-text2emotion
 nrclex
 emoji==1.6.3
+nltk
 
-# Keyword & Semantic Intelligence
-keybert
-spacy
-bertopic
-sentence-transformers
-transformers
-torch
-
-# Optional Enhancements / Stability
-pyarrow
-
-# Oracle Engine (DistilGPT-2)
-huggingface-hub
-tokenizers
-safetensors
-accelerate
+# Optional transformer path (off by default in Actions)
+# transformers
+# torch
+# accelerate
+# safetensors
