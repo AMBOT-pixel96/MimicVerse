@@ -1,321 +1,169 @@
-# ============================================================
-# 🌌 MimicVerse v1.4.1 — The Global Reddit Mood Dashboard (Oracle Engine Unleashed)
-# ============================================================
+# MimicVerse v1.5 — dashboard over precomputed snapshots.
+# No live 250-pass transformer loop. If there is no snapshot yet,
+# fall back to the latest slim reddit_*.csv and score lexicon-only.
 
-import streamlit as st
-import pandas as pd
-import numpy as np
-import json, os, random, zipfile, requests, re
-import altair as alt
-from datetime import datetime
+from __future__ import annotations
+
+import json
 from pathlib import Path
-from collections import Counter
 
-# ============================================================
-# ☁️ Model Setup
-# ============================================================
+import altair as alt
+import pandas as pd
+import streamlit as st
 
-MODEL_ZIP_URL = "https://github.com/AMBOT-pixel96/MimicVerse/releases/download/v1.2-model/goemotions_model.zip"
-MODEL_DIR = Path("models/goemotions_model")
-MODEL_ZIP_PATH = Path("models/goemotions_model.zip")
-MODEL_DIR.parent.mkdir(parents=True, exist_ok=True)
+from mimicverse.score import PRIMARY, prophet_line, score_records, top_themes, aggregate
 
-@st.cache_resource(show_spinner="📦 Preparing GoEmotions model...")
-def prepare_goemotions_model():
-    if MODEL_DIR.exists() and any(MODEL_DIR.iterdir()):
-        return str(MODEL_DIR)
-    with requests.get(MODEL_ZIP_URL, stream=True) as r:
-        r.raise_for_status()
-        with open(MODEL_ZIP_PATH, "wb") as f:
-            for chunk in r.iter_content(chunk_size=32768):
-                f.write(chunk)
-    with zipfile.ZipFile(MODEL_ZIP_PATH, 'r') as zip_ref:
-        zip_ref.extractall(MODEL_DIR)
-    os.remove(MODEL_ZIP_PATH)
-    return str(MODEL_DIR)
+DATA = Path("data")
+LATEST = DATA / "latest_snapshot.json"
+SNAP_DIR = DATA / "snapshots"
+TIMESERIES = DATA / "mood_timeseries.csv"
 
-prepare_goemotions_model()
-
-# ============================================================
-# 🧠 NLTK + TextBlob
-# ============================================================
-
-import nltk
-from textblob import download_corpora
-NLTK_DIR = os.path.join(os.path.expanduser("~"), "nltk_data")
-os.makedirs(NLTK_DIR, exist_ok=True)
-nltk.data.path.append(NLTK_DIR)
-for pkg in ["punkt", "wordnet", "omw-1.4"]:
-    try: nltk.data.find(f"tokenizers/{pkg}")
-    except LookupError: nltk.download(pkg, download_dir=NLTK_DIR)
-try: download_corpora.download_all()
-except: pass
-
-# ============================================================
-# ⚙️ Imports
-# ============================================================
-
-from textblob import TextBlob
-from nrclex import NRCLex
-from wordcloud import WordCloud
-from keybert import KeyBERT
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.decomposition import NMF
-import markovify
-from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
-import torch
-import torch.nn.functional as F
-
-# ============================================================
-# 🧠 Load GoEmotions Model
-# ============================================================
-
-@st.cache_resource
-def load_goemotions():
-    base_dir = Path("models/goemotions_model")
-    for folder in [base_dir] + [f for f in base_dir.iterdir() if f.is_dir()]:
-        if (folder / "config.json").exists():
-            tokenizer = AutoTokenizer.from_pretrained(str(folder), local_files_only=True)
-            model = AutoModelForSequenceClassification.from_pretrained(str(folder), local_files_only=True)
-            return tokenizer, model
-    raise FileNotFoundError("GoEmotions model missing")
-
-tokenizer, model = load_goemotions()
-
-# ============================================================
-# 🎛️ Page Config
-# ============================================================
-
-st.set_page_config(page_title="🌌 MimicVerse", page_icon="🧠", layout="wide")
-st.title("🌌 **MimicVerse – The Global Reddit Mood Dashboard**")
-st.caption("AI that listens to humanity's collective chatter and translates it into emotion ⚡")
-
-# ============================================================
-# 🧾 Load Harvest Scroll + Detect Latest Files
-# ============================================================
-
-DATA_DIR = "data"
-scroll_path = os.path.join(DATA_DIR, "HarvestScroll.csv")
-
-if not os.path.exists(scroll_path):
-    st.error("⚠️ No Harvest Scroll found. Run the harvester first.")
-    st.stop()
-
-scroll = pd.read_csv(scroll_path)
-scroll = scroll.sort_values(by="timestamp_utc", ascending=True).reset_index(drop=True)
-
-def extract_timestamp(filename):
-    match = re.search(r"reddit_(\d{4}-\d{2}-\d{2})_(\d{4})\.csv", str(filename))
-    if match:
-        date_str, time_str = match.groups()
-        return datetime.strptime(f"{date_str} {time_str}", "%Y-%m-%d %H%M")
-    return datetime.min
-
-csv_files = [f for f in os.listdir(DATA_DIR) if f.startswith("reddit_") and f.endswith(".csv")]
-csv_files = sorted(csv_files, key=extract_timestamp, reverse=True)
-
-if not csv_files:
-    st.error("⚠️ No reddit CSVs found in data/")
-    st.stop()
-
-latest_file = csv_files[0]
-previous_file = csv_files[1] if len(csv_files) > 1 else None
-latest_csv = os.path.join(DATA_DIR, latest_file)
-prev_csv = os.path.join(DATA_DIR, previous_file) if previous_file else None
-
-df = pd.read_csv(latest_csv)
-
-st.sidebar.header("📜 Harvest Scroll")
-st.sidebar.markdown(f"**Latest Harvest:** `{latest_file}`")
-st.sidebar.write(f"**Total Harvests Logged:** {len(csv_files)}")
-st.sidebar.write(f"**Posts:** {len(df):,}")
-st.sidebar.write(f"**Subreddits:** {len(df['subreddit'].unique())}")
-
-if previous_file:
-    st.sidebar.info(f"📊 Comparing with previous harvest: `{previous_file}`")
-else:
-    st.sidebar.warning("⚙️ Waiting for at least two harvests to compute delta map.")
-
-# ============================================================
-# 💬 Word on the Street — Oracle Engine v3 (Doomsday Prophet Mode)
-# ============================================================
-
-st.markdown("### 💬 Word on the Street")
-
-def filter_context(texts):
-    cleaned = []
-    for t in texts:
-        t = str(t).strip()
-        if len(t.split()) < 4:
-            continue
-        if any(x in t.lower() for x in ["http", "www", "imgur", "reddit.com", "vote", "r/"]):
-            continue
-        cleaned.append(t)
-    return cleaned
-
-titles = filter_context(df["title"].dropna().tolist())
-comments = filter_context(df["comments"].dropna().tolist()) if "comments" in df.columns else []
-corpus = titles + comments
-random.shuffle(corpus)
-
-# adaptive sample for diversity
-sample_size = max(200, min(1000, len(corpus) // 6))
-sample_posts = random.sample(corpus, min(sample_size, len(corpus)))
-
-# preprocess & theme extraction
-cleaned = [re.sub(r"http\S+|www\S+|[^a-zA-Z\s]", " ", t).strip() for t in sample_posts]
-from sklearn.feature_extraction.text import CountVectorizer
-vectorizer = CountVectorizer(stop_words="english", max_features=40)
-X = vectorizer.fit_transform(cleaned)
-themes = ", ".join(random.sample(vectorizer.get_feature_names_out().tolist(), min(10, len(vectorizer.get_feature_names_out()))))
-
-# unified tone — sarcastic + apocalyptic
-prompt_seed = (
-    f"Summarize humanity's collective emotion today as if written by a cynical prophet on Reddit. "
-    f"Mix sarcasm and apocalypse. Make it one poetic line, darkly funny, referencing themes like {themes}. "
-    f"No hashtags, no lists, just raw digital truth:"
+st.set_page_config(page_title="MimicVerse", page_icon="🌍", layout="wide")
+st.title("🌍 MimicVerse — world-panel mood")
+st.caption(
+    "Stratified Reddit panel scored at harvest time. "
+    "This is **not** planetary ground truth — it is the street as Reddit ranks it."
 )
 
-@st.cache_resource(show_spinner="🧠 Awakening the Prophet (DistilGPT-2)...")
-def summon_oracle():
-    from transformers import pipeline
-    return pipeline("text-generation", model="distilgpt2")
 
-try:
-    oracle = summon_oracle()
-    chaos = oracle(
-        prompt_seed,
-        max_length=45,
-        num_return_sequences=1,
-        do_sample=True,
-        top_k=60,
-        top_p=0.92,
-        temperature=0.93
-    )[0]["generated_text"]
+def load_snapshot() -> dict | None:
+    if LATEST.exists():
+        return json.loads(LATEST.read_text(encoding="utf-8"))
+    files = sorted(SNAP_DIR.glob("snapshot_*.json")) if SNAP_DIR.exists() else []
+    if files:
+        return json.loads(files[-1].read_text(encoding="utf-8"))
+    return None
 
-    chaos = chaos.replace(prompt_seed, "").strip()
-    chaos = re.sub(r"\s+", " ", chaos)
-    chaos = re.sub(r"(\\n|\\r|\\t)+", " ", chaos)
-    chaos = chaos.split(".")[0].strip() + "."
-    st.info(f"🗣️ *“{chaos}”*")
 
-except Exception as e:
-    st.warning(f"⚠️ Oracle has entered radio silence: {e}")
-
-# ============================================================
-# 🧠 Emotion Analyzer
-# ============================================================
-
-go_labels = [
-    'admiration','amusement','anger','annoyance','approval','caring','confusion',
-    'curiosity','desire','disappointment','disapproval','disgust','embarrassment',
-    'excitement','fear','gratitude','grief','joy','love','nervousness','optimism',
-    'pride','realization','relief','remorse','sadness','surprise','neutral'
-]
-
-def analyze_emotion(text):
-    text = str(text).strip()
-    if not text:
-        return {k: 0 for k in ['joy','anger','fear','sadness','surprise']}
-    nrc = NRCLex(text)
-    lex_map = {'joy':'joy','positive':'joy','anger':'anger','disgust':'anger','fear':'fear',
-               'sadness':'sadness','negative':'sadness','surprise':'surprise'}
-    base = {v:0 for v in ['joy','anger','fear','sadness','surprise']}
-    for e, val in nrc.raw_emotion_scores.items():
-        if e in lex_map: base[lex_map[e]] += val
-
-    inputs = tokenizer(text, return_tensors="pt", truncation=True)
-    with torch.no_grad():
-        logits = model(**inputs).logits
-        probs = F.softmax(logits, dim=1).cpu().numpy()[0]
-    ge_dict = {go_labels[i]: float(probs[i]) for i in range(len(go_labels))}
-    collapse_map = {
-        'joy': ['joy','amusement','excitement','optimism','love','relief','gratitude','pride'],
-        'anger': ['anger','annoyance','disapproval','disgust'],
-        'fear': ['fear','nervousness'],
-        'sadness': ['sadness','grief','remorse','disappointment'],
-        'surprise': ['surprise','realization','curiosity']
+def fallback_from_csv() -> dict | None:
+    csvs = sorted(DATA.glob("reddit_*.csv"))
+    if not csvs:
+        return None
+    df = pd.read_csv(csvs[-1])
+    if "title" not in df.columns:
+        return None
+    records = df.to_dict(orient="records")
+    # lexicon only — dashboard must stay cheap
+    scored = score_records(records[:400], use_transformer=False)
+    overall = aggregate(scored)["all"]
+    by_region = aggregate(scored, key="region") if "region" in df.columns else {}
+    themes = top_themes([r.get("title") or "" for r in scored])
+    return {
+        "timestamp_utc": csvs[-1].stem,
+        "n_posts": len(scored),
+        "n_subreddits": df["subreddit"].nunique() if "subreddit" in df.columns else None,
+        "n_regions": len(by_region),
+        "score_source": "nrclex-fallback",
+        "methodology": {"claim": "Fallback score over latest CSV. Run v1.5 harvester for real snapshots."},
+        "overall": overall,
+        "by_region": by_region,
+        "by_subreddit_top": {},
+        "themes": [{"term": t, "n": n} for t, n in themes],
+        "street_line": prophet_line(overall, themes, by_region),
+        "file_stem": csvs[-1].stem,
     }
-    ge_reduced = {k: sum(ge_dict.get(e,0) for e in v) for k,v in collapse_map.items()}
-    return {k: 0.3 * base[k] + 0.7 * ge_reduced.get(k,0) for k in base}
 
-# ============================================================
-# 🌍 Mood Mix
-# ============================================================
 
-st.markdown("### 🧭 Mood Mix of the World 🌍")
-emotions = {k: 0 for k in ['joy','anger','fear','sadness','surprise']}
-texts = df["title"].fillna('').tolist()[:250]
-progress = st.progress(0)
-for i, t in enumerate(texts):
-    emo = analyze_emotion(t)
-    for k in emotions: emotions[k] += emo[k]
-    progress.progress((i + 1) / len(texts))
-progress.empty()
+snap = load_snapshot() or fallback_from_csv()
+if not snap:
+    st.error("No snapshot and no reddit_*.csv in data/. Run `python mimicverse_harvest.py`.")
+    st.stop()
 
-total = sum(emotions.values()) or 1
-emo_data = pd.DataFrame({"Emotion": emotions.keys(), "Value": [round(100*v/total,2) for v in emotions.values()]})
-chart = alt.Chart(emo_data).mark_arc(innerRadius=60).encode(theta="Value", color="Emotion", tooltip=["Emotion","Value"])
+mood = snap.get("overall", {}).get("mood") or {k: 0 for k in PRIMARY}
+
+left, mid, right = st.columns(3)
+left.metric("Posts scored", snap.get("n_posts", "—"))
+mid.metric("Subs / regions", f"{snap.get('n_subreddits', '—')} / {snap.get('n_regions', '—')}")
+right.metric("Dominant", snap.get("overall", {}).get("dominant", "—"))
+
+st.info(f"🗣️ {snap.get('street_line', '')}")
+st.caption(
+    f"Harvest `{snap.get('timestamp_utc', '')}` · source `{snap.get('score_source', '')}` · v{snap.get('version', '?')}"
+)
+
+st.markdown("### Mood mix")
+emo_df = pd.DataFrame(
+    {"Emotion": list(mood.keys()), "Share": [round(100 * float(v), 2) for v in mood.values()]}
+)
+chart = (
+    alt.Chart(emo_df)
+    .mark_arc(innerRadius=70)
+    .encode(theta="Share", color="Emotion", tooltip=["Emotion", "Share"])
+)
 st.altair_chart(chart, use_container_width=True)
-st.dataframe(emo_data)
 
-# ============================================================
-# 🌈 Mood Delta Map
-# ============================================================
+c1, c2 = st.columns(2)
+with c1:
+    st.markdown("### By region")
+    regional = snap.get("by_region") or {}
+    if regional:
+        rows = []
+        for region, payload in regional.items():
+            rec = {"region": region, "n": payload.get("n", 0), "polarity": payload.get("polarity", 0)}
+            rec.update({k: payload.get("mood", {}).get(k, 0) for k in PRIMARY})
+            rows.append(rec)
+        rdf = pd.DataFrame(rows).sort_values("n", ascending=False)
+        st.dataframe(rdf, use_container_width=True, hide_index=True)
+        long = rdf.melt(id_vars=["region"], value_vars=list(PRIMARY), var_name="emotion", value_name="share")
+        st.altair_chart(
+            alt.Chart(long)
+            .mark_bar()
+            .encode(x="region:N", y="share:Q", color="emotion:N", tooltip=["region", "emotion", "share"])
+            .properties(height=280),
+            use_container_width=True,
+        )
+    else:
+        st.write("No regional split in this snapshot (old harvest format).")
 
-if previous_file and os.path.exists(prev_csv):
-    df_prev = pd.read_csv(prev_csv)
+with c2:
+    st.markdown("### Themes")
+    themes = snap.get("themes") or []
+    if themes:
+        tdf = pd.DataFrame(themes).rename(columns={"term": "theme", "n": "count"})
+        st.bar_chart(tdf.set_index("theme"))
+    else:
+        st.write("No themes extracted.")
 
-    def mood_snapshot(df):
-        emos = {k:0 for k in ['joy','anger','fear','sadness','surprise']}
-        for t in df["title"].fillna('').tolist()[:250]:
-            emo = analyze_emotion(t)
-            for k in emos: emos[k] += emo[k]
-        total = sum(emos.values()) or 1
-        return {k: emos[k]/total for k in emos}
-
-    m_latest = mood_snapshot(df)
-    m_prev = mood_snapshot(df_prev)
-    delta = {k: round(100*(m_latest[k]-m_prev[k]),2) for k in m_latest}
-
-    st.markdown("### 🌈 Mood Delta Map (Latest vs Previous Harvest)")
-    delta_df = pd.DataFrame({"Emotion": delta.keys(), "Change (%)": delta.values()})
-    chart = alt.Chart(delta_df).mark_bar().encode(
-        x="Emotion",
-        y="Change (%)",
-        color=alt.condition(alt.datum["Change (%)"] > 0, alt.value("green"), alt.value("red")),
-        tooltip=["Emotion", "Change (%)"]
-    )
-    st.altair_chart(chart, use_container_width=True)
-    st.dataframe(delta_df)
+st.markdown("### Timeseries")
+if TIMESERIES.exists():
+    ts = pd.read_csv(TIMESERIES)
+    if "timestamp_utc" in ts.columns:
+        keep = [c for c in ["timestamp_utc", *PRIMARY, "polarity"] if c in ts.columns]
+        plot = ts[keep].copy()
+        plot["timestamp_utc"] = pd.to_datetime(plot["timestamp_utc"], errors="coerce")
+        long = plot.melt(id_vars=["timestamp_utc"], var_name="series", value_name="value")
+        st.altair_chart(
+            alt.Chart(long)
+            .mark_line(point=True)
+            .encode(x="timestamp_utc:T", y="value:Q", color="series:N", tooltip=["timestamp_utc", "series", "value"])
+            .properties(height=280),
+            use_container_width=True,
+        )
+        if len(ts) >= 2 and all(e in ts.columns for e in PRIMARY):
+            delta = {e: round(100 * (float(ts.iloc[-1][e]) - float(ts.iloc[-2][e])), 2) for e in PRIMARY}
+            st.markdown("#### Delta vs previous harvest")
+            ddf = pd.DataFrame({"Emotion": list(delta), "Change (pp)": list(delta.values())})
+            st.altair_chart(
+                alt.Chart(ddf)
+                .mark_bar()
+                .encode(
+                    x="Emotion",
+                    y="Change (pp)",
+                    color=alt.condition(alt.datum["Change (pp)"] > 0, alt.value("#2ca02c"), alt.value("#d62728")),
+                    tooltip=["Emotion", "Change (pp)"],
+                ),
+                use_container_width=True,
+            )
 else:
-    st.info("Waiting for a previous harvest to compute the delta map.")
+    st.write("Timeseries appears after the first v1.5 harvest.")
 
-# ============================================================
-# 📈 Trend Pulse / Word Cloud / Index
-# ============================================================
+with st.expander("Methodology — read this before quoting the dashboard"):
+    meth = snap.get("methodology") or {}
+    st.write(meth.get("claim", ""))
+    for key in ("panel", "unit", "emotions"):
+        if key in meth:
+            st.write(f"**{key}:** {meth[key]}")
+    for line in meth.get("limitations", []):
+        st.write(f"- {line}")
 
-st.markdown("### 📈 Trend Pulse")
-kw_model = KeyBERT(model='all-MiniLM-L6-v2')
-docs = df["title"].dropna().tolist()
-keywords = []
-for text in random.sample(docs, min(75, len(docs))):
-    try: keywords.extend([k[0] for k in kw_model.extract_keywords(text, top_n=3)])
-    except: pass
-freq = Counter(keywords)
-st.bar_chart(pd.DataFrame(freq.most_common(10), columns=["Keyword","Frequency"]).set_index("Keyword"))
-
-st.markdown("### 🔥 Emotional Index by Subreddit")
-df["sentiment"] = df["title"].fillna('').apply(lambda x: TextBlob(x).sentiment.polarity)
-st.bar_chart(df.groupby("subreddit")["sentiment"].mean().sort_values(ascending=False).head(10))
-
-st.markdown("### ☁️ Global Word Cloud")
-wc = WordCloud(width=1200, height=400, background_color="black", colormap="inferno").generate(" ".join(df["title"].astype(str)))
-st.image(wc.to_array(), use_container_width=True)
-
-# ============================================================
-# 📦 Footer
-# ============================================================
-
-st.markdown("---")
-st.caption("© 2025 MimicVerse | Built by [Amlan Mishra 🧠](https://www.reddit.com/u/ripped_geek/s/DCuDNlO8Lk) | Global Mood Engine v1.4.1 (Oracle Engine Unleashed)")
+st.caption("MimicVerse v1.5 · built for Amlan · harvest scores the world, the app only reads.")
