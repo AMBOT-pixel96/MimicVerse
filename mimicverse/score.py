@@ -1,8 +1,7 @@
 """Harvest-time emotion scoring.
 
-Default path is lexicon-only (NRCLex + TextBlob) so GitHub Actions
-and Streamlit Cloud stay alive. Optional GoEmotions batch path uses
-sigmoid multi-label, not softmax-as-if-single-class.
+Built-in street lexicon first so GitHub Actions cannot zero-out the donut.
+NRCLex is optional extra. GoEmotions batch path is optional.
 """
 
 from __future__ import annotations
@@ -46,6 +45,44 @@ GO_LABELS = [
 _URL_RE = re.compile(r"https?://\S+|www\.\S+|reddit\.com/\S+", re.I)
 _NON_LETTERS = re.compile(r"[^a-zA-Z\s']")
 
+LEXICON = {
+    "joy": {
+        "win", "wins", "won", "victory", "celebrate", "celebrates", "happy",
+        "joy", "love", "loved", "amazing", "great", "good", "hope", "hopeful",
+        "peace", "peacefully", "recover", "recovered", "relief", "proud",
+        "success", "successful", "breakthrough", "record", "champion",
+        "beautiful", "congrats", "congratulations", "smile", "fun", "funny",
+    },
+    "anger": {
+        "anger", "angry", "rage", "furious", "hate", "hates", "outrage",
+        "outraged", "protest", "protests", "riot", "riots", "attack",
+        "attacks", "attacked", "kill", "killed", "killing", "murder",
+        "war", "wars", "bomb", "bombed", "strike", "strikes", "clash",
+        "clashes", "abuse", "corrupt", "corruption", "scam", "fraud",
+        "racist", "fascist", "tyrant", "violence", "violent", "assault",
+    },
+    "fear": {
+        "fear", "afraid", "scared", "panic", "threat", "threats", "warn",
+        "warning", "risk", "risks", "danger", "dangerous", "crisis",
+        "invasion", "missile", "nuclear", "terror", "terrorist", "hostage",
+        "outbreak", "epidemic", "collapse", "crash", "uncertainty",
+        "evacuate", "evacuation", "alert", "lockdown", "ban",
+    },
+    "sadness": {
+        "sad", "sadness", "grief", "grieve", "mourn", "mourning", "death",
+        "dead", "dies", "died", "dying", "loss", "lost", "tragic",
+        "tragedy", "victim", "victims", "casualty", "casualties", "famine",
+        "poverty", "homeless", "suicide", "hurt", "pain", "suffer",
+        "suffering", "disaster", "flood", "earthquake", "drought",
+    },
+    "surprise": {
+        "shock", "shocked", "sudden", "suddenly", "unexpected", "surprise",
+        "surprising", "breakthrough", "reveal", "reveals", "revealed",
+        "unprecedented", "twist", "mystery", "strange", "rare", "first",
+        "historic", "stunning", "dramatic",
+    },
+}
+
 
 def clean_text(text: str) -> str:
     text = _URL_RE.sub(" ", str(text or ""))
@@ -57,41 +94,48 @@ def empty_primary() -> dict[str, float]:
     return {k: 0.0 for k in PRIMARY}
 
 
-def nrc_primary(text: str) -> dict[str, float]:
-    cleaned = clean_text(text)
+def lexicon_primary(text: str) -> dict[str, float]:
+    cleaned = clean_text(text).lower()
+    tokens = cleaned.split()
     base = empty_primary()
+    if len(tokens) < 2:
+        return base
+    for tok in tokens:
+        for emotion, words in LEXICON.items():
+            if tok in words:
+                base[emotion] += 1.0
+    return base
+
+
+def nrc_primary(text: str) -> dict[str, float]:
+    """Built-in lexicon first. NRCLex only if it actually returns scores."""
+    base = lexicon_primary(text)
+    cleaned = clean_text(text)
     if len(cleaned.split()) < 3:
         return base
     try:
         from nrclex import NRCLex
-    except Exception:
-        return base
-    try:
         nrc = NRCLex(cleaned)
-    except Exception:
-        return base
-
-    scores = {}
-    if hasattr(nrc, "raw_emotion_scores") and nrc.raw_emotion_scores:
-        scores = nrc.raw_emotion_scores
-    elif hasattr(nrc, "affect_frequencies") and nrc.affect_frequencies:
-        scores = nrc.affect_frequencies
-    elif hasattr(nrc, "top_emotions") and nrc.top_emotions:
-        scores = dict(nrc.top_emotions)
-    elif hasattr(nrc, "affect_dict") and nrc.affect_dict:
-        bag = {}
-        for words in nrc.affect_dict.values():
-            for w in words:
-                bag[w] = bag.get(w, 0) + 1
-        scores = bag
-
-    for emotion, val in (scores or {}).items():
-        bucket = NRC_TO_PRIMARY.get(str(emotion).lower())
-        if bucket:
+        scores = {}
+        if hasattr(nrc, "raw_emotion_scores") and nrc.raw_emotion_scores:
+            scores = nrc.raw_emotion_scores
+        elif hasattr(nrc, "affect_frequencies") and nrc.affect_frequencies:
+            scores = {
+                k: v for k, v in nrc.affect_frequencies.items()
+                if k not in {"anticip", "anticipation"}
+            }
+        for emotion, val in (scores or {}).items():
+            bucket = NRC_TO_PRIMARY.get(str(emotion).lower())
+            if not bucket:
+                continue
             try:
-                base[bucket] += float(val)
+                extra = float(val)
             except (TypeError, ValueError):
-                base[bucket] += 1.0
+                continue
+            if extra > 0:
+                base[bucket] += extra
+    except Exception:
+        pass
     return base
 
 
@@ -220,10 +264,10 @@ def score_records(records: list[dict], use_transformer: bool = False) -> list[di
     for rec, nrc, go in zip(records, nrc_vecs, go_vecs):
         if use_transformer and any(go.values()):
             mood = blend(normalize(nrc), go, w_b=0.7)
-            source = "nrc+goemotions"
+            source = "lexicon+goemotions"
         else:
             mood = normalize(nrc)
-            source = "nrclex"
+            source = "lexicon"
         scored.append(
             {
                 **rec,
