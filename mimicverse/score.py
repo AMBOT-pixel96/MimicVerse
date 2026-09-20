@@ -66,11 +66,32 @@ def nrc_primary(text: str) -> dict[str, float]:
         from nrclex import NRCLex
     except Exception:
         return base
-    scores = NRCLex(cleaned).raw_emotion_scores or {}
-    for emotion, val in scores.items():
-        bucket = NRC_TO_PRIMARY.get(emotion)
+    try:
+        nrc = NRCLex(cleaned)
+    except Exception:
+        return base
+
+    scores = {}
+    if hasattr(nrc, "raw_emotion_scores") and nrc.raw_emotion_scores:
+        scores = nrc.raw_emotion_scores
+    elif hasattr(nrc, "affect_frequencies") and nrc.affect_frequencies:
+        scores = nrc.affect_frequencies
+    elif hasattr(nrc, "top_emotions") and nrc.top_emotions:
+        scores = dict(nrc.top_emotions)
+    elif hasattr(nrc, "affect_dict") and nrc.affect_dict:
+        bag = {}
+        for words in nrc.affect_dict.values():
+            for w in words:
+                bag[w] = bag.get(w, 0) + 1
+        scores = bag
+
+    for emotion, val in (scores or {}).items():
+        bucket = NRC_TO_PRIMARY.get(str(emotion).lower())
         if bucket:
-            base[bucket] += float(val)
+            try:
+                base[bucket] += float(val)
+            except (TypeError, ValueError):
+                base[bucket] += 1.0
     return base
 
 
@@ -141,7 +162,6 @@ class GoEmotionsBatch:
                     folder = c
                     break
             if folder is None:
-                # public multi-label checkpoint — only if caller wants network
                 name = "SamLowe/roberta-base-go_emotions"
                 self.tokenizer = AutoTokenizer.from_pretrained(name)
                 self.model = AutoModelForSequenceClassification.from_pretrained(name)
@@ -172,7 +192,6 @@ class GoEmotionsBatch:
             )
             with torch.no_grad():
                 logits = self.model(**enc).logits
-            # multi-label: sigmoid, not softmax
             probs = torch.sigmoid(logits).cpu().tolist()
             for row in probs:
                 raw = {self.labels[j]: float(row[j]) for j in range(min(len(self.labels), len(row)))}
@@ -213,7 +232,9 @@ def score_records(records: list[dict], use_transformer: bool = False) -> list[di
                 "fear": mood["fear"],
                 "sadness": mood["sadness"],
                 "surprise": mood["surprise"],
-                "polarity": textblob_polarity(" ".join([str(rec.get("title") or ""), str(rec.get("selftext") or "")[:200]])),
+                "polarity": textblob_polarity(
+                    " ".join([str(rec.get("title") or ""), str(rec.get("selftext") or "")[:200]])
+                ),
                 "score_source": source,
             }
         )
