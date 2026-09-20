@@ -1,2 +1,3 @@
 timestamp_utc,file_stem,n_posts,n_subreddits,score_source,dominant,polarity,joy,anger,fear,sadness,surprise,street_line
-2026-09-20T04:04:22Z,2026-09-20_0404,1026,57,nrclex,neutral,0.03866813239032845,0.0,0.0,0.0,0.0,0.0,"The street is running uneasy quiet (0%) — themes: trump, says, more, year. Loudest desk: global news."
+2026-09-20T04:04:22Z,2026-09-20_0404,1026,57,nrclex,neutral,0.0386681323903284,0.0,0.0,0.0,0.0,0.0,"The street is running uneasy quiet (0%) — themes: trump, says, more, year. Loudest desk: global news."
+2026-09-20T05:57:17Z,2026-09-20_0557,1025,57,lexicon,joy,0.04093665140028377,0.28852005532503455,0.2742047026279391,0.17323651452282157,0.12503457814661134,0.13900414937759337,"The street is running joy (29%) — themes: trump, says, more, iran. Loudest desk: se asia oceania."
