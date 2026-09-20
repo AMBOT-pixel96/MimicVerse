@@ -1,80 +1,49 @@
-name: 🌅🌇🌃 MimicVerse Triple Harvest Cycle
+name: MimicVerse Triple Harvest
 
 on:
   schedule:
-    - cron: "0 0,8,16 * * *"     # runs every 8 hours (00:00, 08:00, 16:00 UTC)
-  workflow_dispatch:             # manual trigger option
+    - cron: "0 0,8,16 * * *"
+  workflow_dispatch:
 
 permissions:
-  contents: write                # allow GitHub Actions to push changes to repo
+  contents: write
 
 jobs:
   harvest:
     runs-on: ubuntu-latest
-
+    timeout-minutes: 40
     steps:
-      - name: 🌀 Checkout Repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 0         # 🔒 Keep your original safety — full history for rebase
+          fetch-depth: 0
 
-      - name: 🧠 Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: ⚙️ Install dependencies (hybrid mode)
+      - name: Install
         run: |
-          echo "🚀 Installing dependencies..."
           pip install --upgrade pip
-          pip install --only-binary=:all: -r requirements.txt || pip install -r requirements.txt
-          echo "✅ Dependencies installed successfully."
+          pip install -r requirements.txt
+          python -c "import nltk; nltk.download('punkt'); nltk.download('brown')" || true
 
-      - name: 🌍 Identify Harvest Window
-        id: session
-        run: |
-          hour=$(date -u +"%H")
-          if [ $hour -lt 8 ]; then
-            echo "window=🌅 Morning Harvest" >> $GITHUB_OUTPUT
-          elif [ $hour -lt 16 ]; then
-            echo "window=🌇 Midday Harvest" >> $GITHUB_OUTPUT
-          else
-            echo "window=🌃 Night Harvest" >> $GITHUB_OUTPUT
-          fi
-
-      - name: 🌌 Run MimicVerse Harvester
+      - name: Harvest + score snapshot
         env:
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
-          REDDIT_USER_AGENT: MimicVerse/0.3 by u/ripped_geek
+          REDDIT_USER_AGENT: MimicVerse/1.5 by u/ripped_geek
         run: |
-          echo "🌐 Starting ${{ steps.session.outputs.window }}..."
-          python mimicverse_harvest.py || echo "⚠️ Harvester run failed (temporary issue or API timeout). Continuing workflow."
-          echo "🧠 Harvesting phase complete for ${{ steps.session.outputs.window }}!"
+          python mimicverse_harvest.py --posts 20
+          python scripts/harvest_logger.py
 
-      - name: 📦 Commit and push updated data (failsafe)
+      - name: Commit snapshots
         run: |
-          echo "📦 Committing harvested data..."
-          git config --global user.name "MimicVerse Bot"
-          git config --global user.email "bot@users.noreply.github.com"
-
-          # 🧩 Preserve your original rebase + stash workflow
-          git add -A
+          git config user.name "MimicVerse Bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/snapshots data/latest_snapshot.json data/mood_timeseries.csv data/HarvestScroll.csv data/reddit_*.csv data/metadata.json data/harvest_history.json || true
           git stash || true
-          git pull --rebase --autostash || echo "⚠️ Pull failed, continuing with local changes..."
+          git pull --rebase --autostash || true
           git stash pop || true
-
-          git add -A
-          git status
-          git commit -am "🪶 ${{ steps.session.outputs.window }} — $(date '+%Y-%m-%d %H:%M:%S')" || echo "✅ No new data to commit."
-
-          # 🔁 Double push fallback intact
-          git push || (git pull --rebase && git push) || echo "⚠️ Push skipped (no changes or permission issue)."
-
-          echo "🎉 ${{ steps.session.outputs.window }} completed and committed successfully."
-
-      - name: 🧾 Update Harvest Scroll Log
-        run: |
-          echo "📜 Updating HarvestScroll.csv..."
-          python harvest_logger.py || echo "⚠️ Logger run skipped or no changes detected."
-          echo "✅ HarvestScroll update complete."
+          git add data || true
+          git commit -m "harvest $(date -u +'%Y-%m-%d %H:%M UTC')" || echo "no changes"
+          git push || (git pull --rebase && git push) || echo "push skipped"
