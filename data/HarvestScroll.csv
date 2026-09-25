@@ -22,3 +22,4 @@ seq_id,file_name,timestamp_utc,posts,subreddits,harvester_type,size_bytes
 21,reddit_2026-09-24_0156.csv,2026-09-24 01:56:54,1035,57,v1.5-panel,189619
 22,reddit_2026-09-24_1304.csv,2026-09-24 13:04:06,1040,57,v1.5-panel,191466
 23,reddit_2026-09-24_1940.csv,2026-09-24 19:40:12,1041,57,v1.5-panel,194054
+24,reddit_2026-09-25_0213.csv,2026-09-25 02:13:08,1046,57,v1.5-panel,192331
