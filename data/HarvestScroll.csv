@@ -38,3 +38,4 @@ seq_id,file_name,timestamp_utc,posts,subreddits,harvester_type,size_bytes
 37,reddit_2026-09-29_2024.csv,2026-09-29 20:24:25,1041,57,v1.5-panel,191376
 38,reddit_2026-09-30_0244.csv,2026-09-30 02:44:15,1046,57,v1.5-panel,193273
 39,reddit_2026-09-30_1425.csv,2026-09-30 14:25:53,1039,57,v1.5-panel,192529
+40,reddit_2026-09-30_2031.csv,2026-09-30 20:31:34,1042,57,v1.5-panel,192708
