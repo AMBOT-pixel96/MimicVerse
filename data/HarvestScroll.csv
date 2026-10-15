@@ -80,3 +80,4 @@ seq_id,file_name,timestamp_utc,posts,subreddits,harvester_type,size_bytes
 79,reddit_2026-10-14_1315.csv,2026-10-14 13:15:20,1043,57,v1.5-panel,194011
 80,reddit_2026-10-14_1953.csv,2026-10-14 19:53:28,1037,57,v1.5-panel,190353
 81,reddit_2026-10-15_0208.csv,2026-10-15 02:08:47,1042,57,v1.5-panel,189154
+82,reddit_2026-10-15_1301.csv,2026-10-15 13:01:24,1037,57,v1.5-panel,190810
