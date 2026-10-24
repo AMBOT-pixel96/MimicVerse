@@ -106,3 +106,4 @@ seq_id,file_name,timestamp_utc,posts,subreddits,harvester_type,size_bytes
 105,reddit_2026-10-23_0217.csv,2026-10-23 02:17:49,1045,57,v1.5-panel,195775
 106,reddit_2026-10-23_1301.csv,2026-10-23 13:01:02,1046,57,v1.5-panel,193827
 107,reddit_2026-10-23_1942.csv,2026-10-23 19:42:11,1043,57,v1.5-panel,193282
+108,reddit_2026-10-24_0216.csv,2026-10-24 02:16:54,1041,57,v1.5-panel,195982
