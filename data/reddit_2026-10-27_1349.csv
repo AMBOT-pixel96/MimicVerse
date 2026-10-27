@@ -1,0 +1,1044 @@
+harvested_at,region,subreddit,title,score,num_comments,created_utc,joy,anger,fear,sadness,surprise,polarity,score_source
+2026-10-27T13:43:06Z,global_news,worldnews,Russian Missiles Hit Kyiv University,5261,155,1793077079.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,worldnews,Kim Jong-un threatens to destroy the US with howitzers,2493,523,1793089304.0,0.0,0.0,0.0,0.0,0.0,-0.2,lexicon
+2026-10-27T13:43:06Z,global_news,worldnews,Bolsonaro effectively concedes in Brazil after Trump suggests he won’t help,18928,616,1793056113.0,1.0,0.0,0.0,0.0,0.0,0.6,lexicon
+2026-10-27T13:43:06Z,global_news,worldnews,"Russia's assault on Ukraine's energy grid is a war crime, UN says",2147,104,1793089486.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,worldnews,Flavio Bolsonaro Reportedly Flees Brazil After Passport Revocation,911,98,1793107220.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,worldnews,"Brazil: Flavio Bolsonaro, who lost the presidential election, ordered to surrender his passport",31142,1090,1793046260.0,0.0,0.0,0.0,1.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,worldnews,Norway Fires Back After Trump Calls It a “Shithouse” Country,23121,2411,1793044730.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,worldnews,Moscow to Restrict Mobile Internet for 3 Days During Putin’s Summits,823,34,1793098023.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,worldnews,Toronto re-elects Olivia Chow as mayor,3153,356,1793067098.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,worldnews,"Brazil markets crater, some stocks sink 50% after Lula victory",7194,1198,1793042687.0,1.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,worldnews,"Only 34,300 Votes Were Cast After Initial Voting Deadline in Brazil's Election; Lula Won by 4.43 Million",5117,100,1793045348.0,1.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,worldnews,"Two weeks after a Russian supply base burned in Luhansk's Khrustalnyi, Ukrainian drones came back for an ammo depot",305,16,1793097858.0,0.0,0.0,0.0,0.0,0.0,-0.26666666666666666,lexicon
+2026-10-27T13:43:06Z,global_news,worldnews,"Microsoft offers voluntary buyouts to 60,000 employees as AI leads to efficiency push",379,117,1793091990.0,0.0,0.0,0.0,0.0,0.0,0.1,lexicon
+2026-10-27T13:43:06Z,global_news,worldnews,"Russia’s Hybrid Attacks in Europe Are Growing More Dangerous, 54 Incidents Identified in Six Months",1618,51,1793062840.0,0.0,0.5,0.5,0.0,0.0,-0.04999999999999999,lexicon
+2026-10-27T13:43:06Z,global_news,worldnews,South Korea’s president urged to play Call of Duty as war wake-up call,440,68,1793084666.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,worldnews,Netanyahu reportedly pressured military to attack Iran in run-up to election,2080,103,1793052049.0,0.0,1.0,0.0,0.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,global_news,worldnews,"Brexit has not “played out” like it was promised to the public, has weakened the economy and the current deal is not good enough, says Andy Burnham",3464,393,1793037833.0,1.0,0.0,0.0,0.0,0.0,-0.0875,lexicon
+2026-10-27T13:43:06Z,global_news,worldnews,UN panel says Russia is committing crimes against humanity by targeting civilians in Ukraine,6139,144,1793026822.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,news,Alex Pretti’s family say they have no answers nine months after federal agents killed him,17093,441,1793070154.0,0.0,1.0,0.0,0.0,0.0,-0.2,lexicon
+2026-10-27T13:43:06Z,global_news,news,Lawyers say ICE has mistakenly detained a mentally ill US citizen,2311,112,1793100675.0,0.0,0.0,0.0,0.0,0.0,-0.5,lexicon
+2026-10-27T13:43:06Z,global_news,news,James Comey charged for a third time by the Trump administration,12128,784,1793050260.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,news,"Average price of gasoline during Trump's term now exceeds Biden's, as midterms loom",8342,289,1793044528.0,0.0,0.0,0.0,0.0,0.0,-0.15,lexicon
+2026-10-27T13:43:06Z,global_news,news,"Microsoft offers voluntary exit packages to 60,000 staff",17702,2154,1793034602.0,0.0,0.0,0.0,0.0,0.0,0.1,lexicon
+2026-10-27T13:43:06Z,global_news,news,"Dollar General sued by FTC, 20 states for what's being described as deceptive pricing",4552,248,1793046268.0,0.0,0.0,0.0,0.0,0.0,0.05000000000000002,lexicon
+2026-10-27T13:43:06Z,global_news,news,"US bans vehicles from China’s BYD at Japan military base, calling them ‘unacceptable’ risk | Japan",807,117,1793077386.0,0.0,0.0,1.0,0.0,0.0,-0.45,lexicon
+2026-10-27T13:43:06Z,global_news,news,"Judge rules Maurene Comey, daughter of ex-FBI director, was unlawfully fired by Trump administration",8695,65,1793030959.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,news,Opponents accuse Netanyahu of stoking tensions with Iran before Israel's election,995,38,1793065492.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,news,Illinois man charged with mailing white powder to members of Congress,688,53,1793069994.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,news,Manhunt under way in Tennessee after convicted murderer escapes prison | Tennessee,1619,95,1793050308.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,news,‘Star Trek’ actor Walter Koenig dies: Reports,3492,284,1793033620.0,0.0,0.0,0.0,1.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,news,Anthropic files for potentially the biggest IPO ever even as CEO warns of risk to humanity from AI,3745,637,1793027322.0,0.0,0.0,1.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,news,European gas prices soar to four-year high over winter supply fears | Gas,697,43,1793044056.0,0.0,0.0,0.0,0.0,0.0,0.08,lexicon
+2026-10-27T13:43:06Z,global_news,news,"Eric Bauza, Voice of Bugs Bunny & More, Dies at 46",24019,658,1792986202.0,0.0,0.0,0.0,1.0,0.0,0.5,lexicon
+2026-10-27T13:43:06Z,global_news,news,"Bolsonaro refuses to concede, says he will seek annulment of Brazil vote",17011,863,1792981818.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,news,Lula wins fourth term as Brazil’s president over Flávio Bolsonaro | Luiz Inácio Lula da Silva,17204,665,1792974296.0,1.0,0.0,0.0,0.0,0.0,0.15,lexicon
+2026-10-27T13:43:06Z,global_news,news,Australian judge rejects prisoner’s human rights challenge to Vegemite ban,993,78,1793020540.0,0.0,0.0,1.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,news,Serbia's Vučić concedes election defeat to student-led protest movement,33222,1507,1792963412.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,news,Jordan arrests three men suspected of deadly church attack after shootout,335,2,1793026843.0,0.0,1.0,0.0,0.0,0.0,-0.2,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,British MPs and Spanish senator ‘detained by Israeli authorities for eight hours’,64,47,1793100899.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,Lula's comeback in Brazil dents Trump's ambitions for Latin America,143,9,1793070403.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,The simple way Netanyahu's reign could be ended by Israel's opposition,9,3,1793102690.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,"Donald Trump backs Orban for UN secretary-general with Russia, China support",383,42,1793026523.0,0.0,0.0,0.0,0.0,0.0,0.05000000000000002,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,AfD’s plan to destroy the EU,338,74,1793022069.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,The disturbing picture that shows Netanyahu is on the brink,4,1,1793108147.0,0.0,0.0,0.0,0.0,0.0,-0.5,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,The Collapse of Cuba,232,202,1793026027.0,0.0,0.0,1.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,"In ‘unprecedented confrontation,’ IDF chief said resisting Netanyahu's order for military action tied to Iran",257,19,1793023040.0,0.0,0.0,0.0,0.0,1.0,0.19999999999999998,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,'My eyes are on you': Netanyahu denies allegations of initiating attack on Iran 'out of fear of losing the election' amid final 24 hours of voting,138,17,1793033498.0,0.0,0.5,0.5,0.0,0.0,0.025,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,Action Needed to Get Ukraine’s Grain to the World,46,15,1793041517.0,0.0,0.0,0.0,0.0,0.0,0.1,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,"Dictatorship isn’t destiny for Russia’s indigenous peoples. They can build independent democracies - ""An independent Sakha will open to the world. Historically, we had business ties with Manchuria and Japan and the entire Pacific region will be open to us""",47,8,1793035421.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,Lula wins election after final votes tallied,937,88,1792974780.0,1.0,0.0,0.0,0.0,0.0,0.15,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,Lula has won but the war for Brazil goes on,148,40,1793006791.0,0.5,0.5,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,Europeans aren’t betting on a Democratic Congress to save Ukraine,59,15,1793023971.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,Kyiv's Brussels blunder leaves EU scrambling over phantom Zelensky visit,12,0,1793056006.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,"France, UK carry out joint airborne nuclear-strike exercise for first time",40,3,1793015550.0,0.0,0.2,0.6,0.0,0.2,0.25,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,The cardiologist who could become Serbia's next PM. The Student List party defeated the government of Aleksandar Vučić in Sunday's election,42,2,1793011277.0,0.0,0.0,0.0,0.0,1.0,0.016666666666666673,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,Spheres of Influence Won’t Help the US,5,43,1793035125.0,1.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,geopolitics,Melania Trump-brokered one-city ceasefire between Russia and Ukraine takes effect,0,2,1793094168.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,The disturbing picture that shows Netanyahu is on the brink,2,1,1793108187.0,0.0,0.0,0.0,0.0,0.0,-0.5,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,Arabs don’t produce science Video from Robert Kennedy Jr,2,1,1793106129.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,The simple way Netanyahu's reign could be ended by Israel's opposition,2,1,1793102663.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,"Israeli PM Benjamin Netanyahu warned of large-scale military operation in the occupied West Bank and vowed to displace residents of Hebron: ""We will enter the neighbourhood from which the terrorists came, evacuate the residents, go from house to house, and destroy the terrorist infrastructure.""",27,6,1793051991.0,0.0,0.0,1.0,0.0,0.0,-0.02857142857142858,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,Netanyahu reportedly pressured military to attack Iran in runup to election,18,1,1793042964.0,0.0,1.0,0.0,0.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,Hormuz: The Catastrophe Has Been Averted,1,1,1793098210.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,U.S. officials accuse Canada of midterm meddling — but Trump has endorsed foreign candidates | CBC News,9,2,1793031130.0,0.0,0.0,0.0,0.0,0.0,-0.125,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,"President Trump on María Corina Machado returning to Venezuela: ""I don't know anything about it, but I think she's a very nice woman. She gave me her Nobel prize, so how can I say anything else? And I hope she's safe. But we're doing really well in Venezuela.""",1,1,1793069399.0,1.0,0.0,0.0,0.0,0.0,0.49333333333333335,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,What is more likely israel and palestine being best friends or the balkans becoming one country?,0,1,1793068418.0,0.0,0.0,0.0,0.0,0.0,0.4875,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,The shock result in Brazil that's a big blow to Trump,11,1,1793015241.0,0.0,0.0,0.0,0.0,1.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,"Former U.S President Bill Clinton criticized the denigration of Muslims during a campaign event in Florida: “I’m tired of people denigrating Muslims for being Muslims. There are bad actors in every faith because we're all flawed human beings. But the religious, culture wars, I'm just tired.""",134,13,1792957007.0,0.0,1.0,0.0,0.0,0.0,-0.2857142857142857,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,Israel Election 2026: Iran Divides Netanyahu and Challenger Eisenkot Before Vote,3,4,1793010621.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,Greta Thunberg talking about the dire state of the upcoming Brazilian election. If Bolsonaro wins it will lead to a terrible climate disaster in the future for the entire world.,30,1,1792956441.0,0.5,0.0,0.0,0.5,0.0,-0.175,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,There was criminal intent from the very start. (Of Iran War),95,6,1792881480.0,0.0,1.0,0.0,0.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,"Turkish Foreign Minister Hakan Fidan cautioned against any renewed attack on Iran, saying such a move would exacerbate tensions and further expand the conflict: ""A military intervention on Iran is not in any way a solution. Nobody approves this at the moment.""",16,1,1792906104.0,0.0,1.0,0.0,0.0,0.0,-0.05625,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,Trump's defeat in the midterms will trigger a dangerous war pact with Israel,32,3,1792837159.0,0.0,0.5,0.5,0.0,0.0,-0.6,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,"Iranian Foreign Minister Abbas Araghchi told reporters that regional issues should be resolved through diplomacy and blamed the U.S for the ""main cause of insecurity"" and tensions in the Strait of Hormuz.",38,1,1792779096.0,0.0,0.0,0.0,0.0,0.0,0.02083333333333333,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,Trump Stops Israel from Pre-Election Iran Attack,0,1,1792800421.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,Thailand Uses IMF–World Bank Summit to Broaden Diplomatic Ties and Economic Cooperation,1,1,1792755602.0,0.0,0.0,0.0,0.0,0.0,0.2,lexicon
+2026-10-27T13:43:06Z,global_news,internationalpolitics,Putin is crowing right now. He's in no mood to do anything Trump wants,16,2,1792671008.0,0.0,0.0,0.0,0.0,0.0,0.24285714285714285,lexicon
+2026-10-27T13:43:06Z,global_news,economics,Donald Trump has been a disaster for rural America,5175,577,1793042663.0,0.0,0.0,0.0,1.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,economics,Trump's tariffs are politically toxic,211,17,1793100447.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,economics,"Microsoft offers voluntary buyouts to 60,000 employees as AI leads to efficiency push",254,18,1793067308.0,0.0,0.0,0.0,0.0,0.0,0.1,lexicon
+2026-10-27T13:43:06Z,global_news,economics,"Microsoft makes new ‘voluntary exit’ offer to about a quarter of its workforce, including some execs",1143,271,1793031836.0,0.0,0.0,0.0,0.0,0.0,0.13636363636363635,lexicon
+2026-10-27T13:43:06Z,global_news,economics,The markets are starting to act seriously weird. Blame AI,714,35,1793026382.0,0.0,0.0,0.0,0.0,0.0,-0.25,lexicon
+2026-10-27T13:43:06Z,global_news,economics,Halloween candy sales are off to a slow start amid high chocolate prices and affordability concerns,1521,265,1793010983.0,0.0,0.0,0.0,0.0,0.0,-0.07000000000000002,lexicon
+2026-10-27T13:43:06Z,global_news,economics,"Wages Fall to 43% of U.S. Gross Domestic Income, Lowest Since 1929",21940,291,1792964668.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,economics,The soaring cost of shipping is lifting the price of oil for consumers,11,2,1793105264.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,economics,The “influencer who doesn’t exist”: Social media platforms struggle to detect AI profiles,112,9,1793054724.0,0.0,0.0,0.0,0.0,0.0,0.03333333333333333,lexicon
+2026-10-27T13:43:06Z,global_news,economics,Brazil Markets Suffer Rout After Lula’s Improbable Election Win,545,207,1793021604.0,0.5,0.0,0.0,0.5,0.0,0.8,lexicon
+2026-10-27T13:43:06Z,global_news,economics,Australian vegetable giant facing millions in penalties over price-fixing and cartel conduct,103,6,1793052934.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,economics,"In China, the AI bubble has already burst",403,96,1793023035.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,economics,More Americans seek debt counseling: 'Don't be afraid to ask for help',43,5,1793065287.0,0.0,0.0,1.0,0.0,0.0,-0.04999999999999999,lexicon
+2026-10-27T13:43:06Z,global_news,economics,Iran reports medicine shortages and rising prices as patients shoulder 55% of healthcare costs,16,3,1793085721.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,economics,President Lee says Korea should learn from European protests to sustain growth,7,1,1793103095.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,economics,Anthropic IPO live updates: AI lab lost $80.7 billion in first half of 2026,331,227,1793021276.0,0.0,0.0,0.0,0.5,0.5,0.07323232323232323,lexicon
+2026-10-27T13:43:06Z,global_news,economics,"Moody's sees positive shift in Japan's growth, resilience remains key test",8,1,1793082815.0,0.0,0.0,0.0,0.0,0.0,0.11363636363636363,lexicon
+2026-10-27T13:43:06Z,global_news,economics,Dutch cabinet eyes €3.5 billion in annual savings through AI-led job cuts,2,3,1793106667.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,climate,Americans told stock up on 7 items now as 'devastating' weather forming,372,47,1793092505.0,0.0,0.0,0.0,0.0,0.0,-1.0,lexicon
+2026-10-27T13:43:06Z,global_news,climate,"Europe must prepare for a 3°C warmer world, EU climate chief warns. New EU rules will require governments to clarify who is responsible for climate preparedness – but no new funding is being offered to help households adapt.",81,25,1793098145.0,0.0,0.0,0.0,0.0,0.0,0.0893939393939394,lexicon
+2026-10-27T13:43:06Z,global_news,climate,"Anthropic is burning gas to feed the AI boom | Anthropic is clear that data centers will run on gas, to the company’s own detriment. (The Verge) Oct. 26, 2026",148,24,1793080980.0,0.0,0.0,0.0,0.0,0.0,0.35,lexicon
+2026-10-27T13:43:06Z,global_news,climate,"Greenhouse gas levels hit record highs, climate impact will last centuries: UN",47,6,1793099847.0,1.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,climate,"'A potential glimpse into the future': Climate change has triggered 'permafrost landslides' with house-size blocks of ice in Canada. Such slides have not been observed in the region before and may be unprecedented over the past 10,000 years or more.",664,22,1793041244.0,0.0,0.0,0.0,0.0,1.0,0.14166666666666666,lexicon
+2026-10-27T13:43:06Z,global_news,climate,"Brazil’s Vote Is a Victory for the Amazon, Environmentalists Say | The re-election of President Luiz Inácio Lula da Silva is expected to lead to continued rainforest protections. His opponent wanted to make it easier to clear land.",255,1,1793053485.0,1.0,0.0,0.0,0.0,0.0,6.938893903907228e-18,lexicon
+2026-10-27T13:43:06Z,global_news,climate,California has a plan for El Niño’s torrential rain: Save it for later,122,6,1793065978.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,climate,"Super-rich get ‘double dividend’ from causes and costs of climate crisis, report finds",35,3,1793086387.0,0.0,0.0,1.0,0.0,0.0,0.23611111111111108,lexicon
+2026-10-27T13:43:06Z,global_news,climate,Global Warming Has Nearly Doubled in Speed Since 2010,522,27,1793024490.0,0.0,0.0,0.0,0.0,0.0,0.05,lexicon
+2026-10-27T13:43:06Z,global_news,climate,Trump Targets Methane Curbs on Oil and Gas in a New Climate Rollback | The US is set to dial back federal requirements on the emissions as it aims to boost energy production.,8,0,1793107512.0,0.0,0.0,0.0,0.0,0.0,0.06818181818181818,lexicon
+2026-10-27T13:43:06Z,global_news,climate,"Super-rich get ‘double dividend’ from causes and costs of climate crisis, report finds",6,0,1793105719.0,0.0,0.0,1.0,0.0,0.0,0.23611111111111108,lexicon
+2026-10-27T13:43:06Z,global_news,climate,"The EPA is quietly killing its web archive - Tens of thousands of documents on contamination, clean power, and Trump’s climate deletions are now scheduled to disappear.",488,5,1793019380.0,0.0,1.0,0.0,0.0,0.0,0.18333333333333335,lexicon
+2026-10-27T13:43:06Z,global_news,climate,Lula wins Brazil election after cutting Amazon deforestation to record low. Lula’s victory in Brazil's presidential election brings hope for the Amazon – but far-right gains threaten progress.,704,4,1793011232.0,1.0,0.0,0.0,0.0,0.0,0.017142857142857144,lexicon
+2026-10-27T13:43:06Z,global_news,climate,"Study of 7,338 U.S. adults finds that “extinction of plants and animals” generates more concern and policy support than terms such as “biodiversity loss” or “extinction crisis”",60,3,1793059286.0,0.0,0.0,0.5,0.5,0.0,0.25,lexicon
+2026-10-27T13:43:06Z,global_news,climate,"Big oil wins big in BC election, where the the Conservative Party won its first major victory in nearly a century. Lorne Doerkson, the leader of the Conservatives, has said his party would double methane production by 2032 and triple it by ​2035.",97,15,1793045157.0,0.75,0.0,0.0,0.0,0.25,0.10178571428571428,lexicon
+2026-10-27T13:43:06Z,global_news,climate,'It's offensively cheap': How solar power is quietly becoming bigger than nuclear,298,27,1793023135.0,0.0,0.0,1.0,0.0,0.0,0.2833333333333334,lexicon
+2026-10-27T13:43:06Z,global_news,climate,Greenhouse gas levels hit new record highs in 2025,5,0,1793106724.0,1.0,0.0,0.0,0.0,0.0,0.13636363636363635,lexicon
+2026-10-27T13:43:06Z,global_news,climate,"Thwaites is a runaway climate disaster. New studies show how. The ""Doomsday Glacier"" could drown coastlines around the world. And the outlook is getting worse.",264,17,1793024625.0,0.0,0.0,0.0,1.0,0.0,-0.13181818181818183,lexicon
+2026-10-27T13:43:06Z,global_news,climate,Florida Sues Climate Modeler First Street Over Home Risk Scores,4,1,1793106085.0,0.0,0.0,0.5,0.0,0.5,0.25,lexicon
+2026-10-27T13:43:06Z,global_news,environment,‘A Crime of Extreme Inequality’: Richest 0.1% Generate More Carbon Pollution Than Half of Humanity | “The ultra-rich are setting the planet on fire and then charging the rest of us for the extinguishers.”,258,9,1793103416.0,0.0,0.0,0.0,0.0,0.0,0.14583333333333334,lexicon
+2026-10-27T13:43:06Z,global_news,environment,"Newly discovered internal memos reveal that Big Oil and the plastics industry have ""been aware of and concerned about the potential for microplastic contamination in the human body"" for decades.",2619,60,1793047730.0,0.0,0.0,0.0,0.0,1.0,0.06439393939393939,lexicon
+2026-10-27T13:43:06Z,global_news,environment,"This Oil Company Is Linked to 1,000 Pollution Incidents and Other Violations. Oklahoma Never Punished It.",62,0,1793097499.0,0.0,0.0,0.0,0.0,0.0,-0.125,lexicon
+2026-10-27T13:43:06Z,global_news,environment,"Super-rich get ‘double dividend’ from causes and costs of climate crisis, report finds",94,1,1793086360.0,0.0,0.0,1.0,0.0,0.0,0.23611111111111108,lexicon
+2026-10-27T13:43:06Z,global_news,environment,Judge continues to block Trump admin. from cutting down trees at D.C. golf course,196,3,1793069178.0,0.0,0.0,0.0,0.0,0.0,-0.37777777777777777,lexicon
+2026-10-27T13:43:06Z,global_news,environment,'It's offensively cheap': How solar power is quietly becoming bigger than nuclear,329,6,1793046883.0,0.0,0.0,1.0,0.0,0.0,0.2833333333333334,lexicon
+2026-10-27T13:43:06Z,global_news,environment,UN urges India to suspend controversial mega-project on Great Nicobar Island,19,1,1793099150.0,1.0,0.0,0.0,0.0,0.0,0.675,lexicon
+2026-10-27T13:43:06Z,global_news,environment,"Global Warming Has Nearly Doubled in Speed Since 2010, With Earth’s Average Temperature Rising at an Accelerated Rate Driven Primarily by Human-Caused Greenhouse Gas Emissions, Major Climate Study Finds",966,47,1793021765.0,0.0,0.0,0.0,0.0,0.0,0.0025000000000000022,lexicon
+2026-10-27T13:43:06Z,global_news,environment,Loggers say Roadless Rule repeal won't solve their biggest challenges,56,7,1793060943.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,environment,"Endangered turtles and ‘exceptional’ coral at risk from Woodside’s gas drilling in WA, watchdog says",53,1,1793059741.0,0.0,0.0,1.0,0.0,0.0,0.6666666666666666,lexicon
+2026-10-27T13:43:06Z,global_news,environment,Trump to Ease Oil Well Methane Curbs in Bid to Lower Costs,25,6,1793074449.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,environment,UN sends warning to Chevron after plumes of methane found over Gorgon project,167,3,1793026615.0,0.0,0.0,1.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,environment,"El Niño is bringing devil rays, hammerhead sharks and other unusual marine life to California",45,0,1793051300.0,0.0,0.0,0.0,0.0,0.0,0.037500000000000006,lexicon
+2026-10-27T13:43:06Z,global_news,environment,"‘Pure arrogance’: anger in Finland as Google illegally fells 250,000 trees for datacentre | Environment",81,4,1793038111.0,0.0,1.0,0.0,0.0,0.0,-0.32857142857142857,lexicon
+2026-10-27T13:43:06Z,global_news,environment,‘Cheap water is over’: A $500 bill shows a Southwest suburb’s dilemma,95,15,1793031945.0,0.0,0.0,0.0,0.0,0.0,0.4,lexicon
+2026-10-27T13:43:06Z,global_news,environment,"Burnham in danger of sleepwalking into climate disaster, say campaigners",6,2,1793086295.0,0.0,0.0,0.5,0.5,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,environment,Cabinet split emerges over controversial Rosebank oilfield decision,4,1,1793086492.0,0.0,0.0,0.0,0.0,0.0,0.55,lexicon
+2026-10-27T13:43:06Z,global_news,environment,"‘They paved paradise’: fighting back over the loss of green spaces in Cameroon’s capital. Concrete sprawl in Yaoundé has devastated the city’s trees and parks, so volunteers are stepping up, shrub by shrub.",166,0,1793008788.0,0.0,0.0,0.0,1.0,0.0,-0.016666666666666663,lexicon
+2026-10-27T13:43:06Z,global_news,environment,Lawsuit Targets Utah Oil Highway Threatening World-Renowned Nine Mile Canyon – 10.6.26,21,0,1793040446.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,global_news,environment,"Japan’s largest marine DNA study detects 126 fish species further north than previously recorded.  Nationwide mapping of environmental DNA reveals Japan's fish distributions in unprecedented detail, offering new insights into potential northward shifts and the challenges they could bring.",1,0,1793095684.0,0.0,0.0,0.0,0.0,1.0,0.11393939393939394,lexicon
+2026-10-27T13:43:06Z,south_asia,india,IAS officer Shikhar and his IPS wife Prashakha’s family own 40 villas/cottages—all purchased from a single company over a span of two and a half years,703,45,1793101940.0,0.0,0.0,0.0,0.0,0.0,0.12063492063492065,lexicon
+2026-10-27T13:43:06Z,south_asia,india,"30,000 Agniveers with combat experience will be released from duty this December.",522,136,1793094665.0,0.0,0.0,0.0,0.0,1.0,0.21666666666666667,lexicon
+2026-10-27T13:43:06Z,south_asia,india,"China 40-50km inside Arunachal, says state Congress chief Bosiram Siram",527,17,1793086471.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,india,Guest at Taj Hotel in Agra blacklisted for slapping waiter: 'No one has the right to disrespect...',512,24,1793075073.0,0.0,0.0,0.0,0.0,0.0,0.2857142857142857,lexicon
+2026-10-27T13:43:06Z,south_asia,india,CCPA fines Britannia Rs 1 lakh for misleading ‘100% whole wheat’ bread claim,542,46,1793069584.0,0.0,0.0,0.0,0.0,0.0,0.2,lexicon
+2026-10-27T13:43:06Z,south_asia,india,"""Apologise"": Kiren Rijiju To Congress As Army Debunks Fake China Posts Arunachal Pradesh Ritu Choudhary",143,14,1793086892.0,0.0,0.0,0.0,0.0,0.0,-0.5,lexicon
+2026-10-27T13:43:06Z,south_asia,india,"When the deference is voluntary, intimidation is unnecessary",120,3,1793085949.0,0.0,0.0,0.0,0.0,0.0,-0.4,lexicon
+2026-10-27T13:43:06Z,south_asia,india,"SIR in Karnataka: 99 lakh names out of state's final voter list, electorate shrinks to 4.55 crore",82,2,1793086843.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,india,"Ambani, Adani media outlets challenge Modi govt’s privacy law",159,7,1793072022.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,india,"Junior doctors, interns at Kolkata govt. hospital allege threats over stampede claims",31,3,1793095742.0,0.0,0.0,1.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,india,"In a first since 2023, Delhi invites Pakistan Minister for inaugural SCO Civilisational Dialogue in November",19,9,1793104657.0,0.0,0.0,0.0,0.0,1.0,0.25,lexicon
+2026-10-27T13:43:06Z,south_asia,india,‘We love you but...’: Rahul Gandhi tells Delhi traders protests will stop in ‘30 seconds’ if Modi sacks Gyanesh Kumar,730,85,1793031504.0,0.5,0.5,0.0,0.0,0.0,0.5,lexicon
+2026-10-27T13:43:06Z,south_asia,india,Producer BP Singh of CID and Aahat dies after major heart attack,23,8,1793097527.0,0.0,0.5,0.0,0.5,0.0,0.0625,lexicon
+2026-10-27T13:43:06Z,south_asia,india,Baby orangutans in India expose illegal wildlife trade as experts question a billionaire’s zoo,442,10,1793038223.0,0.0,0.0,0.0,0.0,0.0,-0.5,lexicon
+2026-10-27T13:43:06Z,south_asia,india,Census 2027: Private Enumerators Raise Political Concerns,17,7,1793100163.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,india,Tuberculosis & how to go back to normal life,35,19,1793083006.0,0.0,0.0,0.0,0.0,0.0,-0.19785714285714287,lexicon
+2026-10-27T13:43:06Z,south_asia,india,"""The matter of changing the names of 13,000 voters in UP, FIR against two SDMs, Election Commission gets stuck""",14,1,1793098740.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,india,After Vote Chori - New Blueprint To Rig Elections? | Today Andhra - Tomorrow All Of India? | Akash B,39,1,1793078881.0,0.0,0.0,0.0,0.0,0.0,0.13636363636363635,lexicon
+2026-10-27T13:43:06Z,south_asia,india,"‘Strip and walk, or die’: Kolkata teens caught kissing. Then, a chilling punishment | Kolkata News",1009,111,1793012551.0,0.0,0.0,0.0,0.0,0.0,-0.5,lexicon
+2026-10-27T13:43:06Z,south_asia,pakistan,Getting flashbacks of the Biscuit wars,80,165,1793099452.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,pakistan,Pakistan is preparing to launch a $2.25 billion lithium-ion battery manufacturing project in Rawalpindi.,56,30,1793095254.0,0.0,0.0,0.0,0.0,0.0,-0.12380952380952381,lexicon
+2026-10-27T13:43:06Z,south_asia,pakistan,Senators to Get Lifetime Blue Passports,26,11,1793106038.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,pakistan,Lahoڑis arent ready for this AHAHA,105,9,1793057020.0,0.0,0.0,0.0,0.0,0.0,0.2,lexicon
+2026-10-27T13:43:06Z,south_asia,pakistan,Need Someone to play Minecraft with?,14,37,1793084981.0,0.0,0.0,0.0,0.0,0.0,-0.3,lexicon
+2026-10-27T13:43:06Z,south_asia,pakistan,Marco Rubio says they have more influence over Pakistani decision making.,198,65,1793031486.0,0.0,0.0,0.0,0.0,0.0,0.25795454545454544,lexicon
+2026-10-27T13:43:06Z,south_asia,pakistan,"Why do Pakistani politicians treat rich people, celebrities, and foreigners better than ordinary citizens?",4,3,1793102231.0,0.0,0.0,0.0,0.0,0.0,0.19999999999999998,lexicon
+2026-10-27T13:43:06Z,south_asia,pakistan,Are all Hindus sindhi ??,8,12,1793096870.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,pakistan,Pakistanis Work Abroad So Elites Can Live Better in DHA: Atif Mian,398,49,1793014762.0,0.0,0.0,0.0,0.0,0.0,0.22954545454545455,lexicon
+2026-10-27T13:43:06Z,south_asia,pakistan,Knife Collectors in Pakistan? I am being called wierd by my family for Collecting Knifes.,5,5,1793096333.0,1.0,0.0,0.0,0.0,0.0,0.24375,lexicon
+2026-10-27T13:43:06Z,south_asia,pakistan,House help deserves better,11,2,1793080096.0,0.0,0.0,0.0,0.0,0.0,0.02738095238095237,lexicon
+2026-10-27T13:43:06Z,south_asia,pakistan,How much would you realistically pay for a good-quality pair of jeans in Pakistan?,6,12,1793086918.0,1.0,0.0,0.0,0.0,0.0,0.15178571428571427,lexicon
+2026-10-27T13:43:06Z,south_asia,pakistan,BMS for small-medium business,5,0,1793090285.0,0.0,0.0,0.0,0.0,0.0,-0.16666666666666666,lexicon
+2026-10-27T13:43:06Z,south_asia,pakistan,Made a Flag for Punjab need suggestions,5,19,1793086551.0,0.0,0.0,0.0,0.0,0.0,0.140625,lexicon
+2026-10-27T13:43:06Z,south_asia,pakistan,A working for students against child abuse,4,1,1793090509.0,0.0,1.0,0.0,0.0,0.0,-0.35714285714285715,lexicon
+2026-10-27T13:43:06Z,south_asia,pakistan,The PR Department Is Cooking 😂,288,166,1793006506.0,0.0,0.0,0.0,0.0,0.0,-0.5,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,Why are they so lecherous?,27,7,1793097887.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,If this is not dictatorship I wonder what is,72,15,1793078540.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,So he left the country...,269,71,1793047052.0,1.0,0.0,0.0,0.0,0.0,0.15000000000000002,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,Thought it was fake until I saw his official Facebook page posted it,27,10,1793080581.0,0.0,0.0,0.0,0.0,0.0,-0.5,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,The torture of our school,6,1,1793103311.0,0.0,0.5,0.0,0.0,0.5,-0.027380952380952395,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,Smoking is injurious to health.,4,3,1793105798.0,0.0,0.0,0.0,0.0,0.0,0.2416666666666667,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,"How much can an IELTS instructor earn in Dhaka, Bangladesh?",3,1,1793106622.0,0.0,0.0,0.0,0.0,0.0,0.38333333333333336,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,"Looking for programmers with knowledge of C#, Java javascript",3,4,1793103270.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,"We started with 3 to 5 people. Thanks to r/Bangladesh community, we were able to keep our flag on the Canvas. I would also like to thank the mod for helping us out and listening to the National Anthem with the community was a powerful feeling inside. Than",23,5,1793057720.0,0.0,0.0,0.0,0.0,0.0,0.3,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,Durga Puja celebrations in Mymensingh. Beautiful scenes all around,102,7,1793028722.0,1.0,0.0,0.0,0.0,0.0,0.85,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,"Little interest in offshore gas exploration, new initiative taken",3,0,1793087780.0,0.0,0.0,0.0,0.0,0.0,0.008143939393939393,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,NCP keeps disappointing,83,34,1793027559.0,0.0,0.0,0.0,0.0,0.0,-0.6,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,পিরোজপুরে মুক্তিযোদ্ধার লাশ দাফনে বাঁধা দেয়ার ঘটনায় হালকা করে প্রতিবাদ জানিয়েছেন এনসিপির নেতা নাহিদ ইসলাম,5,10,1793080736.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,Can I apply for two position in a single job Circular?,2,2,1793095735.0,0.0,0.0,0.0,0.0,0.0,-0.07142857142857142,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,Shameless woman defending that madrasa teacher who kissed a 6 year old girl.,17,4,1793051715.0,1.0,0.0,0.0,0.0,0.0,-0.12499999999999997,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,মাদ্রাসাকে কায়দা করে স্কুল বানানোর চেষ্টা চলছে: ডা. শফিকুর রহমান,46,14,1793028025.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,"Looking for a Content Assistant (Part-Time, Remote, Flexible Hours)",2,0,1793080137.0,0.0,0.0,0.0,0.0,0.0,-0.03333333333333333,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,Could someone please explain to me specifically why Madrasas are necessary?,95,48,1793004346.0,0.0,0.0,0.0,0.0,0.0,-0.075,lexicon
+2026-10-27T13:43:06Z,south_asia,bangladesh,Tareq Rahman is the larpest politician I've ever seen.,77,19,1793007584.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,nepal,Prostitute in Nepal. Garden of Lust and Pain.,38,9,1793094229.0,0.0,0.0,0.0,1.0,0.0,-0.30000000000000004,lexicon
+2026-10-27T13:43:06Z,south_asia,nepal,Can we master Daraz scheme,3,2,1793101130.0,0.0,0.0,0.0,0.0,0.0,-0.3125,lexicon
+2026-10-27T13:43:06Z,south_asia,nepal,So I purchased a jacket from this store Sakura.clo and got scammed they take the advance and ghost you straight up,2,6,1793105876.0,0.0,0.0,0.0,0.0,0.0,0.21666666666666667,lexicon
+2026-10-27T13:43:06Z,south_asia,nepal,"8:30 today night(Pokhara zero_km):Even in the dark, the mountains stand strong and the stars keep shining.",94,7,1793029225.0,0.0,0.0,0.0,0.0,0.0,0.058333333333333334,lexicon
+2026-10-27T13:43:06Z,south_asia,nepal,Sale girl in Pokhara lakeside,2,2,1793100742.0,0.0,0.0,0.0,0.0,0.0,0.25,lexicon
+2026-10-27T13:43:06Z,south_asia,nepal,Has Anyone gone to Everest base camp trek.,2,7,1793098194.0,0.0,0.0,0.0,0.0,0.0,-0.31851851851851853,lexicon
+2026-10-27T13:43:06Z,south_asia,nepal,"IRD portal: ""Not implemented yet"" error when downloading 81/82 tax clearance",2,0,1793097421.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,nepal,help me out pls does anyone have any idea about this?,2,4,1793095015.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,nepal,"Where do I get braces, for a very affordable price?",1,0,1793108094.0,0.0,0.0,0.0,0.0,0.0,0.13333333333333333,lexicon
+2026-10-27T13:43:06Z,south_asia,nepal,Your thoughts about the song?,2,1,1793104956.0,0.0,0.0,0.0,0.0,0.0,0.35,lexicon
+2026-10-27T13:43:06Z,south_asia,nepal,Any reliable astrologer in Nepal?,1,2,1793101432.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,nepal,Online Driving License Portal Down?,1,5,1793098160.0,0.0,0.0,0.0,0.0,0.0,-0.051851851851851864,lexicon
+2026-10-27T13:43:06Z,south_asia,nepal,"Pharmacy owners in Nepal, I have a few questions.",2,1,1793069013.0,0.0,0.0,0.0,0.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,south_asia,nepal,Driving centre recommendation,1,2,1793095763.0,1.0,0.0,0.0,0.0,0.0,0.7,lexicon
+2026-10-27T13:43:06Z,south_asia,nepal,Need a content creator in Pokhara for an bakery,0,0,1793093722.0,1.0,0.0,0.0,0.0,0.0,0.3,lexicon
+2026-10-27T13:43:06Z,south_asia,nepal,I want to improve my english accent,2,17,1793079494.0,0.0,0.0,0.0,0.0,0.0,-0.20833333333333334,lexicon
+2026-10-27T13:43:06Z,south_asia,nepal,Confusion on choosing majors,2,2,1793078009.0,0.0,0.0,0.0,0.0,0.0,-0.041666666666666664,lexicon
+2026-10-27T13:43:06Z,south_asia,nepal,Need guitar recommendations under 20k – Mantra Prakiti?,0,4,1793090660.0,1.0,0.0,0.0,0.0,0.0,0.3666666666666667,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,Request to new driver with new cars. It's ok if a 10 year old Maruti overtakes your car. Experienced drivers can drive faster than you. So please set your ego aside and let faster drivers pass. Thanks.,66,18,1793094709.0,0.0,0.0,0.0,0.0,0.0,0.29173553719008266,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,The only logical explanation,40,7,1793103099.0,0.0,0.0,0.0,0.0,0.0,0.125,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,is this the beginning of something?,30,15,1793104912.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,Size of this egg at omlette burger in ninewells hospital,161,28,1793067424.0,0.0,0.0,0.0,0.0,0.0,-0.3,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,"Sri Lanka surprised us in the best possible way, had an amazing holiday! 🇱🇰",22,3,1793103922.0,1.0,0.0,0.0,0.0,0.0,0.45124999999999993,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,Airbus deal: Indictments filed against Namal Rajapaksa and three others before the Permanent Three-Judge High Court with the approval of the Chief Justice & further remanded till Thursday.,43,4,1793089437.0,0.0,0.0,0.0,0.0,0.0,0.10666666666666667,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,How can I keep my dating life discrete?,22,15,1793095463.0,0.0,0.0,0.0,0.0,0.0,0.1984126984126984,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,Bad air all around sri lanka.,11,6,1793103068.0,0.0,0.0,0.0,0.0,0.0,-0.6999999999999998,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,Stolen debit card on a bus,11,3,1793102194.0,0.0,0.0,0.0,0.0,0.0,0.042857142857142844,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,Am i the only one noticed the egg propaganda,8,7,1793091453.0,0.0,0.0,0.0,0.0,0.0,-0.07993506493506494,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,"SL men, whats the most romantic thing you've done in your life?",61,75,1793046259.0,0.0,0.0,0.0,0.0,0.0,-0.027380952380952384,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,Lets talk about weather in SL,2,6,1793107233.0,0.0,0.0,0.0,0.0,0.0,0.10000000000000002,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,Honey'Sun' Tips and guidelines,2,1,1793107171.0,0.0,0.0,0.0,0.0,0.0,0.14375,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,The Milton was kinda weird?,48,53,1793040342.0,0.0,0.0,0.0,0.0,0.0,-0.5,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,Rotaract clubs and “volunteering” : What’s the perfect balance between being involved and overextending oneself,7,5,1793080200.0,0.0,0.0,0.0,0.0,0.0,1.0,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,Tell me your Sri lankan without telling me your Sri Lankan,5,7,1793083523.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,"Colombo property market, what do experienced investors know that beginners don’t?",2,0,1793100189.0,0.0,0.0,0.0,0.0,0.0,0.246875,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,Best budget Android phone for a secondary phone?,3,2,1793091875.0,0.0,0.0,0.0,0.0,0.0,0.10555555555555556,lexicon
+2026-10-27T13:43:06Z,south_asia,srilanka,Ants and Possible Eggs Inside My Lenovo LOQ 15IRX9 - Can Lenovo Service Centre Clean It Under Warranty? (Sri Lanka),2,2,1793098746.0,0.0,0.0,0.0,0.0,0.0,0.18333333333333335,lexicon
+2026-10-27T13:43:06Z,south_asia,indiaSpeaks,"WATCH: Protesters wearing ‘head coverings’ raise slogans against ‘Brahminvaad’, ‘Manuvaad’ in JMI; the tax payer funded minority institution with 50% reservation for minorities",620,36,1793082959.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,indiaSpeaks,BJP is fighting for reservation to be increased?,45,11,1793076519.0,0.0,0.0,0.0,0.0,0.0,0.17750000000000002,lexicon
+2026-10-27T13:43:06Z,south_asia,indiaSpeaks,Soaring domestic and international airfares make travellers rethink year-end holidays,10,0,1793105374.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,indiaSpeaks,"E100 fuel gets govt nod, paving way for cars running on 100% ethanol",7,0,1793107231.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,indiaSpeaks,Backdoor attacks on Indian SMB systems jump 52% in H1 2026: Kaspersky,6,0,1793106990.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,indiaSpeaks,"Indian music composer AR Rahman faces criticism over usage of Sufi Islamic Qawwali themed music for Shree Rama and Maa Sita's auspicious wedding in new song ""Mangal Rang"" from Namit Malhotra's upcoming Ramayana movie",1027,127,1793004805.0,0.0,0.0,0.0,0.0,0.0,0.13636363636363635,lexicon
+2026-10-27T13:43:06Z,south_asia,indiaSpeaks,"Logitech starts manufacturing in India, sets up production in Haryana",106,0,1793039535.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,indiaSpeaks,How much of India's infrastructure was built after 2014?,217,34,1793024876.0,0.0,0.0,0.0,0.0,0.0,0.2,lexicon
+2026-10-27T13:43:06Z,south_asia,indiaSpeaks,"INDIA’S FDI INFLOWS HIT A RECORD HIGH: India attracted $30.7 B in Gross FDI in Q1 FY27, Highest in at least 15 years After accounting for repatriation & outward FDI, Net FDI stood at $7.8 B, Highest in 4 years",109,9,1793038419.0,1.0,0.0,0.0,0.0,0.0,-0.034999999999999996,lexicon
+2026-10-27T13:43:06Z,south_asia,indiaSpeaks,"Nearly all major forecasters, including the IMF, ADB and World Bank, have recently raised their growth forecasts for India to above 7% for this year AND next. Remarkable in itself - even more so when viewed against India’s recent performance",4,0,1793098663.0,0.0,0.0,0.0,0.0,0.0,0.1765625,lexicon
+2026-10-27T13:43:06Z,south_asia,indiaSpeaks,BREAKING: ECI files counter affidavit in Supreme Court on plea against CEC’s functioning; says petition built entirely on a single news report,86,30,1793033998.0,0.0,0.0,0.0,0.0,0.0,-0.07142857142857142,lexicon
+2026-10-27T13:43:06Z,south_asia,indiaSpeaks,AI-generated fake news are some of the most recent problems we have been facing.,273,31,1793009393.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,indiaSpeaks,When will they stop freebies and corruption ?,11,6,1793055318.0,0.0,1.0,0.0,0.0,0.0,0.16,lexicon
+2026-10-27T13:43:06Z,south_asia,indiaSpeaks,Leftists are lazy. They just apply old terms without understanding what is new.,119,13,1793003263.0,0.0,0.0,0.0,0.0,0.0,-0.004545454545454547,lexicon
+2026-10-27T13:43:06Z,south_asia,indiaSpeaks,Six election officials removed in U.P. after SP flags voter list errors,24,3,1793035018.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,south_asia,indiaSpeaks,The man who was beaten by congress workers in Kharge’s event turns out to be a congress worker himself. He says; “I was saying Modi won’t go normally. We have to do rebellion for it. They thought I was BJP’s man and beat me up”,1195,38,1792948375.0,1.0,0.0,0.0,0.0,0.0,0.15,lexicon
+2026-10-27T13:43:06Z,south_asia,indiaSpeaks,"Hindu Girls happily and freely prepare for Dussehra celebrations in Tel Aviv, Israel",1229,83,1792933457.0,0.0,0.0,0.0,0.0,0.0,0.6000000000000001,lexicon
+2026-10-27T13:43:06Z,south_asia,indiaSpeaks,"Mallikarjun Kharge loses cool after a  Bjp supporter interrupts speech, says 'Modi ka baap bhi jayega'",586,61,1792940640.0,0.0,0.0,0.0,0.0,0.0,0.024999999999999994,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,Manga author sues state over revised imperial adoption rules,111,29,1793097385.0,0.0,0.0,0.0,0.0,0.0,0.15,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,"Moody's sees positive shift in Japan's growth, resilience remains key test",30,2,1793082881.0,0.0,0.0,0.0,0.0,0.0,0.11363636363636363,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,U.S. military bans Chinese-made BYD cars from key air base in Okinawa,426,87,1793008962.0,0.0,0.0,0.0,0.0,0.0,-0.225,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,Japan embassy official meets reporter nearly 2 weeks after Russia detention,32,1,1793058866.0,0.0,0.0,0.0,0.0,0.0,0.012500000000000002,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,How much more time i have to wait to recieve my SSW visa since 2 months are about to over.,0,1,1793105051.0,0.0,0.0,0.0,0.0,0.0,0.25,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,"US Marine indicted over robbery, murder of woman in Okinawa",491,81,1792940041.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,Cygames loses at least $2 MILLION USD in ticket sales,100,10,1792937528.0,0.0,0.0,0.0,0.0,0.0,-0.3,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,A teenager starved to death months after being detained. Her mom'ts taking police to court,1346,55,1792882801.0,0.0,0.0,0.0,1.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,Cartel-suspected brewers held beer prices steady after 2023 tax cut,151,13,1792918195.0,0.0,0.0,0.0,0.0,0.0,0.1597222222222222,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,Japanese carmakers to cut development times to counter Chinese rivals,107,42,1792898701.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,Shoki Oda to skip NPB Draft to pursue MLB dreams,36,10,1792909193.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,2 crested ibises released into wild in central Japan found dead,272,5,1792821139.0,0.0,0.0,0.0,1.0,0.0,-0.022222222222222223,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,Japanese Pottery/Ceramic Artist search help,8,2,1792879409.0,0.0,0.0,0.0,0.0,0.0,-0.054166666666666675,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,Japan calls for more support amid rising youth suicides,216,26,1792792887.0,0.0,0.0,0.5,0.5,0.0,0.12,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,Japan's revised law to maintain imperial family size takes effect,85,17,1792807558.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,"Japan's Financial Services Agency Issues Emergency Notice to FX Firms After GMO-Linked Unauthorized Access, Urges Monitoring for Suspicious Trades",17,2,1792808320.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,Japan-Russia ties hit new low amid Moscow’s geostrategic shift,104,7,1792770331.0,0.0,0.0,0.0,0.0,0.0,0.06818181818181818,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,Shigeru Miyamoto named first video game-related recipient of Japan’s Order of Culture,254,7,1792751367.0,0.0,0.0,0.0,0.0,1.0,-0.05000000000000001,lexicon
+2026-10-27T13:43:06Z,east_asia,japan,"Japanese Author Ryu Murakami, Who Wrote ‘Almost Transparent Blue,’ Dies at 74",91,7,1792735443.0,0.0,0.0,0.0,1.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,One in Four South Korean Applicants Denied U.S. Visa... Refusal Rate Higher Than in China and Japan,179,12,1793070883.0,0.0,0.0,0.0,0.0,0.0,0.25,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,North Korean soldiers and 122mm gun spotted from Starbucks in gimpo,2525,200,1793011864.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,2026 Sacheon Airshow (korea)-1,57,6,1793083302.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,Fewer quality jobs push young Koreans to take whatever work they can get,25,8,1793094461.0,0.0,0.0,0.0,0.0,0.0,0.1,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,"South Korea economy grows 1.0% QoQ, three times faster than expected in Q3",91,10,1793064430.0,0.0,0.0,0.0,0.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,"A BTS ticket bought for ₩110,000 was resold for ₩3,000,000. Korea just changed the rules on scalpers, and if you’ve ever sold a spare ticket, you’ll want to read this.",22,5,1793088812.0,0.0,0.0,0.0,0.0,1.0,0.125,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,President Lee says Korea should learn from European protests to sustain growth,49,10,1793071146.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,'Doctor X' faces petition to halt airing over Gwangju Uprising depiction,66,36,1793060334.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,"Shinhan, KB, Toss hesitate to adopt Apple Pay",9,0,1793095518.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,India to buy 335 more K-9 Howitzers for deployment along its borders.,81,13,1793037489.0,0.0,0.0,0.0,0.0,0.0,0.5,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,A lot of people in certain SEA subs don’t like when people are racist to them but themselves say racist things,104,110,1793010784.0,0.0,1.0,0.0,0.0,0.0,0.09821428571428571,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,How safe is changja and kkaenip kimchi if it remains unrefrigerated for about 8 or 9 hours?,0,4,1793092853.0,0.0,0.0,0.0,0.0,0.0,0.31666666666666665,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,"1 in 10 residents of Korea in their 20s, 30s have migrant backgrounds: data",3,4,1793060372.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,"Without migrants, Korea’s population would have shrunk last year",79,53,1793004515.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,"[OC] Fishing boats offshore, planes overhead. An evening at home in Jeju.",26,1,1793021823.0,0.0,0.0,0.0,0.0,0.0,-0.09375,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,Swiss foreign minister to hold talks in North Korea this week,6,1,1793049009.0,0.0,0.0,0.0,0.0,0.0,-0.125,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,An autumn evening stroll under the streetlights at a Seoul apartment complex 🍂,42,1,1793004482.0,1.0,0.0,0.0,0.0,0.0,0.22499999999999998,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,"26th October is quite a day for here, it is a day where quite lots of historic events happened in regards of Korean history.",40,10,1792996471.0,0.5,0.0,0.0,0.0,0.5,0.010000000000000004,lexicon
+2026-10-27T13:43:06Z,east_asia,korea,Lee says Korea emerging as global economic leader on record current account surplus,132,22,1792966407.0,1.0,0.0,0.0,0.0,0.0,0.06666666666666667,lexicon
+2026-10-27T13:43:06Z,east_asia,china,Mbappe dropped by Chinese brands for 'offending national sentiments',254,225,1793073598.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,china,Taiwan charges five men over plot to run over comedian for his Xi Jinping jokes,24,11,1793092180.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,china,Why China’s Gen Z is dreaming of Mao,24,35,1793094381.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,china,La Liga matches suspended in China.,10,9,1793096098.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,china,"Trump said China was headed for ‘big trouble.’ Instead, its economy is growing faster than the U.S., and its deficits are pulling in the right direction",170,75,1793033332.0,0.0,0.0,0.0,0.0,0.0,-0.010714285714285713,lexicon
+2026-10-27T13:43:06Z,east_asia,china,Why does no one wash their hands..,125,105,1793039250.0,0.0,0.0,0.0,0.0,0.0,0.2,lexicon
+2026-10-27T13:43:06Z,east_asia,china,"3.2 Petabits per second real-time optical fiber transfer speed world record claimed by Chinese team, equivalent to downloading more than 20,000 4K movies in one second — speed improvement of 30% in one year",26,12,1793067532.0,1.0,0.0,0.0,0.0,0.0,0.13999999999999999,lexicon
+2026-10-27T13:43:06Z,east_asia,china,"There is additional footage, recorded from the Hotel Millenium by a Chinese couple.",3,1,1793101929.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,china,"World’s first: China to build 74,000-ton floating research 'island'",21,5,1793051283.0,0.0,0.0,0.0,0.0,1.0,0.1,lexicon
+2026-10-27T13:43:06Z,east_asia,china,"A 911/WTC recording, made from the Millenium Hotel by a Chinese couple, is being sought.",1,2,1793106040.0,0.5,0.0,0.0,0.0,0.5,0.088,lexicon
+2026-10-27T13:43:06Z,east_asia,china,Mbappé sorry for 'ill-judged' Mao remark after backlash in China,0,1,1793104606.0,0.0,0.0,0.0,0.0,0.0,-0.5,lexicon
+2026-10-27T13:43:06Z,east_asia,china,Can you travel through Xinjiang without a car?,7,14,1793065530.0,0.0,0.0,0.0,0.0,0.0,0.4125,lexicon
+2026-10-27T13:43:06Z,east_asia,china,Hospital tiers in China: how to end up in the right one,3,1,1793073143.0,1.0,0.0,0.0,0.0,0.0,0.37142857142857144,lexicon
+2026-10-27T13:43:06Z,east_asia,china,War of words over Xinjiang erupts between Chinese and Turkish social media users,93,92,1792999389.0,0.0,1.0,0.0,0.0,0.0,0.016666666666666666,lexicon
+2026-10-27T13:43:06Z,east_asia,china,I am terrified at the prospect of living in the same city as my parents.,2,5,1793072460.0,1.0,0.0,0.0,0.0,0.0,0.23617424242424245,lexicon
+2026-10-27T13:43:06Z,east_asia,china,How to make myself look like a western Chinese?,4,59,1793051146.0,0.0,0.0,0.0,0.0,0.0,0.09999999999999999,lexicon
+2026-10-27T13:43:06Z,east_asia,china,Agricultural Development in China 1368-1968,2,2,1793064316.0,0.0,0.0,0.0,0.0,0.0,0.12,lexicon
+2026-10-27T13:43:06Z,east_asia,hongkong,Met 2 cult members on my first Timeleft dinner yesterday,90,56,1793075259.0,0.0,0.0,0.0,0.0,1.0,0.3,lexicon
+2026-10-27T13:43:06Z,east_asia,hongkong,Hong Kong beautician gets 4 years for selling friends to Myanmar scam hub,16,2,1793103899.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,hongkong,How Hong Kong Built a Subway Money Machine,10,2,1793099141.0,0.0,0.0,0.0,0.0,0.0,0.35,lexicon
+2026-10-27T13:43:06Z,east_asia,hongkong,Lam Tin Station fire incidents traced to insulation failure and overheated cable,6,2,1793101466.0,0.0,0.0,0.0,0.0,0.0,-0.3166666666666667,lexicon
+2026-10-27T13:43:06Z,east_asia,hongkong,Hong Kong privacy watchdog issues guidance on AI ‘smart glasses’ to curb covert surveillance,5,1,1793099216.0,0.0,0.0,0.0,0.0,0.0,0.21428571428571427,lexicon
+2026-10-27T13:43:06Z,east_asia,hongkong,Lost property at Chungking Mansions,7,32,1793087377.0,0.0,0.0,0.0,1.0,0.0,0.5,lexicon
+2026-10-27T13:43:06Z,east_asia,hongkong,Quirky Hygiene Habits,13,66,1793075449.0,1.0,0.0,0.0,0.0,0.0,-0.00714285714285715,lexicon
+2026-10-27T13:43:06Z,east_asia,hongkong,Fire at Hong Kong’s first incinerator prompts calls to rethink waste strategy,3,4,1793099697.0,0.0,0.0,0.0,0.0,1.0,0.024999999999999994,lexicon
+2026-10-27T13:43:06Z,east_asia,hongkong,Woman injured by falling banana in Kwun Tong,88,24,1793019897.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,hongkong,Buying computer diagnostic tools,3,12,1793081248.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,hongkong,How will Hong Kong’s ‘cardboard grannies’ survive as prices drop after new policy?,63,5,1793017331.0,0.0,0.0,0.0,0.0,0.0,0.13636363636363635,lexicon
+2026-10-27T13:43:06Z,east_asia,hongkong,What kind of architectural features do you think encapsulates Hong Kong overcrowding?,0,13,1793085238.0,0.0,0.0,0.0,0.0,0.0,0.3666666666666667,lexicon
+2026-10-27T13:43:06Z,east_asia,hongkong,Buying prescription medication for visiting tourist,1,4,1793083580.0,0.0,0.0,0.0,0.0,0.0,0.375,lexicon
+2026-10-27T13:43:06Z,east_asia,hongkong,Joji Tickets 29/11,1,0,1793083208.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,hongkong,"The Weeknd’s ‘Hong Kong’ captures nostalgia for bygone era, video director says",48,3,1793006696.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,hongkong,Looking for some help in HK! Need local designers or small business owners for a quick research project ($150 + coffee ☕️),1,10,1793080273.0,0.0,0.0,0.0,0.0,0.0,0.012896825396825387,lexicon
+2026-10-27T13:43:06Z,east_asia,hongkong,Warning to HKers,203,288,1792971673.0,0.0,0.0,1.0,0.0,0.0,-0.5,lexicon
+2026-10-27T13:43:06Z,east_asia,hongkong,《I want it upgrade》晴天林｜港人大鬧日本機場不滿無飛機餐(原曲：I Want It That Way - Backstreet Boys）,52,13,1792995185.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,taiwan,I was in Belize Two week ago and i saw ROC flag and Taiwanese embassy,630,22,1793063515.0,0.0,0.0,0.0,0.0,0.0,-0.09999999999999992,lexicon
+2026-10-27T13:43:06Z,east_asia,taiwan,What Actually Defines the Quality of a Tea?,5,0,1793105193.0,0.0,0.0,0.0,0.0,0.0,0.24761904761904763,lexicon
+2026-10-27T13:43:06Z,east_asia,taiwan,Made a small batch of s’mores cookies during the typhoon/long holiday,177,30,1793033294.0,1.0,0.0,0.0,0.0,0.0,0.037500000000000006,lexicon
+2026-10-27T13:43:06Z,east_asia,taiwan,"""Taiwan stole our chip business""",530,224,1793010063.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,taiwan,Is taiwan/taipei more expensive than japan to live in?,32,60,1793062832.0,0.0,0.0,0.0,0.0,0.0,0.022727272727272724,lexicon
+2026-10-27T13:43:06Z,east_asia,taiwan,English therapist in Taipei,2,12,1793095728.0,0.0,0.0,0.0,0.0,0.0,0.12666666666666665,lexicon
+2026-10-27T13:43:06Z,east_asia,taiwan,Selling antiques in Taipei/Taiwan,4,7,1793080740.0,0.0,0.0,0.0,0.0,0.0,-0.15,lexicon
+2026-10-27T13:43:06Z,east_asia,taiwan,A few shots from our Taiwan trip.,600,45,1792978172.0,0.0,0.0,0.0,0.0,0.0,-0.2,lexicon
+2026-10-27T13:43:06Z,east_asia,taiwan,I wanna approach a Taiwanese girl respectfully,0,36,1793101929.0,0.0,0.0,0.0,0.0,0.0,0.22000000000000003,lexicon
+2026-10-27T13:43:06Z,east_asia,taiwan,Creepy encounter at Zhongshan MRT exit 1,59,48,1793015587.0,0.0,0.0,0.0,0.0,0.0,-0.21851851851851856,lexicon
+2026-10-27T13:43:06Z,east_asia,taiwan,Moving to Taiwan with toddler?,10,27,1793042638.0,0.0,0.0,0.0,0.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,east_asia,taiwan,"Local help needed in Linkou, Taipei. Need a hand navigating daycare & preschool.",0,5,1793076640.0,0.0,0.0,0.0,0.0,0.0,-0.05535714285714286,lexicon
+2026-10-27T13:43:06Z,east_asia,taiwan,Grocery comparisons costco and mega PXmart,15,18,1793015988.0,0.0,0.0,0.0,0.0,1.0,0.3333333333333333,lexicon
+2026-10-27T13:43:06Z,east_asia,taiwan,Looking for good lgbtq spots specifically bdsm,0,2,1793091145.0,1.0,0.0,0.0,0.0,0.0,0.7,lexicon
+2026-10-27T13:43:06Z,east_asia,taiwan,Traveling to Taiwan from the US with prescribed testosterone (TRT),0,4,1793047564.0,0.0,0.0,0.0,0.0,0.0,0.16666666666666666,lexicon
+2026-10-27T13:43:06Z,east_asia,taiwan,Hows the typhoon? Isit safe to go taiwan now?,0,10,1793097665.0,0.0,0.0,0.0,0.0,0.0,0.16666666666666666,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,Indonesia Tells Its Umrah Pilgrims to Avoid Singapore Transit,247,114,1793095748.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,Beautiful hazeless sunrise earlier today,803,28,1793059115.0,1.0,0.0,0.0,0.0,0.0,0.425,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,NUH to stop offering plastic bags at pharmacies from November,67,53,1793097766.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,Elderly people seen taking leftovers at hawker centres: 'They just don't want to waste food',45,23,1793094928.0,0.0,0.0,0.0,0.0,0.0,-0.2,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,"Singapore, Indonesia setting up joint task force to probe firms linked to forest fires; hotlines to manage differences",31,12,1793102543.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,"Man jailed for choking his 2 teenage kids, including daughter he thought was vaping",39,15,1793092349.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,"Marina Bay pursuit: Driver fleeing traffic police stop hits another car, patrol vehicle",27,13,1793096151.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,Forum: Allow prenatal medical expenses to be deducted directly from MediSave before childbirth,19,9,1793101432.0,0.0,0.0,0.0,0.0,0.0,0.05,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,He built an app to bring neighbours closer. Keeping it going hasn't been easy,83,69,1793071090.0,0.0,0.0,0.0,0.0,0.0,0.43333333333333335,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,1-hour PM2.5 level rises to elevated band in northern Singapore,32,9,1793089656.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,SKLRT West Loop overcrowding after dual loop operation reinstated,14,6,1793103602.0,0.0,0.0,0.0,0.0,0.0,0.26875,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,"6 members of Singapore syndicate hawking vapes from Malaysia get jail, fines",29,2,1793087124.0,0.0,0.0,0.0,0.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,Singapore’s wealthy keep more than 70% of assets in cash despite rising wealth: Citi,73,22,1793069319.0,0.0,0.0,0.0,0.0,0.0,0.5,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,Does the Solar Panel work in this situation?,9,13,1793106111.0,0.0,0.0,0.0,0.0,0.0,-0.4,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,"Singapore must keep minority safeguards like GRC system, as 'racial undercurrents' persist: Jayakumar",75,106,1793064180.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,"Singapore, Indonesia setting up joint task force to probe firms linked to forest fires; hotlines to manage differences",6,5,1793106421.0,0.0,0.0,0.0,0.0,0.0,-0.012499999999999997,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,"Singapore launches first LNG term supply tender, weighs third import terminal",35,3,1793072457.0,0.0,0.0,0.0,0.0,1.0,0.125,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,"First Resources, Bumitama Agri shares fall after receiving NEA notices over haze",60,14,1793058528.0,0.0,0.0,0.0,0.0,1.0,0.25,lexicon
+2026-10-27T13:43:06Z,east_asia,singapore,"Five listed directorships cap among proposed changes to corporate governance code, SGX rules",6,1,1793098265.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,philippines,MGA ATE TIGIL TIGILAN NYO KAKAGAMIT NG N-WORD!!!! ANTATANDA NYO NA DI NYO KINACOOL PAGGAMIT NYAN. Sinabihan daw ng N-word yung babae kaya naghimutok at nakipag basag ulo.,1570,446,1793091874.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,philippines,"The peso hit a record low of P64 against the dollar during intraday trading on Tuesday, October 27",1159,194,1793071408.0,1.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,philippines,Lacson and De Lima question the bounty offered for Bato,152,26,1793102198.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,philippines,Saw this today. Meanwhile nag-cecelebrate ang iba sa opening ng arena nila,312,35,1793087632.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,philippines,ANG BABABOY! Nakakaloka! Ano na bang nangyayare sa mga eskwelahan natin?,332,77,1793083887.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,philippines,From POGOs to scam hubs EYES WIDE OPEN,355,29,1793077298.0,0.0,1.0,0.0,0.0,0.0,-0.1140625,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,philippines,DepEd orders suspension of all physical and home-based academic activities once ambient temperature hits 42 degrees Celsius,181,36,1793087978.0,0.0,0.0,1.0,0.0,0.0,0.06666666666666667,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,philippines,Clarita Carlos reportedly filed legal cases against Admiral Tarriela and General Mike Logico,146,37,1793091295.0,0.0,0.0,0.0,0.0,0.0,0.125,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,philippines,PAF alumni group condemns online mockery of fallen aviators,97,16,1793098016.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,philippines,Saw Sen Kiko's comment on Gerry Cacanindin's 2022-nostalgia FB post. A major political undertaking seems about to happen 🙏🌷🎗,959,81,1793049400.0,0.0,0.0,0.0,0.0,0.0,0.043750000000000004,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,philippines,"The LTO will start STRICTLY implementing the drunk driving law on November 15 by using breathalyzers, with failure of said breathalyzer test resulting in immediate license revocation, according to Asec. Markus Lacanilao",138,51,1793082641.0,0.0,0.0,0.0,0.0,0.0,-0.4083333333333333,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,philippines,Palace Press Officer Claire Castro Calls Fake News Trolls “Gremlins”,46,8,1793097419.0,0.0,0.0,0.0,0.0,0.0,-0.5,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,philippines,"P64.17 = $1, October 27, 2026",66,30,1793089597.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,philippines,Begpacking tourists in Manila,234,49,1793060629.0,0.0,0.0,0.0,0.0,0.0,0.1,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,philippines,I think there's a BIG PSYOP in PH reddit in favor of Duts!,189,85,1793059214.0,0.0,0.0,0.0,0.0,1.0,-0.02,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,philippines,Nowhere to hide abroad’: Ping Lacson says Bato faces higher risk of arrest overseas over ICC warrant,47,28,1793083843.0,0.0,0.0,1.0,0.0,0.0,0.1,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,philippines,"TIL - BreadTalk Philippines does not offer end-of-day or closing-time discount sales to clear out their trays. Instead, they donate 100% of their unsold tray-displayed baked goods of the day to local charities, orphanages, and community organizations",12112,181,1792982692.0,0.0,0.0,0.0,0.0,0.0,0.05000000000000001,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,philippines,"If indeed Sen Bato is protected by an armed group, then he will make his last stand",23,14,1793107842.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,indonesia,"Wowok lewat bikin macet, semua orang pada klakson",444,81,1793082878.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,indonesia,Stop Driving Cars In Jakarta,260,110,1793090246.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,indonesia,Doksli (Dokumen Asli) Dramok (Drama Jomok) Reza Auditore & Ladesh Gimank yang Viral (dan Dijadikan Konten Hingga Timpa Masuk Jurang),114,42,1793100084.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,indonesia,Huge influx of IndoMie,121,26,1793094418.0,0.0,0.0,0.0,0.0,0.0,0.10666666666666669,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,indonesia,"Ribuan Ton Sawit Indonesia Mengalir ke Israel, Lewat Mana?",87,40,1793099713.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,indonesia,"Kuburan Leluhur Di Toraja Terbakar, Karhutla Merambat ke 3 Pemakaman.",197,20,1793083402.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,indonesia,Mending Bungkam Guys,281,38,1793068913.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,indonesia,Pasar Glodok JKT Tahun 2005/2006,52,19,1793100473.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,indonesia,"Prabowo Meradang Soal BBM Bali, Perintahkan Audit Kontrak & Ekspor Satu Pintu!",62,45,1793096331.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,indonesia,Pria paru baya cekcok dengan wainta di tansjakarta,95,59,1793082815.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,indonesia,Komoda bagaimana pengalaman kalian Perkemahan di Indonesia tahun ini?,93,22,1793082666.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,indonesia,Ga bisa berantas korupsi ganti definisi,32,15,1793102398.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,indonesia,"Jalan Lintas Flores, Dibangun Sejak 2015, Ditargetkan Rampung 2028",117,27,1793075508.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,indonesia,lho ya boleh wong ditawarin,57,11,1793088671.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,indonesia,"Alvin Tedjo asal Indonesia terpilih sebagai walikota Missisauga, Kanada",38,10,1793096890.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,indonesia,saya sedang menangis karena pidato pak prabowo sangat indah #02didepan 😢😢😢🍆💦💦,188,44,1793064573.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,indonesia,Jumlah Siswa SMP di Dramaga Bogor yang Diduga Keracunan MBG Bertambah Jadi 417 Orang,44,9,1793090989.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,indonesia,Apakah ini buzzer?,26,32,1793100972.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,malaysia,"Boy keeps playing peek-a-boo with his late mummy, waiting for her to respond",450,49,1793105710.0,0.0,0.0,0.0,0.0,0.0,-0.06666666666666667,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,malaysia,Update: Level 2 of this PPR has won the most beautifully decorated corridor contest,226,13,1793102058.0,1.0,0.0,0.0,0.0,0.0,0.675,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,malaysia,Pakcik braved the flood and hit the curb,193,13,1793089368.0,0.0,0.0,0.0,1.0,0.0,0.4166666666666667,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,malaysia,Malaysia: After Starting to Import Oxygen from China.,1017,64,1793055628.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,malaysia,Azmin Ali + Hanayo,64,27,1793101386.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,malaysia,‘Betrayal’: Putrajaya cuts off Penang petrol station over suspected Budi Madani subsidy abuse,74,18,1793093246.0,0.0,1.0,0.0,0.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,malaysia,Sexually harassed in bathroom,208,66,1793069989.0,0.0,0.0,0.0,0.0,0.0,0.25,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,malaysia,"Cubaan lari dari polis,di Seri Alam,punca masih dalam diasatan dan masih belum diketahui.",26,8,1793102053.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,malaysia,Anwar eyes closer Malaysia-Brazil ties after Lula’s election victory,97,47,1793076350.0,1.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,malaysia,"BN-PN tsunami could push Harapan to worst GE outcome since 2008, S'gor defeat (Aug 2026)",54,94,1793082697.0,0.0,0.0,0.0,0.0,0.0,-0.475,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,malaysia,Found a lost Male Kitten,17,1,1793103750.0,0.0,0.0,0.0,1.0,0.0,-0.06361111111111112,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,malaysia,PM Confirms Japan’s SoftBank As Previously Announced US$50 Billion Data Centre Investor,46,11,1793084477.0,0.0,0.0,0.0,0.0,0.0,-0.16666666666666666,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,malaysia,Sanusi: Federal government is keeping Kedah poor by preventing us from extracting REE,16,13,1793104341.0,0.0,0.0,0.0,0.0,0.0,-0.4,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,malaysia,is it possible to remove Muhd & Ahmad in legal name,64,35,1793073368.0,0.0,0.0,0.0,0.0,0.0,0.04772727272727273,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,malaysia,"After months of the haze, this photo doesn't look real",2299,45,1793002210.0,0.0,0.0,0.0,0.0,0.0,0.2,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,malaysia,"Southeast Asians scale back weddings as inflation, energy crisis take toll",45,2,1793077881.0,0.0,0.0,1.0,0.0,0.0,0.07142857142857142,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,malaysia,"Fix your water supply before chasing RM720b GDP dream, Akmal tells SG4 states",15,6,1793100162.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,malaysia,MALABAR GOLD FRAUD EXPOSED - Is this the same Malabar Gold that trades in Masjid India ?,89,25,1793061138.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,australia,ABC to demand rightwing One Nation party stop using Bluey in ‘shocking and disrespectful’ cartoon,1563,96,1793096377.0,0.0,0.0,0.0,0.0,0.0,-1.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,australia,Labor condemns One Nation cartoons depicting Penny Wong being murdered as Hanson says videos ‘not going anywhere’,1254,266,1793079070.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,australia,When does a stick become a branch?,451,43,1793084415.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,australia,"Amateur prospector discovers gold nugget worth $150,000 on outback station",300,23,1793085189.0,0.0,0.0,0.0,0.0,0.0,0.1275,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,australia,Former One Nation candidate James Hansen identified as man found dead in floodwaters on Fraser Coast,778,378,1793061172.0,0.0,0.0,0.0,1.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,australia,AFP boss warns boys as young as 12 being radicalised at home,112,60,1793096843.0,0.0,1.0,0.0,0.0,0.0,-0.01666666666666668,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,australia,David Jones: Retail icon on life support as directors weigh insolvency,357,154,1793073442.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,australia,Greens leader proposes $21-a-week tax cut in vow to 'replace Labor',92,141,1793097266.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,australia,Randa Abdel-Fattah to appear at 2027 Adelaide Writers' Week,121,25,1793090429.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,australia,Dementia deaths surpass one in 10 to remain Australia’s leading cause of death,105,19,1793090154.0,0.0,0.0,0.0,1.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,australia,"Man sues Qantas after slipping and falling down stairs, airline says injuries his own fault",239,52,1793074093.0,0.0,0.0,0.0,0.0,0.0,0.1148148148148148,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,australia,Asthma deaths reach decade-high levels and number of Australians dying of dementia grows,55,13,1793102540.0,0.0,0.0,0.0,1.0,0.0,0.16,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,australia,Angus Taylor criticised for ‘tone deaf’ response to alleged attack on Helen Haines,577,177,1793054105.0,0.0,1.0,0.0,0.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,australia,"PM admits Marrickville Golf Club grant is not to fix sewage issues, after department sinks his claim",175,192,1793073033.0,0.0,0.0,0.0,0.0,0.0,-0.05,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,australia,Australia’s weirdest Bunnings?,54,108,1793082022.0,0.0,0.0,0.0,0.0,0.0,-0.11666666666666665,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,australia,Mildura's Big Sultana unveiled as Australia's next big thing,344,152,1793047245.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,australia,Former Queensland Education worker charged with historical child sex offences,36,5,1793090192.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,australia,First new steel mill in Australia in 35 years to be the first to be powered by 100 per cent renewables,1183,110,1793018524.0,0.0,0.0,0.0,0.0,1.0,0.21212121212121213,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,newzealand,Forgot to enrol? Vote anyway,930,294,1793083164.0,0.0,0.0,0.0,0.0,0.0,0.011904761904761918,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,newzealand,"Beware, it's so so bad",146,79,1793086677.0,0.0,0.0,0.0,0.0,0.0,0.0416666666666667,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,newzealand,Jacinda Ardern joins University of Sydney as lecturer and mentor,961,243,1793049655.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,newzealand,"Labour to expand first Home Loan Scheme, 5% deposit, $300,000 income cap.",366,252,1793066795.0,0.0,0.0,0.0,0.0,1.0,0.25,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,newzealand,Poll: Coalition has path to power but Labour steady after gangs row,148,306,1793077613.0,0.0,0.0,0.0,0.0,0.0,0.16666666666666666,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,newzealand,NZ First candidate Ron Mark blames 'woke b******t' for HMNZ Manawanui sinking,100,138,1793085009.0,0.0,0.0,0.0,0.0,1.0,0.25,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,newzealand,National is panicking,44,16,1793099531.0,0.0,0.0,0.0,0.0,0.0,0.20625,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,newzealand,Praise post for Overkill Games NZ,353,94,1793054999.0,0.0,0.0,0.0,0.0,0.0,-0.09375,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,newzealand,"Do Inflation stats for NZ track ""shrinkflation""?",263,77,1793059509.0,0.0,0.0,0.0,0.0,0.0,-0.025,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,newzealand,Is National allowed to use orange?,53,25,1793086178.0,0.0,0.0,0.0,0.0,0.0,0.075,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,newzealand,"National Candidate says 'gang leader' told him ""I need you to get in""",182,110,1793063667.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,newzealand,"Private sector gets 80% of increase in public health funding, unions' report finds",497,103,1793043121.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,newzealand,ELI5 Are the ACT party Atlas Network connections an issue?,115,73,1793072647.0,0.0,0.0,0.0,0.0,0.0,0.043939393939393945,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,newzealand,The campaign ‘lie’ that prompted an 81-year-old to scale an 8m ladder ‒ and why he now faces charges,384,118,1793047002.0,0.0,0.0,0.0,0.0,0.0,0.1,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,newzealand,Sad for independent bookstores,93,14,1793074479.0,0.0,0.0,0.0,1.0,0.0,0.08249999999999999,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,newzealand,"Briscoes Lady, 1989",20,2,1793096306.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,newzealand,Our depressed flatmate,112,115,1793063919.0,0.0,0.0,0.0,0.0,0.0,0.21666666666666667,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,newzealand,Greens blast 'backing the gangs' election billboard ads,262,417,1793045723.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,Mama does it again,2,0,1770179385.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,Does anyone know if any researchers in the Pacific received the Trump DEI questionnaire?,1,0,1743657153.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,"A group of law students at a university in Vanuatu has initiated a landmark case that could significantly influence future climate negotiations.
+What started as a classroom exercise in the Pacific is now set to be heard in the International Court of Justice.",2,0,1733090335.0,0.0,0.0,0.0,0.0,0.0,0.125,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,"“Warily eyeing China’s Pacific influence, US talks up US$7.1 billion in aid”",2,0,1711602946.0,0.0,0.0,0.0,0.0,0.0,-0.5,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,Asia-Pacific countries are trying to beat inflation and cost-of-living pressures — but are they winning the fight?,1,1,1710131821.0,0.0,0.0,0.0,0.0,0.0,0.5,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,Worries over seafood safety mount as Japan releases Fukushima water into the Pacific,1,0,1704141173.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,Definition for Western Pacific,1,0,1700073121.0,0.0,0.0,0.0,0.0,0.0,0.06666666666666667,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,Pacific yet to receive US aid promised by President Biden,2,0,1696206306.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,U.S. and Republic of Palau sign agreement to strengthen ties with new chapter in maritime security and stewardship,1,0,1693843207.0,0.0,0.0,0.0,0.0,0.0,0.13636363636363635,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,Glorious Day and Sounds of the Ocean,1,0,1691976866.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,"Newport Oregon, May 14, 2023 it was 80° out today￼￼",2,0,1684104742.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,Today was an incredible beautiful day on the Oregon coast ☀️🏖️🩳￼,3,0,1684026487.0,1.0,0.0,0.0,0.0,0.0,0.875,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,King tides on the Oregon coast￼ 🌊,3,0,1674417813.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,Newport Oregon ocean views on views Pacific Wonderland compilation,5,0,1673754479.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,I made a Twitter account for the Pacific Ocean. How do you like it so far?,2,1,1660959568.0,0.0,0.0,0.0,0.0,0.0,0.1,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,"Japanese Man, 83, Ready For More After Crossing The Pacific Ocean Solo",3,0,1654427047.0,0.0,0.0,0.0,0.0,0.0,0.2333333333333333,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,"Fiji’s decision to join the Indo-Pacific Economic Framework for Prosperity (IPEF), first in Pacific Islands 'United States thanks Prime Minister Bainimarama, and we look forward to deepening our partnership for the benefit of our countries'",2,0,1653695834.0,0.0,0.0,0.0,0.0,1.0,0.21666666666666667,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,PNG and Bougainville sign key covenant to usher in referendum results: Bougainville's quest for independence from Papua New Guinea is inching closer with both governments endorsing a key document last Friday,3,0,1651794553.0,0.0,0.0,0.0,0.0,0.0,0.03409090909090909,lexicon
+2026-10-27T13:43:06Z,se_asia_oceania,pacific,‘Absolutely amazing’: Tongan man swept away by tsunami stayed afloat for 24 hours,3,0,1642669925.0,1.0,0.0,0.0,0.0,0.0,0.30000000000000004,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,MiddleEast,Libya's $2.5 billion iron project could open new trade opportunities with the Gulf. How significant could it be?,2,0,1792331357.0,0.0,0.0,0.0,0.0,0.0,0.17045454545454544,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,MiddleEast,Damascus Walking Tour 4K 🌸 | October 2026 | احلى مشوار الى بقين وبلودان وزيارة لمغارة موسى,1,0,1792330941.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,MiddleEast,Iran War Updates: Deadly Houthi attacks keep Saudi airport closed as Trump considers U.S. strikes in Yemen,1,0,1791856378.0,0.0,1.0,0.0,0.0,0.0,-0.15000000000000002,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,MiddleEast,Should Kuwaitis be able to openly question every government decision without fearing consequences? 🇰🇼,1,0,1791742109.0,0.0,0.0,0.0,0.0,0.0,0.25,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,MiddleEast,Libya Steel Industry: Tosyali-SULB and the Industrial Opportunity,1,0,1791705902.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,MiddleEast,"Kuwait depends on expats for almost everything, yet some people still treat them like they're disposable",1,0,1791437515.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,MiddleEast,Damascus Walking Tour 4K 🌸 | Sep 2026 | جولة في وسط دمشق وسوق الحميدية,1,0,1790955560.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,MiddleEast,"Who is Captain Smit Machchhar, the pilot who averted Flydubai disaster?",2,0,1790869523.0,0.0,0.0,0.0,1.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,MiddleEast,Libya's Steel Industry: Can DRI Become the Foundation of a New Industrial Economy?,1,0,1790252869.0,0.0,0.0,0.0,0.0,0.0,0.13636363636363635,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,MiddleEast,Iraq to collect 6 million weapons despite Iran-backed militia pushback,2,0,1790090621.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,MiddleEast,Damascus Walking Tour 4K 🌸 | Sep 2026 | جولة في الطلياني و الروضة,1,0,1790094001.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,MiddleEast,"Yemen Conflict Intensifies, Reverberating Beyond the Region",2,0,1789750301.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,MiddleEast,Turkey: 162 arrested in LGBTQ+ raids - Turkish authorities have arrested at least 162 people in a weekend crackdown on the country's LGBTQ+ community.,5,0,1789590544.0,0.0,0.0,0.0,0.0,0.0,-0.3,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,MiddleEast,"Kurds in Syria, Iraq fight against 'Arabization' with language, but might need to push harder",2,0,1789218234.0,0.0,0.0,0.0,0.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,MiddleEast,"When is a foreign partnership an industrial base, and when is it just imports?",1,0,1789039719.0,0.0,0.0,0.0,0.0,0.0,-0.4625,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,MiddleEast,After the Flames at Zawiya: Why Libya Needs More than Oil,1,0,1788687950.0,0.0,0.0,0.0,0.0,0.0,0.5,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,MiddleEast,10k AED in Dubai vs 10k QAR in Doha ?,2,1,1788452421.0,0.0,0.0,0.0,0.0,0.0,0.3866666666666666,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,iran,JATRAS: 'SLEEPWALKING' INTO A NUCLEAR MIDDLE EAST WAR,3,1,1793055544.0,0.0,0.5,0.5,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,iran,Brugada and other common genetic diseases of Iran,6,1,1793022482.0,0.0,0.0,0.0,0.0,0.0,-0.15833333333333333,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,iran,"The war involving Iran is having consequences far beyond the region, including for people facing deportation from Europe",8,1,1793014376.0,0.0,1.0,0.0,0.0,0.0,-0.0375,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,iran,Israel admits the world is treating it as exactly what it's always been: a rogue state that should be sanctioned,59,0,1792907327.0,0.0,0.0,0.0,0.0,0.0,0.08333333333333333,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,iran,"regarding the 30,000 protesters killed myth",27,27,1792912002.0,0.0,1.0,0.0,0.0,0.0,-0.125,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,iran,62% Persian MyHeritage,16,7,1792871252.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,iran,'ALL BETS ARE OFF': Larry Johnson Warns of Iran's Devastating Retaliation,3,2,1792859199.0,0.0,0.0,0.0,0.0,0.0,-1.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,iran,Looking for a trusted sulfur granular supplier.,7,1,1792829661.0,0.0,0.0,0.0,0.0,0.0,0.1,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,iran,who’s your guy’s favorite iranian music artists ???,15,8,1792777056.0,1.0,0.0,0.0,0.0,0.0,0.28750000000000003,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,iran,Netanyahu NEEDS a Threat From Iran for His Own Political Survival: BEN-E...,7,3,1792777742.0,0.0,0.0,1.0,0.0,0.0,0.3,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,iran,Remembering Mostafa Khomeini on Anniversary of His Martyrdom (23th October 1977),19,6,1792741622.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,iran,"Earnings Report Crushes Markets, Oil Prices Explode, War Escalates",7,1,1792736852.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,iran,Sorry if this comes across as insensitive but how are ordinary Iranians coping with the possibility of war starting again?,26,14,1792678688.0,0.0,0.6666666666666666,0.3333333333333333,0.0,0.0,-0.18560606060606064,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,iran,Is Trump Fueled By Revenge as New Round of War With Iran Looms?,8,1,1792690784.0,0.0,1.0,0.0,0.0,0.0,-0.03181818181818183,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,iran,NPR reports preparations for possible renewed U.S.-Israeli action against Iran,14,1,1792668589.0,0.0,0.0,0.0,0.0,0.0,0.05,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,iran,Iranian jewish man calls for the division of Iran into 5 states,48,7,1792631719.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,iran,Trump's 'Revenge' and Netanyahu's Plan to 'Finish the Job' in Iran (W/ T...,9,1,1792617655.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,iran,Is it just me?,30,7,1792554437.0,0.0,0.0,0.0,0.0,0.0,-0.125,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,israel,"Polls officially open: Millions of Israelis head to the polls in the only free and fair democratic elections in the entire Middle East. Every Israeli citizen, including Jews, Muslims, Christians and people of all other faiths or none, has an equal vote.",155,15,1793087287.0,0.0,0.0,0.0,0.0,0.0,0.12187500000000001,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,israel,United Airlines expands service to Israel,209,19,1793055418.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,israel,Intel agreed to buy Israeli quantum software startup Classiq in quantum computing push,17,2,1793106300.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,israel,St Louis Blues of the NHL call out antisemitism,304,50,1793038426.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,israel,"On this day in 1994, Israel and Jordan signed a historic peace treaty, making Jordan the second Arab country after Egypt to formally make peace with Israel. Signed at their desert border, the agreement turned decades of secret contacts into official diplomatic relations and cooperation.",195,5,1793046618.0,0.6666666666666666,0.0,0.0,0.0,0.3333333333333333,-0.05000000000000001,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,israel,"July 30, 1980: Jerusalem officially becomes Israel’s complete and united capital.",310,7,1793030845.0,0.0,0.0,0.0,0.0,0.0,0.1,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,israel,Beast Breakfast Buffet and beautiful ambiance! 😋,223,19,1793033698.0,1.0,0.0,0.0,0.0,0.0,0.85,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,israel,US wants control of Israeli technology in exchange for aid,67,21,1793056725.0,0.0,0.0,0.0,0.0,0.0,0.2,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,israel,Intel to acquire Israeli quantum startup Classiq for $2.3 billion in record deal,87,2,1793051159.0,1.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,israel,Can't Be Friends With Jews.,154,7,1793039787.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,israel,From 1960: Israel opens up training to non-Jewish Africans to help build their newly decolonized nations,113,11,1793026307.0,0.0,0.0,0.0,0.0,0.0,0.06818181818181818,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,israel,Israel to supply Cyprus with new offshore patrol vessel,106,5,1793023334.0,0.0,0.0,0.0,0.0,0.0,0.05909090909090908,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,israel,The prince of Egypt - When You Believe HQ [Hebrew],25,2,1793043376.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,israel,The Israeli-British band Soaring River is planning some Israel shows around January!,33,3,1793038695.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,israel,"IDF arrests five Hamas, Islamic Jihad affiliates in Samaria raids",103,1,1793008203.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,israel,"In ‘unprecedented confrontation,’ IDF chief said resisting Netanyahu’s order for military action tied to Iran",104,23,1793003366.0,0.0,0.0,0.0,0.0,1.0,0.19999999999999998,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,israel,Cybercriminal claims to hold confidential Mossad and Israeli intelligence data,30,10,1793025419.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,israel,Must Visit National Parks In Israel,297,2,1792956555.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,lebanon,we need to start shaming people that marry their cousins,61,59,1793095906.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,lebanon,Sad that it failed 🥀,18,6,1793103537.0,0.0,0.0,0.0,1.0,0.0,-0.5,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,lebanon,What a downgrade,99,48,1793041682.0,0.0,0.0,0.0,0.0,0.0,-0.2916666666666667,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,lebanon,"Teskir sherke SARL, fi rsoom 3adleyye? W ksoor snin",3,2,1793099947.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,lebanon,Help with Lebanese trivia questions,5,10,1793098153.0,0.0,0.0,0.0,0.0,0.0,-0.08,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,lebanon,"Investigation showed that underage rape in Tripoli is extremely common and cheap. In a time when the capital punishment is abolished and general amnesty laws are passed, more and more criminals are free to destroy our society.",127,38,1793024886.0,0.0,0.0,0.0,0.0,0.0,0.19285714285714284,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,lebanon,Something happened in Sagesse University,35,28,1793037153.0,0.0,0.0,0.0,0.0,0.0,0.35,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,lebanon,Pharmacy at LAU,1,0,1793104429.0,0.0,0.0,0.0,0.0,0.0,0.1275,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,lebanon,What's with the Golden goose shoes,12,7,1793049602.0,0.0,0.0,0.0,0.0,0.0,0.2,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,lebanon,Any good honda mechanic? Check engine light came in my crv 2011 exl,6,5,1793059236.0,1.0,0.0,0.0,0.0,0.0,0.55,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,lebanon,Hezbollah readies for new regional war with funds from Iran,20,27,1793028025.0,0.0,1.0,0.0,0.0,0.0,0.13636363636363635,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,lebanon,About Georges Nasser collaboration with the Lebanese army,2,6,1793055375.0,0.0,0.0,0.0,0.0,0.0,0.06666666666666667,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,lebanon,Have you guys ever made a friend from r/lebanon? How was it like?,6,23,1793041024.0,0.0,0.0,0.0,0.0,0.0,0.125,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,lebanon,How time consuming is the GA for LAU CS?,3,3,1793043430.0,0.0,0.0,0.0,0.0,0.0,0.075,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,lebanon,Kif el wade3?,10,36,1793024662.0,0.0,1.0,0.0,0.0,0.0,0.35,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,lebanon,iPhone duo prices in Lebanon,38,38,1792993625.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,lebanon,Kif byehko 3-4 shabeb ma3 ba3ed w byerja3o byerso 3a wahad byetjawazo,5,26,1793029422.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,lebanon,"Wait, Beirut Had a City Pop Scene During the Civil War?!",88,9,1792970703.0,0.0,1.0,0.0,0.0,0.0,0.35,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,nigeria,Nothing wey aboki no dey see for gate!,27,57,1793087752.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,nigeria,One day when I have the money I’m going to buy those long barbecue fishes,18,9,1793091418.0,0.0,0.0,0.0,0.0,0.0,0.07500000000000001,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,nigeria,Using your kids names as affirmations is crazy work,5,8,1793103229.0,0.0,0.0,0.0,0.0,0.0,0.0625,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,nigeria,Nigerian Consulate in NYC Sucks!!!,24,22,1793071038.0,0.0,0.0,0.0,0.0,0.0,-0.0068181818181818205,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,nigeria,"Whatever happens, I’m glad I didn’t waste 2026 just wishing for a better life in Nigeria.",22,13,1793067523.0,1.0,0.0,0.0,0.0,0.0,0.23383838383838385,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,nigeria,"Everywhere you go, you cant escape them.",26,3,1793057269.0,0.0,0.0,0.0,0.0,0.0,0.2,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,nigeria,APC: Working hard to destroy 🇳🇬,34,7,1793051501.0,0.0,0.0,0.0,0.0,0.0,-0.24583333333333335,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,nigeria,Advice from current nigerian medical school students and doctors about schooling and practicing abroad? US residency,5,8,1793081415.0,0.0,0.0,0.0,0.0,0.0,0.022222222222222223,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,nigeria,Having a Nigerian name,1,0,1793108200.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,nigeria,CELESTIAL EYES: NIGERIA'S MOST CELEBRATED COMIC BOOK SERIES IS BACK.,26,5,1793044516.0,0.0,0.0,0.0,0.0,1.0,0.3092592592592593,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,nigeria,Something we could do about corruption??,2,12,1793094150.0,0.0,1.0,0.0,0.0,0.0,0.13809523809523808,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,nigeria,I am really confused,26,20,1793031892.0,0.0,0.0,0.0,0.0,0.0,0.11666666666666668,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,nigeria,"THE WEEK: Fulani Militias Hack 12 Christians to Death in Benue, Five Others Die in Plateau, Niger Attacks",6,2,1793056673.0,0.0,0.5,0.0,0.5,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,nigeria,Calling Nigerian Tailors!! I built a platform to connect Nigerian tailors with diaspora clients (and guarantee you get paid). Looking for 10 founding designers,2,12,1793077651.0,0.0,0.0,0.0,0.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,nigeria,wrong opay transaction,4,9,1793053250.0,0.0,0.0,0.0,0.0,0.0,-0.2619047619047619,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,southafrica,Takealot is full of nonsense,11,14,1793106864.0,0.0,1.0,0.0,0.0,0.0,-0.1416666666666667,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,southafrica,Help reconnecting with South Africa 🇿🇦,12,10,1793086466.0,0.5,0.0,0.0,0.0,0.5,0.14166666666666666,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,southafrica,"Cape Town sunsets, Never disappoint",2,1,1793108566.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,southafrica,Moody’s says South Africa’s budget update is credit positive,68,6,1793018209.0,0.0,0.0,0.0,0.0,0.0,0.22727272727272727,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,southafrica,Ramaphosa confident ANC will receive ‘outright majority’ in Joburg,55,29,1793022653.0,0.0,0.0,0.0,0.0,0.0,0.06666666666666667,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,southafrica,Resources on Apartheid Era Government Corruption,33,24,1793029984.0,0.0,1.0,0.0,0.0,0.0,-0.13749999999999998,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,southafrica,Jesus was South African,355,38,1792976628.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,southafrica,Ranked: Countries With the Highest Online Gambling Rates,156,35,1792986358.0,0.0,0.0,0.0,0.0,0.0,0.35,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,southafrica,FNB online banking and card payments outage,23,5,1793012623.0,0.0,1.0,0.0,0.0,0.0,-0.07777777777777779,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,southafrica,Nicknames for strangers,37,51,1792994839.0,1.0,0.0,0.0,0.0,0.0,-0.16666666666666666,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,southafrica,Struggling to get a driver's license test date,9,2,1793014132.0,1.0,0.0,0.0,0.0,0.0,0.7,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,southafrica,"World first, Thomas Van Tonder is monkey barring the Blaukrans Bridge",26,2,1792988896.0,0.0,0.0,0.0,0.0,1.0,0.006177156177156176,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,southafrica,Learning Setswana from scratch,20,15,1792990081.0,1.0,0.0,0.0,0.0,0.0,0.1484848484848485,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,southafrica,I need a smart ID to vote,3,16,1793020325.0,0.0,0.0,0.0,1.0,0.0,0.12142857142857143,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,southafrica,PHYS.Org: Southern Africa's first known stenciled rock art found hiding in plain sight,14,3,1792967659.0,0.0,0.0,0.0,0.0,1.0,0.007142857142857145,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,southafrica,"Helen Zille, the DA and the constitutional limits of political convenience",0,2,1793030564.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,Africa,"Why Do We Still Have Our Natural Landmarks Named After Europeans? It infuriates me to the Core every, single, time",290,63,1793083356.0,0.0,0.0,0.0,0.0,0.0,0.2714285714285714,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,Africa,"Addis Ababa, Ethiopia is building rapidly, but rent prices are still super high! How much does a two-bedroom apartment in the city center cost in your country ($)?",32,17,1793083635.0,1.0,0.0,0.0,0.0,0.0,0.1288888888888889,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,Africa,"Africa welcomes its newest gold refinery as another nation joins Burkina Faso, Ethiopia in refining gold at home",2,1,1793104757.0,0.0,0.0,0.0,0.0,0.0,0.07878787878787878,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,Africa,East Africa gearing up for hosting some big athletic events in the late 2020s/early 2030s.,4,2,1793089342.0,0.0,0.0,0.0,0.0,0.0,-0.06666666666666667,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,Africa,Has anyone else struggled to readjust to their home country after living abroad ?,32,9,1793018486.0,0.0,0.0,0.0,0.0,1.0,0.05,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,Africa,Etango Mine progresses ahead of 2028 start of uranium production,6,1,1793042222.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,Africa,Exploitation and misinformation hinder DRC Ebola response,20,2,1793006996.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,Africa,Libya’s Non-Oil Economy: The Industries and Companies Building Beyond Petroleum,8,1,1793020695.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,Africa,"""Troy's Sacred Waters""",15,1,1792981952.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,Africa,Looking for advice/experiences: Navigating being openly gay & getting married in conservative environments?,5,2,1792998286.0,0.0,0.0,0.0,0.0,0.0,0.2666666666666667,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,Africa,Leaving Half Our Future Behind: Girls' Education Across Africa,175,15,1792927180.0,0.0,0.0,0.0,0.0,0.0,0.023809523809523808,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,Africa,"Navigating the Congo River: Ancient Towns, Societies and Trade in Central Africa.",21,2,1792953669.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,Africa,Is there a serious defence of the idea that personhood is achieved rather than given?,7,3,1792955382.0,0.0,0.0,0.0,0.0,0.0,0.0033333333333333327,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,Africa,Is there an African Unionist party?,4,32,1792926130.0,0.0,0.0,0.0,0.0,0.0,0.03333333333333333,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,Africa,South Africa Eyes $610 Million Nationalization of ArcelorMittal Unit to Avert Industrial Collapse,31,4,1792842530.0,0.0,0.0,1.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,Africa,Morocco's Megaport Push: Dakhla Atlantique Hits 70% Milestone as Nador West Med Prepares for 2026 Launch,8,1,1792856386.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,Africa,Durban attack: Crowd of 50 beats foreigner to death in South Africa,164,61,1792786763.0,0.0,0.3333333333333333,0.0,0.6666666666666666,0.0,-0.10833333333333332,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,Africa,Ebola: Kenya announces second death,25,2,1792795518.0,0.0,0.0,0.0,1.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,egypt,اختي اللي عندها 10 سنين بتتفرج علي porn,48,92,1793100771.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,egypt,احا حد يقفل ساب اسكندرية,75,50,1793087430.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,egypt,ياريت توصلو صوته لحد من المسؤوليين,62,25,1793084309.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,egypt,أحا يولاد المجنونة,23,20,1793100919.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,egypt,الشعب الهمجي وهو بينظف الشوارع شعب مصر هو الاولي بانه يعمل ثورة حتي لو حولو يقنعونا بالعكس,19,7,1793090405.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,egypt,قالك مبارك لما مشي كانوا ال ١٠٠٠ بلبل يجيبوا ٤ جرام دهب ! ماذا بينك و بين الله يا مبارك حتي تحبك الناس كل هذا الحب !,13,17,1793095371.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,egypt,ليه بنحب نلزق المشاكل في امور بعيدة بدل محاولة دراسة الأسباب الأصلية ؟,21,39,1793077857.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,egypt,أحمد طنطاوي مرشح الرئاسة,9,17,1793088363.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,egypt,ما انا مش هتفرج علي الفيديو دا لوحدي,6,5,1793094642.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,egypt,ايه دا ؟؟؟,69,163,1793042581.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,egypt,قولتلي منقعدش في مكاننا دا لو الدولار وصل 50 جنيه,8,6,1793084521.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,egypt,لا ياعم دولار ايه الي يوصل 20 جنيه بس,98,31,1793033562.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,egypt,سؤال ايه الاستفادة من خروج جيش مصر للسعودية هنستفاد ايه ده غير اقتصدنا المفشوخ,11,24,1793073769.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,egypt,برامج على موبايلك شايفها مفيده و عايز تشاركها معانا part 5,79,49,1793032842.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,egypt,هما فاضيين شكلهم,3,3,1793087340.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,egypt,About Egypt from a tourist,0,0,1793108205.0,0.0,0.0,0.0,1.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,middle_east_africa,egypt,يا سلام عليك يا ترعة المفهومية !,29,28,1793042144.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,europe,Europe vs. Elon: 5 ways the EU is trying to squeeze out Musk’s Starlink,904,61,1793094072.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,europe,How Russian Double-Taps Increasingly Kill Rescuers,563,17,1793089205.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,europe,Exclusive: EU to give Frontex new powers to deport migrants from outside Europe,560,120,1793084857.0,0.0,0.0,0.0,0.0,0.0,0.06818181818181818,lexicon
+2026-10-27T13:43:06Z,europe,europe,RTV opens evening news with apology to viewers over years of biased reporting,298,32,1793095199.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,europe,Stubb and Støre called Putin,178,119,1793098738.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,europe,Can The EU Put Russia's GRU On Its Terror List?,154,6,1793100394.0,0.0,0.0,1.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,europe,“We will not change our position”: Europe responds to American threats regarding its satellite sovereignty projects,4098,219,1793035844.0,0.0,0.0,1.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,europe,Zelenskyy calls out monthlong wait for Hegseth to sign off on Patriots,1607,72,1793051730.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,europe,France promises to replace its university admissions after riots and thousands of arrests,128,75,1793100292.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,europe,AfD falls to its lowest level in months,9202,426,1793013121.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,europe,They lost from what they feared the most,3785,327,1793024275.0,0.0,0.0,0.0,1.0,0.0,0.5,lexicon
+2026-10-27T13:43:06Z,europe,europe,Kadyrov calls Chechens who left for Europe ‘despicable traitors’,76,25,1793098214.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,europe,AfD’s plan to destroy the EU,5447,815,1793012947.0,0.0,0.0,0.0,0.0,0.0,-0.2,lexicon
+2026-10-27T13:43:06Z,europe,europe,"Europe to remain the ‘powerhouse’ of global travel for the next decade, new report predicts",56,85,1793098378.0,0.0,0.0,0.0,0.0,0.0,0.04545454545454545,lexicon
+2026-10-27T13:43:06Z,europe,europe,'It's offensively cheap': How solar power is quietly becoming bigger than nuclear,1738,297,1793030224.0,0.0,0.0,1.0,0.0,0.0,0.2833333333333334,lexicon
+2026-10-27T13:43:06Z,europe,europe,Melting glaciers in Dolomites reveal cache of first world war munitions,101,0,1793084602.0,0.0,0.3333333333333333,0.0,0.0,0.6666666666666666,0.25,lexicon
+2026-10-27T13:43:06Z,europe,europe,Europe is not destined to endure the onslaughts of the Americans and Chinese forever,46,32,1793099030.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,europe,Russian Intelligence Services Tried to Organize Rally in Support of Paks II Nuclear Plant in Budapest,637,40,1793046591.0,0.0,0.0,1.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,europe,Leaders of Finland and Norway hold direct talks with Putin,37,33,1793104877.0,0.0,0.0,0.0,0.0,0.0,0.1,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,True scale of Reform UK’s donations from overseas donors revealed,1620,223,1793087447.0,0.0,0.0,0.0,0.0,1.0,0.35,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,Harry Kane ends England's 25-year wait for Ballon d'Or,3092,264,1793055129.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,‘It’s a better experience’: shoppers praise Oxford Street pedestrianisation,450,165,1793092198.0,0.0,0.0,0.0,0.0,0.0,0.5,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,"Boy who stabbed girl at school was radicalised online, says father",152,202,1793100450.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,Two men charged under National Security Act after RAF Fairford incident,193,107,1793092140.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,UK and EU officials to discuss freedom of movement,133,74,1793095615.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,Israel detains SNP MP and Scottish Green MSP trying to enter Palestine,152,103,1793092316.0,0.0,0.0,0.0,0.0,0.0,-0.2,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,PC sacked for taking snacks from crime scene,128,61,1793090592.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,"'Day Zero' where UK reservoirs run dry could happen before Christmas, ministers are secretly warned",1546,638,1793038299.0,0.0,0.0,0.0,0.0,0.0,-0.23333333333333334,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,UK Govt budget ‘must support’ pet owners as staggering costs of animal harm are revealed,55,86,1793100975.0,0.0,0.0,0.0,0.0,1.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,Reform UK leader of Staffordshire County Council announces shock resignation,81,48,1793090778.0,0.0,0.0,0.0,0.0,1.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,CO2 pig stunning to be phased out in UK for ‘more humane’ methods,439,236,1793050002.0,0.0,0.0,0.0,0.0,1.0,0.5,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,Beccles school overturns boy's detention after PE socks row - BBC News,27,38,1793105476.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,'Living next door to anti-social behaviour has been hell',23,30,1793106537.0,0.0,0.0,0.0,0.0,0.0,0.016666666666666666,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,Liz Truss claims UK would be flying people to Mars by 2040 if she’d stayed as PM,1918,937,1793016392.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,Healey to announce minimum wage rise and slowdown in rates for young people,473,416,1793041500.0,0.0,0.0,0.0,0.0,0.0,0.1,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,Dad ‘punched’ man who warned against entering sea with kids during Storm Austen,1059,254,1793021777.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,Farage And Jenrick Mocked For Sea Of Empty Seats At Reform Event,554,70,1793034099.0,0.0,0.0,0.0,0.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,DWP to ban 4 benefits including state pension for certain crimes - list,39,65,1793086019.0,0.0,0.0,1.0,0.0,0.0,0.21428571428571427,lexicon
+2026-10-27T13:43:06Z,europe,unitedkingdom,Is the UK government actually preparing for mass unemployment with recent accouncemant of layoffs?,255,295,1793046918.0,0.0,0.0,0.0,0.0,0.0,0.013333333333333341,lexicon
+2026-10-27T13:43:06Z,europe,france,INFO RADIO FRANCE. Le député RN José Beaurain visé par une enquête pour détournement de fonds publics,787,138,1793092844.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,france,"Edwige Diaz, président RN au sénat confirme que le RN pense que Trappes est une république islamiste miniature qui fait référence au propos de Bardella en 2022, le 27/10 sur BFMtv",528,102,1793093962.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,france,Des écrits prouvent l’adhésion du tueur de Trappes aux idées du RN,311,31,1793103142.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,france,Un ancien candidat RN à Tourcoing épinglé pour s’être moqué de la victime de l’attentat de Trappes,271,22,1793102445.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,france,"LFI réclame une commission d'enquête parlementaire pour ""établir les responsabilités"" sur l'attentat raciste dans les Yvelines",298,72,1793099814.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,france,"Un député RN accusé de détournement de fonds publics : José Beaurain aurait demandé à ses assistants parlementaires de lui reverser leurs primes en espèces, une enquête ouverte",283,30,1793099284.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,france,"« Ce type de mesures est l'apanage de régimes autoritaires » : après les violences, l'exécutif tente par tous les moyens de contrôler les réseaux sociaux",471,31,1793084044.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,france,"""Je criais de panique"" : une grenade explose dans son appartement lors de la manifestation du 24 octobre, ce Breton accuse les forces de l'ordre",129,21,1793107374.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,france,"Calvados : un homme armé tué lors d’une intervention de la douane, le parquet évoque un lien «à une mouvance d’ultradroite»",258,29,1793092819.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,france,"Au Brésil, Flavio Bolsonaro, isolé, renonce à demander l’annulation du scrutin après la victoire de Lula",281,36,1793090901.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,france,Manifestant mort à Paris : prudence journalistique ou suivisme préfectoral ?,206,17,1793096558.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,france,"Didier Guérin, magistrat : « Marine Le Pen est actuellement inéligible jusqu’à la décision de la Cour de cassation sur son pourvoi »",328,79,1793084813.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,france,"La bulle de l’IA éclate en Chine, effaçant 480 milliards : l’Amérique est-elle la prochaine ?",110,76,1793105912.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,france,«44% des entreprises rencontrent des difficultés importantes de recrutement» : l’étonnant paradoxe souligné par le directeur général de France Travail,152,203,1793096455.0,0.0,0.0,0.0,0.0,0.0,-0.5,lexicon
+2026-10-27T13:43:06Z,europe,france,« Une erreur de casting » : comment deux influenceuses ont fait dérailler le coup de com’ de Sébastien Lecornu,266,106,1793082597.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,france,"""Le droit au blocage n'existe pas"": le ministre de l'Enseignement supérieur juge que ""le travail"" des lycéens ""doit reprendre lundi""",132,97,1793093292.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,france,La Chine attrape Mbappé par le col après une blague sur Mao,90,61,1793100735.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,france,"Mis en cause sur l’antisémitisme de Jordan Bardella, le RN dégoupille",162,38,1793088036.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,germany,German police search for suspects as BMW rams into crowd and injures 5,96,17,1793095369.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,germany,My wife failed her driving exam 3rd time and its stressing us out,53,111,1793099871.0,0.0,0.0,0.0,0.0,0.0,-0.09999999999999999,lexicon
+2026-10-27T13:43:06Z,europe,germany,Quick reminder about the extrema summer this year so we are not forgetting the truth (re-posting),82,79,1793091007.0,0.0,0.0,0.0,0.0,0.0,0.14666666666666667,lexicon
+2026-10-27T13:43:06Z,europe,germany,Levi’s refuses to refund €250 for a package that never arrived and accuses me of fraud,21,34,1793101656.0,0.0,1.0,0.0,0.0,0.0,0.29444444444444445,lexicon
+2026-10-27T13:43:06Z,europe,germany,Does a Dutch accent in German really sound that cute?,747,293,1793030290.0,0.0,0.0,0.0,0.0,0.0,0.15,lexicon
+2026-10-27T13:43:06Z,europe,germany,"[Update] Restaurant owner returned to my apartment a week later, banging on my door and shouting threats. Called 110, but the police dismissed it because he left before they arrived. What are my real options now?",254,137,1793037137.0,0.0,0.0,1.0,0.0,0.0,0.03333333333333333,lexicon
+2026-10-27T13:43:06Z,europe,germany,3500 Drawings - Germany as people remember and draw it,6112,150,1792955772.0,0.0,0.0,0.0,0.0,0.0,0.4,lexicon
+2026-10-27T13:43:06Z,europe,germany,How can I find a psychologist quickly?,1,12,1793098985.0,0.0,0.0,0.0,0.0,0.0,0.06708333333333333,lexicon
+2026-10-27T13:43:06Z,europe,germany,Health insurance gap in Germany as an University student,0,21,1793098415.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,germany,MRI after knee trauma with EHIC,2,3,1793098157.0,0.0,0.0,0.0,0.0,0.0,-0.6999999999999998,lexicon
+2026-10-27T13:43:06Z,europe,germany,Black Spots on Government ID card?,2,4,1793096866.0,0.0,0.0,0.0,0.0,0.0,-0.06190476190476191,lexicon
+2026-10-27T13:43:06Z,europe,germany,Moving to Germany on a Fiancé Visa: Questions About Freelancing and Taxes,1,1,1793108566.0,0.0,0.0,0.0,0.0,0.0,0.024999999999999994,lexicon
+2026-10-27T13:43:06Z,europe,germany,Anyone have experience with Sprachenschule Trivium in Duisburg?,0,1,1793106939.0,1.0,0.0,0.0,0.0,0.0,0.16666666666666666,lexicon
+2026-10-27T13:43:06Z,europe,germany,Nearly 6 years in Germany as an African migrant: A counter-perspective to the constant doom and gloom,1160,362,1792966043.0,1.0,0.0,0.0,0.0,0.0,-0.008333333333333331,lexicon
+2026-10-27T13:43:06Z,europe,germany,"What are the best german cities for a singer-songwriter trying to ""make it""?",0,7,1793094726.0,0.0,0.0,0.0,0.0,0.0,0.3333333333333333,lexicon
+2026-10-27T13:43:06Z,europe,germany,Does anyone know what this hole in the wall of my room does ?,88,68,1793005614.0,0.0,0.0,0.0,0.0,0.0,0.12159090909090908,lexicon
+2026-10-27T13:43:06Z,europe,germany,15 yr old in germnay help me,0,15,1793107147.0,0.0,0.0,0.0,0.0,1.0,-0.1625,lexicon
+2026-10-27T13:43:06Z,europe,germany,Germany export license plates questions,0,1,1793093102.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,italy,"Alle midterm USA gli europei tifano per i democratici, la percentuale più alta in Italia. Sondaggio di Euroscope",77,64,1793103106.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,italy,"Sole 24 Ore - Report ""Ecosistema Urbano"" su mobilità, rifiuti, aria, acqua, ambiente ed energia",73,60,1793085576.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,italy,"Online safety laws have failed to protect children in UK, Ofcom admits | Children",41,8,1793094772.0,0.0,0.0,0.0,0.0,0.0,-0.23333333333333334,lexicon
+2026-10-27T13:43:06Z,europe,italy,Lo strano caso del militare con tre molotov nell’auto a Napoli: «Una pronta all'uso». La scoperta dopo un tamponamento,211,45,1793043469.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,italy,Mentana ufficializza l'addio al TgLa7: 'Il 23 dicembre saluto i telespettatori',152,65,1793044825.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,italy,In oltre metà delle regioni italiane ci sono più pensioni che occupati,383,170,1793011970.0,0.0,0.0,0.0,0.0,0.0,0.4166666666666667,lexicon
+2026-10-27T13:43:06Z,europe,italy,"Napoli, spaccia cocaina ma in realtà è sale da cucina: pusher arrestato",105,38,1793020076.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,italy,L’AI indossa la toga: confermato il verdetto scritto con l’algoritmo - L'Unione Sarda.it,32,13,1793042225.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,italy,Il clima emotivo degli italiani (sondaggio SWG),1,0,1793108703.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,italy,Perché ci sono stati molti passaggi di parlamentari da un partito all’altro,31,13,1793038626.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,italy,"Il rapporto Istat sul benessere 2025:  dei 132 indicatori per cui è possibile il confronto con l’anno precedente, 54 migliorano, 55 stabili e 23 peggiorano, evidenziando un generale avanzamento del benessere.",26,19,1793037101.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,italy,Del Vecchio lancia Opa sul Fatto Quotidiano. I soci fondatori: «Non interessati»,102,130,1793005607.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,italy,"Next Week, Italian Driver Kimi Antonelli can become World Champion and the 1st World Champion from Italy since 1953 with Alberto Ascari",424,52,1792969651.0,1.0,0.0,0.0,0.0,0.0,0.17626262626262626,lexicon
+2026-10-27T13:43:06Z,europe,italy,"Sembra che in Israele sia in corso un ""confronto senza precedenti"", con il capo dell'esercito che si rifiuta di mettere in atto una non meglio specificata azione militare chiesta da Netanyahu contro l'Iran a due giorni dalle elezioni parlamentari",521,92,1792965589.0,0.0,0.0,0.0,0.0,0.0,-0.125,lexicon
+2026-10-27T13:43:06Z,europe,italy,"Brasile, Lula rieletto presidente",325,173,1792974393.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,italy,Il prezzo dell'elettricità e l'idroelettrico in Italia,22,58,1793018580.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,italy,"Gli studenti vincono le elezioni in Serbia, lo annuncia lo sconfitto Vucic",307,146,1792965131.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,italy,Fisioterapisti e ortopedici: mi spiegate la questione delle solette personalizzate?,5,24,1793035962.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,"El jefe antidroga de la Guardia Civil en Segovia, en prisión por narcotráfico: «Vente a por el jamón que te tengo preparado»",262,30,1793002532.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,"Así se ve la playa de San Vicente de la Barquera desde 2.434 metros, en alguna cumbre del mazico oriental de Picos de Europa.",165,22,1793000482.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,"Lo que se sabe (y lo que no) de los disturbios del 24-O en Barcelona, con fuentes",245,87,1792967662.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,Spain is where humanity peaked,816,258,1792882125.0,0.0,0.0,0.0,0.0,1.0,0.016666666666666663,lexicon
+2026-10-27T13:43:06Z,europe,spain,De las discotecas y villas de Ibiza a OnlyFans: Ismael López Fauste explica cómo se capta a chicas para porno y prostitución,64,2,1792911069.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,"25,000 rally in Madrid demanding state pension guarantees",280,45,1792873684.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,Habitacion mercado inmobiliario español ahora mismo,306,8,1792867351.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,Version 2.0 XD,5,0,1792935455.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,"Satisfacción con la vida en España, por comunidad (INE)",85,19,1792876072.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,"Ricky Martín, el perro y la mermelada (Rimembah, 2026)",0,0,1792982031.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,Un coro asturiano sorprende a Patti Smith. Premio Princesa de Asturias de las artes.,849,30,1792740203.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,"National Geographic - Francisco Javier Osuna, historiador: ""La gran asignatura pendiente de nuestra historia es el siglo XIX. Muchos de los grandes problemas de este país nacen ahí""",18,1,1792796022.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,Merluza rellena de centollo,9,0,1792761310.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,Madrid al atardecer,114,1,1792687127.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,Spain bid to host 2035 Rugby World Cup,98,11,1792683198.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,Uno de los lugares donde se alcanzan las temperaturas más bajas de España.,244,44,1792608124.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,Sunshine hours/day across Spain (2025),163,19,1792576593.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,🇪🇸 ¡España necesita tu ayuda en EarthMC! 🇪🇸,0,0,1792683172.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,"Documentos RNE: Rafael Azcona, el hombre entre guiones",8,0,1792614554.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,spain,Bird of Paradise in Malaga #Spain,142,4,1792459194.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,ukraine,Russia Takes Five Hits in Just Two Days as Ukraine Hunts Key Defense Factories,778,13,1793089083.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,ukraine,"Meet Jessica, an American veteran who has joined Ukraine’s 46th Separate Airmobile Brigade as a combat medic. After serving in the U.S. military, she chose to continue helping others on the front lines in Ukraine. Her journey reflects a commitment to saving lives that goes beyond borders. 🇺🇸🇺🇦",525,7,1793093651.0,0.0,0.0,0.0,0.0,0.0,-0.03333333333333333,lexicon
+2026-10-27T13:43:06Z,europe,ukraine,Losses of the Russian military to 27.10.2026,604,28,1793079097.0,0.0,0.0,0.0,0.0,0.0,-0.05,lexicon
+2026-10-27T13:43:06Z,europe,ukraine,"Norway, Finland leaders hold 'frank and substantive' talk with Putin",197,28,1793097695.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,ukraine,"Zelenskyy: I offered the US three options if they want us to stop hitting Russian refineries: 1. Russia stops attacking our energy. 2. Open Starlink over Russian ballistic missile launch sites. 3. Give us Patriot missiles. We got none. Instead, Starlink was restricted.",4719,115,1793034357.0,0.0,0.0,1.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,ukraine,"Sverdlovsk Oblast, russia. Trump’s diesel didn’t make it. Twenty freight train cars derailed, and seven fuel tank cars caught fire. 26 Oct 2026",1964,37,1793039147.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,ukraine,Ukraine to Share Combat Experience with Moldova Under New Military-Technical Cooperation Agreement,145,2,1793088529.0,0.0,0.0,0.0,0.0,0.0,0.012121212121212116,lexicon
+2026-10-27T13:43:06Z,europe,ukraine,"ruZZian Missiles Strike Kyiv University Campus – One Killed, 10 Wounded, Mostly Students. Zelensky warned of further attacks and urged allies to accelerate air defense deliveries",537,17,1793062049.0,0.0,1.0,0.0,0.0,0.0,0.09999999999999999,lexicon
+2026-10-27T13:43:06Z,europe,ukraine,"Ukraine-Moldova Defense Deal Covers Air Defense, Cybersecurity and Joint R&D",85,1,1793099167.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,ukraine,This is what Ukraine is forced to endure every single day. russia’s brutal and illegal war,2417,70,1793031593.0,0.0,1.0,0.0,0.0,0.0,-0.31428571428571433,lexicon
+2026-10-27T13:43:06Z,europe,ukraine,It's sad to see in the last years that the number of our allies and countries supporting our fight decreases. New Serbian government being pro-russian is especially sad. Same with new Bulgarian government. France the next year.,819,187,1793052032.0,0.0,0.3333333333333333,0.0,0.6666666666666666,0.0,-0.07644628099173555,lexicon
+2026-10-27T13:43:06Z,europe,ukraine,🤬 russia attacked Kyiv with ballistic missiles and Shahed drones overnight,103,1,1793089857.0,0.0,1.0,0.0,0.0,0.0,0.04375,lexicon
+2026-10-27T13:43:06Z,europe,ukraine,Raskin says oil companies will face consequences for importing Russian diesel,46,1,1793107375.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,ukraine,Zelenskyy on peace talks: Ukraine will not accept limits on size of its armed forces,1368,35,1793037831.0,1.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,ukraine,"Russian Forces Intensify Shelling of Epicentr K Chain Across Ukraine in 48-Hour Wave of Strikes.Epicentr K said its retail/warehouse facilities were damaged in attacks . The company reported damage in Dubno, Kharkiv, Kovel, Kyiv, Pervomaisk, Poltava, Uman, Vinnytsia and Zaporizhzhia.",105,2,1793083997.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,ukraine,"Ukraine strikes Russian plant producing missile, bomb batteries in Yelets, General Staff says",405,3,1793056240.0,0.0,0.6666666666666666,0.3333333333333333,0.0,0.0,0.02500000000000001,lexicon
+2026-10-27T13:43:06Z,europe,ukraine,EU support for Ukraine: Council mobilises €4.9 billion under the European Peace Facility,73,1,1793088416.0,1.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,ukraine,"Ceasefire Introduced in Oleshky, Kherson Region, for Humanitarian Operation",67,6,1793087811.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,poland,Poland was the first country in Europe to have a written constitution.,93,15,1793107093.0,0.0,0.0,0.0,0.0,1.0,0.25,lexicon
+2026-10-27T13:43:06Z,europe,poland,Polish far-right leader charged over confrontation with abortion doctor and inciting hatred against Jews,96,23,1793101095.0,0.0,0.0,0.0,0.0,0.0,0.19285714285714284,lexicon
+2026-10-27T13:43:06Z,europe,poland,Polish region cuts ties with Lviv amid outrage over WWII group honor,123,65,1793092542.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,poland,Polish Government is Sponsoring Anime Girls…!,57,19,1793104500.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,poland,27 years later I've made an actual game (and now it's going digital),78,11,1793084515.0,0.0,0.0,0.0,0.0,0.0,0.039999999999999994,lexicon
+2026-10-27T13:43:06Z,europe,poland,"Two journalists who were supposed to testify in the case of Jacek Sutryk have just been fired from TVP3 Wrocław after over 30 years of work. Previously, the television blocked the airing of their documentary regarding the ongoing proceedings against the Mayor of Wrocław.",249,20,1793048775.0,0.0,0.0,0.0,0.0,0.0,-0.08333333333333333,lexicon
+2026-10-27T13:43:06Z,europe,poland,"Poland has caught up with oil rich Kuwait in GDP per capita in 2026, despite being only 25% of the latter in 2006",46,35,1793081342.0,0.0,0.0,0.0,0.0,0.0,0.125,lexicon
+2026-10-27T13:43:06Z,europe,poland,"Poland and UK support strong transatlantic alliance, says Polish minister",11,1,1793104498.0,0.0,0.0,0.0,0.0,0.0,0.16666666666666663,lexicon
+2026-10-27T13:43:06Z,europe,poland,Lista firm i biznesów powiązanych z Sebastianem M. i jego rodziną (podsumowanie rejestrów KRS i CEIDG),10,2,1793094148.0,0.0,0.0,0.0,0.0,0.0,-0.2,lexicon
+2026-10-27T13:43:06Z,europe,poland,"Poles more physically active than EU average, report finds",131,7,1793033185.0,0.0,0.0,0.0,0.0,0.0,0.0632996632996633,lexicon
+2026-10-27T13:43:06Z,europe,poland,Russia may seek NATO troop withdrawal from Poland in Ukraine talks: report,414,230,1793010422.0,1.0,0.0,0.0,0.0,0.0,0.7,lexicon
+2026-10-27T13:43:06Z,europe,poland,How do you eat this awesome stuff?,552,207,1792996847.0,0.0,0.0,0.0,0.0,1.0,0.35,lexicon
+2026-10-27T13:43:06Z,europe,poland,"Poland eyes more cooperation with Germany in space, Polish minister says",52,0,1793037293.0,0.0,0.0,0.0,0.0,0.0,0.5,lexicon
+2026-10-27T13:43:06Z,europe,poland,How much does a Stanley tumbler cost in Poland?,1,7,1793107964.0,0.0,0.0,0.0,0.0,0.0,0.26666666666666666,lexicon
+2026-10-27T13:43:06Z,europe,poland,Craft beer & dürüm kebab in Kraków,0,1,1793105940.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,poland,Poland’s GDP ‘losing billions’ due to drought-related crop losses,64,9,1793024438.0,0.0,0.0,0.0,1.0,0.0,0.07784090909090909,lexicon
+2026-10-27T13:43:06Z,europe,poland,Trump's Attempt At Plotting A Regime Change,0,2,1793101270.0,0.0,0.0,0.0,0.0,0.0,0.6,lexicon
+2026-10-27T13:43:06Z,europe,nordiccountries,I Asked Norwegians Questions About Their Social Norms,0,4,1793060917.0,0.0,0.0,0.0,0.0,0.0,-0.008333333333333335,lexicon
+2026-10-27T13:43:06Z,europe,nordiccountries,"Addressing a poll rally on Saturday in Perry, Georgia, US President Donald Trump has renewed his attacks on migrants and revived his “shithouse countries” remark, saying the US should take immigrants from Nordic nations such as Norway, Sweden and Denmark.",40,103,1792944143.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,nordiccountries,"Russia’s Hybrid Attacks in Europe Are Growing More Dangerous, 54 Incidents Identified in Six Months",150,10,1792916058.0,0.0,0.5,0.5,0.0,0.0,-0.04999999999999999,lexicon
+2026-10-27T13:43:06Z,europe,nordiccountries,Northern Norwegian dialects and Grundsprååtsi,45,38,1792935628.0,0.0,0.0,0.0,0.0,0.0,0.06666666666666667,lexicon
+2026-10-27T13:43:06Z,europe,nordiccountries,"Yle price comparison: Finland's food prices lower than Sweden, Estonia",50,23,1792856284.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,nordiccountries,"‘Pure arrogance’: anger in Finland as Google illegally fells 250,000 trees for datacentre",355,52,1792701169.0,0.0,1.0,0.0,0.0,0.0,-0.32857142857142857,lexicon
+2026-10-27T13:43:06Z,europe,nordiccountries,Finland's Answer to Worms | Liero,33,20,1792530345.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,nordiccountries,Tiden er inde til at samle Norden i ét rige,54,33,1792509713.0,0.0,0.0,1.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,nordiccountries,The Weirdest Flying Chicken & Bun Battles! | Eats Sweden Ep. 1 🇸🇪,0,0,1792613982.0,0.0,0.0,0.0,0.0,0.0,-0.6,lexicon
+2026-10-27T13:43:06Z,europe,nordiccountries,"TIL out of 27 European countries surveyed on etiquette, Finland is the only one where the majority said that they would never bring a gift when visiting a friend.",36,4,1792416781.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,nordiccountries,A video: The King of Sweden arrives in Finland for a state visit in 1925 as the guest of the warm-hearted and cosmopolitan President Relander,96,5,1792189659.0,0.0,0.0,0.0,0.0,0.0,0.3,lexicon
+2026-10-27T13:43:06Z,europe,nordiccountries,Sweden’s Bizarre Thursday Ritual: Tube Soup & Warm Alcohol (Sweden's Weirdest Excuses to Drink EP 1),0,5,1792281688.0,0.0,0.0,0.0,0.0,0.0,0.5,lexicon
+2026-10-27T13:43:06Z,europe,nordiccountries,Readying the Nordics for War,38,18,1792130616.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,nordiccountries,Supersize or downsize: countries to watch in the EU budget battle,0,0,1792068753.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,nordiccountries,Säkerhetsläget får finländarna att blicka mot Norden,26,20,1791921597.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,europe,nordiccountries,"The ""Viking Alliance""",0,29,1791981581.0,0.0,0.0,0.0,0.0,0.0,0.275,lexicon
+2026-10-27T13:43:06Z,europe,nordiccountries,What is your most ingenious setup to defeat the rain?,4,27,1791887633.0,1.0,0.0,0.0,0.0,0.0,0.2866666666666667,lexicon
+2026-10-27T13:43:06Z,europe,nordiccountries,All the NB8 countries are doing pretty well here,596,134,1791750080.0,0.0,0.0,0.0,0.0,0.0,0.25,lexicon
+2026-10-27T13:43:06Z,americas,canada,America Needs Canada’s Aluminum. Trump’s Tariff Exposed Just How Badly.,176,18,1793105398.0,0.0,0.0,0.0,0.0,0.0,-0.6999999999999998,lexicon
+2026-10-27T13:43:06Z,americas,canada,Olivia Chow wins Toronto's mayoral race | CBC News,528,69,1793074610.0,1.0,0.0,0.0,0.0,0.0,0.3,lexicon
+2026-10-27T13:43:06Z,americas,canada,B.C. Conservatives celebrate winning election by burning down old growth forest,1150,68,1793057523.0,1.0,0.0,0.0,0.0,0.0,0.14814814814814814,lexicon
+2026-10-27T13:43:06Z,americas,canada,Edmonton judge rejects 'unhinged' sentence proposed for Indigenous stabber,79,39,1793105348.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,canada,"The U.S. put surveillance drones in the Great Lakes, and this border town mayor isn't happy",107,9,1793098174.0,1.0,0.0,0.0,0.0,0.0,0.8,lexicon
+2026-10-27T13:43:06Z,americas,canada,"United Arab Emirates, Canada to share details of strategic partnership today | U.A.E. has pledged to invest about $70 billion in Canada",62,11,1793105792.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,canada,PM Carney says it’s time to move beyond Indian Act,1094,424,1793049050.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,canada,Kinew calls on PM Carney to abolish Indian Act at meeting with chiefs,1471,355,1793043186.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,canada,PM Carney says U.S. is ‘coming closer to our position’ in trade war as talks gain momentum,769,228,1793053252.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,canada,Why a spate of gun-for-hire shootings in Toronto were likely paid for by Iran,80,86,1793093770.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,canada,B.C. election results revive debate over proportional representation,175,111,1793077020.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,canada,Apple’s clinical-grade Hearing Test and Hearing Aid features available with AirPods Pro in Canada (except Ontario and Quebec),50,23,1793100953.0,0.0,0.0,0.0,0.0,0.0,0.4,lexicon
+2026-10-27T13:43:06Z,americas,canada,B.C. First Nations chief warns ripping up DRIPA is a ‘declaration of war’,366,318,1793062125.0,0.0,0.5,0.0,0.0,0.5,0.25,lexicon
+2026-10-27T13:43:06Z,americas,canada,Toronto driver not sure where to park after city removes bike lanes,1539,44,1793028878.0,0.0,0.0,0.0,0.0,0.0,-0.25,lexicon
+2026-10-27T13:43:06Z,americas,canada,Liberals set to table bill restricting access to MAID in cases of mental illness,55,42,1793094105.0,0.0,0.0,0.0,0.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,americas,canada,Montreal police officer who allegedly urinated on homeless people faces ethics probe,266,86,1793053175.0,0.0,0.0,0.0,1.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,americas,canada,HOCKEY FANS SOUND OFF ON ROGERS' EXCLUSIVE STREAMING PACKAGES,661,186,1793034236.0,0.0,0.0,0.0,0.0,0.0,0.4,lexicon
+2026-10-27T13:43:06Z,americas,canada,"James Moore: David Eby treated B.C. voters like fools, and paid the price",545,179,1793035060.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,canada,Asia Pays Top Dollar For Canadian Oil Amid Slump in US Prices,872,55,1793022410.0,0.0,0.0,0.0,0.0,0.0,0.5,lexicon
+2026-10-27T13:43:06Z,americas,mexico,¿Cómo creen que terminen esos morros que ven gore en la escuela?,795,45,1793068137.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,mexico,27 de octubre.. nuestras mascotas fallecidas vienen a visitarnos..,292,7,1793078962.0,0.0,0.0,0.0,0.0,0.0,0.6,lexicon
+2026-10-27T13:43:06Z,americas,mexico,ALITO ARREMETE CONTRA CIUDADANO En Baja California,165,46,1793061786.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,mexico,Transportistas confrontan a autoridades en paro en Culiacán,157,6,1793061162.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,mexico,Ante todo pronóstico gana Brasil,998,187,1793024348.0,0.0,0.0,0.0,0.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,americas,mexico,Se acerca Halloween y empiezan a matar gatos por mi colonia,223,70,1793049879.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,mexico,"Diputados trotamundos: gastan 11.3 millones en boletos y viáticos para ir a Europa, Asia y Sudamérica - El Sol de México",19,4,1793099878.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,mexico,El Programa de Ordenación de la Zona Metropolitana del Valle de México (POZMVM) ha encendido las alarmas ante la propuesta de un impuesto al desperdicio urbano del 1% a terrenos subutilizados.,13,5,1793104412.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,mexico,Un poco de lo que fue la Mega procesión de Catrinas 2026 en CDMX,276,10,1793038118.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,mexico,"Brazil Markets Crater, Some Stocks Sink 50% After Lula Victory",40,18,1793072202.0,1.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,mexico,Es verdad que los regios mantienen la economia de texas?,285,173,1793029353.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,mexico,¿Como implantarían el habito lector en un niño?,205,139,1793025727.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,mexico,Cómo puedo denunciar a mi empresa porque me reporta con el salario mínimo ante el IMSS y en realidad me paga más? También por hostigamiento laboral?,10,6,1793081993.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,mexico,¿Quién más celebra con nuestros hermanos brasileños que ganó el presidente Lula? 🇧🇷🎉,2631,647,1792975404.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,mexico,Lula es reelecto como presidente de Brasil,882,183,1792991856.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,mexico,La derecha también pierde en Serbia,1293,111,1792983811.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,mexico,"Alta funcionaria de México renuncia tras escándalo de corrupción -- Guadalupe Taddei, presidenta del Instituto Nacional Electoral (INE), ha sido vinculada a procesos oscuros de triangulación de contratos y servicios.",166,22,1793021030.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,mexico,"¿México va bien o va mal? Comparte tu argumento y cita tu fuente (INEGI, Banxico, OCDE, entre otras). Sin ataques: argumentos, datos y experiencia.",9,30,1793077170.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,mexico,México y Francia buscan ampliar inversión y cadenas de suministro entre Europa y Norteamérica,50,2,1793041917.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,brazil,Education in Brazil,10,26,1793102673.0,0.0,0.0,0.0,0.0,0.0,-0.2833333333333333,lexicon
+2026-10-27T13:43:06Z,americas,brazil,It's Bolsover ( 99%),6975,729,1792973862.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,brazil,Congratulations Brasil 🇧🇷 on the historic elections!,6017,405,1792976515.0,0.5,0.0,0.0,0.0,0.5,0.0,lexicon
+2026-10-27T13:43:06Z,americas,brazil,"As a foreigner who fell in love with Brazil, I just want to say congratulations! 🇧🇷💚",631,74,1793016851.0,1.0,0.0,0.0,0.0,0.0,0.45,lexicon
+2026-10-27T13:43:06Z,americas,brazil,24 hours post-election: What’s the mood like where you are?,49,37,1793061897.0,1.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,brazil,"Brazil stocks, real tumble as Lula win ends bullish run",247,114,1793025699.0,1.0,0.0,0.0,0.0,0.0,0.5,lexicon
+2026-10-27T13:43:06Z,americas,brazil,Brazil betting ban: what Lula's re-election means,299,11,1793011282.0,0.0,0.0,1.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,brazil,"Gentlemen, this was a historic election. Thank you all for your support.",1702,124,1792975274.0,0.0,0.0,0.0,0.0,1.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,brazil,THANK YOU BRAZILLLLL!!,1634,200,1792974654.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,brazil,It's about time...,75,19,1792991376.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,brazil,Lula now favourite,228,219,1792968729.0,1.0,0.0,0.0,0.0,0.0,0.8,lexicon
+2026-10-27T13:43:06Z,americas,brazil,Toronto is looking good,621,80,1792946410.0,1.0,0.0,0.0,0.0,0.0,0.7,lexicon
+2026-10-27T13:43:06Z,americas,brazil,"In Canada, Brazilians are coming from everywhere to the capitals to vote. How is it in Brazil?",363,128,1792894253.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,brazil,Brazil betting licences expire with no R$2.55bn refund,34,8,1792924607.0,0.0,0.0,0.0,0.0,0.0,0.1,lexicon
+2026-10-27T13:43:06Z,americas,brazil,"In Brazil’s Runoff, Lula Faces Bolsonaro, Trump—and Big Tech",728,98,1792843829.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,brazil,For the LGBTQIA+ who are thinking of voting in Flavio: Do you know pl 5167/2009 ?,331,88,1792770677.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,brazil,"If you are a foreigner that cares about our upcoming elections and can't vote, do this instead!",615,94,1792721819.0,0.0,0.0,0.0,0.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,americas,brazil,Luis Fernando Verissimo - the book I purchased,21,5,1792781983.0,0.0,0.0,0.0,0.0,0.0,-0.08333333333333333,lexicon
+2026-10-27T13:43:06Z,americas,brazil,"Flávio Bolsonaro and Lula about even ahead of Brazil runoff, Datafolha poll shows",478,121,1792711307.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,argentina,“No tengo cuerpo”. Argentinos murieron en Ucrania combatiendo por dinero y sus familiares quieren saber qué pasó,50,56,1793103528.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,argentina,Un policía mató de un tiro a una perra en una comisaría porteña: lo desvincularon de la fuerza y enfrenta una causa penal,73,19,1793084857.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,argentina,"Lo mandaron a controlar a la hinchada y terminó tomando vino y bailando, según trascendió, fue sancionado",188,52,1793064288.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,argentina,Nadie: - los hombres argentinos a los 65 años con su primer hijo porque a esa edad por fin pudieron estar estable económicamente,790,141,1793033590.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,argentina,Los docentes de todos los ámbitos deberían ser mucho más exigentes en los contenidos mínimos,28,58,1793095808.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,argentina,Operario en la cima de una torre del escenario para el Papa,16,10,1793103549.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,argentina,"¿no me habrás filmado, no? 🐧💰",112,103,1793057704.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,argentina,Sorpresa en Anillaco por un ejercicio militar urbano en la localidad,70,28,1793064957.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,argentina,Motero te da un tip de seguridad muy importante,867,174,1793014575.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,argentina,Nancy Pazos fue al cumple de Charly y no la dejaron entrar frente a las cámaras,305,60,1793032041.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,argentina,"Milei salió al balcón de la Casa Rosada a saludar junto a su Gabinete e hizo el gesto de ""six seven""",433,451,1793024962.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,argentina,Foquito sigue deambulando por las calles y ahora pide plata,62,18,1793059401.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,argentina,Yabirú - Jabiru mycteria,11,3,1793092667.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,argentina,Nació un elefante marino en Mar del Plata y posó para la foto,119,15,1793038560.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,argentina,Macritip: vayan comprando repelente de mosquitos para este verano,37,34,1793061402.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,argentina,El Gobierno avanza con la revisión de pensiones por invalidez y evalúa dar de baja 20.000 beneficios,100,71,1793041040.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,argentina,Inauguraron la Planta Compresora Holdich en Comodoro y habilitará nuevas conexiones de gas en 25 localidades de la Patagonia,3,0,1793106883.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,argentina,Encontré data del Mundo Cartoon Network,26,6,1793064186.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,chile,VIDEOS | Tornado categoría 2 afecta a Renco y Requínoa en O’Higgins: reportan destrucción de colegio,718,146,1793050061.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,chile,¿Cuánto es una mareaqueta? 🇨🇱,256,226,1793065394.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,chile,Hombres que estuvieron en una relación por varios años y terminaron ¿lograron conocer otras mujeres?,29,95,1793103436.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,chile,Juego de palabras sobre un eufemismo: «el V-Word»,23,71,1793104851.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,chile,Guitar Hero 2: Rock Chileno V1.5 Parche 2026,77,7,1793079192.0,0.0,0.0,0.0,0.0,0.0,0.2,lexicon
+2026-10-27T13:43:06Z,americas,chile,Angol tiene 500 familias sin alcantarillado y sin solución cercana,21,10,1793100832.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,chile,Pederastas con riesgo de reincidencia: estos son 33 de los 56 beneficiados por Rabat y compañía,135,39,1793063791.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,chile,Soy mal amigo?,16,45,1793103581.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,chile,Qué opinan sobre las cápsulas para dormir siesta en la Universidad Alberto Hurtado?,94,43,1793067810.0,0.0,0.0,0.0,0.0,0.0,-0.05,lexicon
+2026-10-27T13:43:06Z,americas,chile,Superintendente de Pensiones eleva a US$ 10.000 millones las pérdidas de valoración de las AFP en derivados y revela alertas desde 2024,126,35,1793056491.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,chile,Ay no ...,192,14,1793047232.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,chile,Conductor vinculado a recorridos de las líneas 102 y 103 fue detenido por intento de violación en Villa Alemana,113,40,1793055254.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,chile,Please tell me I didn't permanently offend my partner’s family at my first Chilean asado,10,31,1793102602.0,0.0,0.0,0.0,0.0,1.0,0.1625,lexicon
+2026-10-27T13:43:06Z,americas,chile,¿Su pareja es también su mejor amigo/a? Me dolió la respuesta de mi novio.,275,267,1793031501.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,chile,"No, no hay que aumentar la edad de jubilación",78,105,1793055019.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,chile,"DUOC UC, GRATUIDAD 70%",6,8,1793106745.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,chile,Laguna Las Mellizas,47,2,1793058235.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,chile,El desmarque de Republicanos al guion de Kast por reelección de Lula en Brasil: Militantes acusan “intervencionismo electoral”,136,55,1793036608.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,colombia,EPS gastó en casinos y prostíbulos mientras estuvo intervenida,32,12,1793103509.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,colombia,Colombian Rapper Chelo Hop Stomps on Israeli Flag During Bogotá Performance.,37,4,1793098478.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,colombia,27 de octubre.. nuestras mascotas fallecidas vienen a visitarnos,37,5,1793079101.0,0.0,0.0,0.0,0.0,0.0,0.6,lexicon
+2026-10-27T13:43:06Z,americas,colombia,"[Meme] Flavio, ¿por qué?",321,29,1793036464.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,colombia,Eliminando una emisora al dia (dia 5),9,12,1793103424.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,colombia,"De un exitoso programador bilingüe a considerar el ejército a los 5 años, esta es mi historia",57,34,1793066566.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,colombia,El lawfare en colombia está muy raro,261,41,1793033128.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,colombia,Ordoñez y Petrosky conectados siempre 😅,58,1,1793062183.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,colombia,Lo que hay es plata mijita,218,53,1793027883.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,colombia,American first time traveling abroad first meal costilla guisada with yuca and cheese base,103,29,1793041472.0,0.0,0.0,0.0,0.0,1.0,0.06999999999999999,lexicon
+2026-10-27T13:43:06Z,americas,colombia,"Abelardistas se montan en la narrativa, sin pruebas, de un fraude en Brasil",35,18,1793060074.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,colombia,Así se ven 9'999.000 en baretа y 1.000 de pan,13,4,1793072077.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,colombia,Ni Netflix tiene esos cámaras,3,0,1793101659.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,colombia,Estas cifras tienen sentido?,18,11,1793063039.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,colombia,Fiscalía imputará a Hollman Morris por acto sexual violento,20,7,1793060799.0,0.0,0.0,0.0,0.0,0.0,0.5,lexicon
+2026-10-27T13:43:06Z,americas,colombia,RTX 5060 ti o RTX 5060 ti Dual,6,8,1793084340.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,colombia,La rosca de De la Espriella y los Gómez en empresas del Estado,23,5,1793054462.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,usa,“Family values” my ass! 🙄,24,2,1793074467.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,usa,Ukrainians are not fighting for Zelenskyy. They are fighting for national survival.,3,0,1793107164.0,0.0,0.0,0.0,0.0,0.0,-0.0625,lexicon
+2026-10-27T13:43:06Z,americas,usa,The Trump PAC That’s Attacking a Democratic House Candidate,1,1,1793105222.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,usa,Did Elon Musk Commit Some Light Treason?,25,8,1793036438.0,0.0,0.0,0.0,0.0,0.0,0.4,lexicon
+2026-10-27T13:43:06Z,americas,usa,Revealed: Democrats Release Report Detailing Trump’s Alleged Crimes with Epstein,5,0,1793037412.0,0.0,0.0,0.0,0.0,1.0,-0.1,lexicon
+2026-10-27T13:43:06Z,americas,usa,"House Dems Release 53 Page Trump-Epstein Report, Call for Special Counsel to Investigate Trump and Epstein Crimes",3,1,1793046481.0,0.0,0.0,0.0,0.0,0.0,0.35714285714285715,lexicon
+2026-10-27T13:43:06Z,americas,usa,Trump says he doesn't 'give a damn' about gas prices as US making 'fortune',41,6,1792977463.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,usa,Zelenskiy says US fully resumes warnings on ballistic strikes,2,0,1793029458.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,usa,"In U.S. Gas Talks With Kremlin, Hidden Financing for Alaska Project Emerges",3,0,1793016090.0,0.0,0.0,0.0,0.0,0.0,-0.16666666666666666,lexicon
+2026-10-27T13:43:06Z,americas,usa,Saddam Hussein Cheesecake Factory.,47,1,1792950923.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,usa,"Steve Heise (@americareformed): ""This story is blowing up around the world and if true, will blow back on The Trump Crime Family the likes of which no one has ever seen """,4,2,1792996363.0,0.0,0.0,0.0,0.0,0.0,0.175,lexicon
+2026-10-27T13:43:06Z,americas,usa,From “Ask not” to “Ass talk.” The presidential downgrade.,3,0,1792991132.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,usa,"You can do it, Texans. Turn Texas BLUE! 💙🗳️",24,2,1792949560.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,usa,"Ken Paxton will eat your tax dollars for lunch, and stick you with the bill. 💸",20,2,1792950090.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,usa,"FULL SPEECH: Obama Unleashes Fiery Attack on Trump Over Iran War, Corruption at Michigan Rally| AC1G",12,2,1792943985.0,0.0,1.0,0.0,0.0,0.0,0.35,lexicon
+2026-10-27T13:43:06Z,americas,usa,Opinion | Russia Was Losing. Enter President Trump.,3,2,1792916491.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,usa,Facing Evil and Calling It by Its Name,1,0,1792916540.0,0.0,0.0,0.0,0.0,0.0,-1.0,lexicon
+2026-10-27T13:43:06Z,americas,nyc,I painted some pumpkins on the Upper East Side,146,10,1793102841.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,nyc,"As SNAP cuts hit 273,000 New Yorkers, the state will keep school lunches free",338,37,1793049325.0,0.0,0.0,0.0,0.0,0.0,0.2681818181818182,lexicon
+2026-10-27T13:43:06Z,americas,nyc,New Yorkers Want to Play Ball. The Toughest Game is Getting a Field. | The City Reporter,22,8,1793100041.0,0.0,0.0,0.0,0.0,0.0,-0.13181818181818183,lexicon
+2026-10-27T13:43:06Z,americas,nyc,"A video i took of a striped skunk in my neighborhood. Kew Gardens, Queens.",197,27,1793054874.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,nyc,NYC Mayor Mamdani Struggles to Get a Handle on Homeless Encampments,117,126,1793057168.0,0.0,0.0,0.0,1.0,0.0,-0.16590909090909092,lexicon
+2026-10-27T13:43:06Z,americas,nyc,"MTA faces $900M budget hole by 2030 — despite cash-strapped agency continuing to hike fares, fees",142,157,1793050385.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,nyc,"Landlord trying to replace our front desk staff with a ""virtual doorman.""",380,134,1793028677.0,0.0,0.0,0.0,0.0,0.0,0.018181818181818174,lexicon
+2026-10-27T13:43:06Z,americas,nyc,I've drawn the Bronx with one line that never intersects [oc],124,16,1793045059.0,0.0,0.0,0.0,0.0,0.0,0.2619047619047619,lexicon
+2026-10-27T13:43:06Z,americas,nyc,"Woman sexually assaulted at knifepoint in Central Park, police say",388,125,1793016883.0,0.0,0.0,0.0,0.0,0.0,0.25,lexicon
+2026-10-27T13:43:06Z,americas,nyc,Something Fun for Halloween From our Archives ~ Charles Fazzino  in Greenwich Village,4,0,1793104384.0,1.0,0.0,0.0,0.0,0.0,0.3,lexicon
+2026-10-27T13:43:06Z,americas,nyc,911 Medic Angrily Testifies to NYC Council On The Collapse of the 911 Ambulance Service In NYC,475,104,1793010257.0,0.0,0.0,1.0,0.0,0.0,-0.5,lexicon
+2026-10-27T13:43:06Z,americas,nyc,New NYC “I Voted” Stickers,53,6,1793050961.0,0.0,0.0,0.0,0.0,0.0,0.13636363636363635,lexicon
+2026-10-27T13:43:06Z,americas,nyc,Woman who jabbed rabbi with syringe in NYC claims mistaken identity,76,32,1793031129.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,nyc,I made a Knicks painting of Game 4 of the NBA finals at Madison Square Garden,16,1,1793063022.0,0.0,0.0,0.0,0.0,0.0,-0.4,lexicon
+2026-10-27T13:43:06Z,americas,nyc,Community speaks out on Tompkins Square Park pool and fitness area renovations at Community Board Meeting,1,0,1793108624.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,nyc,"City Council passes COPA, paving the way for land trusts and non-profits to get first dibs on failing buildings",52,39,1793028030.0,0.0,0.0,0.0,0.0,1.0,0.25,lexicon
+2026-10-27T13:43:06Z,americas,nyc,"Foundations Underway For 333-Unit Building at 1959 Jerome Avenue in Morris Heights, The Bronx",10,1,1793049471.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,americas,nyc,NYPD in negotiations to use new AI-driven technology that will make it easier to track cell phones,8,7,1793047478.0,0.0,0.0,0.0,0.0,0.0,0.13636363636363635,lexicon
+2026-10-27T13:43:06Z,americas,nyc,AMC wants to keep Kips Bay movie theater but NYU wants them out,279,72,1792970593.0,0.0,0.0,0.0,0.0,0.0,0.325,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,'Constant surveillance is pushing us toward an authoritarian state': voters demand regulation of Flock cameras,1318,59,1793104762.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,ICE plan to buy robot dogs spurs protest from hundreds of Boston Dynamics employees,23963,1598,1793046994.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,The EPA is quietly killing its web archive,422,20,1793105458.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,Police Are Increasingly Pulling People Over Because AI Deems Their Driving Patterns “Suspicious”,8213,459,1793047030.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,Police have reopened a criminal investigation into sexualised deepfakes made using X’s chatbot Grok,518,49,1793094063.0,0.0,0.0,0.0,0.0,0.0,-0.4,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,Someone debloated their Samsung Tizen OS TV by pointing a camera at it for Claude to see,4494,826,1793047472.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,"Data center gear is being hijacked in transit to the tune of hundreds of millions — grand-theft-GPU thieves hack accounts, perform hit-and-runs, spoof GPS signals, and funnel hardware to China",276,29,1793098100.0,0.0,0.0,0.0,0.0,0.0,0.10000000000000002,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,'It's offensively cheap': How solar power is quietly becoming bigger than nuclear,3151,292,1793046805.0,0.0,0.0,1.0,0.0,0.0,0.2833333333333334,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,"Cloud gaming was once billed as cheaper than buying titles. But new pricing from Microsoft’s Xbox is eroding that argument, gamers say",1040,96,1793068036.0,0.0,0.0,0.0,0.0,0.0,0.13636363636363635,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,"In Leaked Audio, Flock CEO Tells Cops Backlash to the Company Isn’t Real / In comments at a private police conference, Garrett Langley also said his wife advised him to never apologize.",4938,111,1793036672.0,0.0,0.0,0.0,0.0,0.0,0.1,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,"The AI boom is happening at seven companies, the rest of the S&P 500 isn't seeing it",1778,114,1793053616.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,Sunlight at night: US startup’s demonstration of lighting Earth from space draws criticism,126,34,1793105451.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,Meta stock sinks nearly 7% as AI spend pushes free cash flow negative,6257,224,1793024470.0,0.0,0.0,0.0,0.0,0.0,0.02500000000000001,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,Microsoft offers to buy out a quarter of its workforce,108,44,1793103683.0,0.0,0.0,0.0,0.0,0.0,0.1,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,Lula Vows to Regulate Social Media Giants,26158,657,1793007793.0,0.0,0.0,0.0,0.0,0.0,0.03333333333333333,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,"How Wikipedia’s Editors Keep the Online Encyclopedia Human-Written // AI-generated text is harder to spot, but that hasn’t deterred them",99,22,1793104408.0,0.0,0.0,0.0,0.0,0.0,-0.05,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,"In China, the AI bubble has already burst",6570,643,1793023301.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,Anthropic Reveals It Will Pay SpaceX Up to $120.5B for AI Compute,3917,651,1793031898.0,0.0,0.0,0.0,0.0,1.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,Highway robbers target off-duty cops escorting millions in data center gear / Investigators explain how highway thieves stole $100M in data center equipment.,2550,150,1793035693.0,0.0,0.0,0.0,0.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,street_topics,technology,You can now run Nintendo Switch games natively on iPhones and Macs,404,69,1793069707.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,science,How dismissed symptoms can push patients to breaking point: Patients with autoimmune diseases have been left feeling suicidal after feeling like their doctor was saying their symptoms were ‘all in their head’. Only 7% agreed with being told that their symptoms were “psychosomatic”.,1575,197,1793101042.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,science,"A monkey infected with an HIV-like virus has stayed virus-free for four years after a single shot of a new antibody that helps the immune system destroy the cells where the virus hides. Several other baby monkeys also stayed clear for months after their HIV drugs were stopped, in a small, new study.",1379,22,1793090652.0,0.0,0.0,0.0,0.0,0.0,0.007629870129870131,lexicon
+2026-10-27T13:43:06Z,street_topics,science,Global happiness researchers reveal keys to a good life. Research found as much as 40 per cent of one’s happiness is related to “volitional activities” or how you choose to spend your time.,524,41,1793099614.0,0.5,0.0,0.0,0.0,0.5,0.3833333333333333,lexicon
+2026-10-27T13:43:06Z,street_topics,science,"Autistic brains react less to being told ""you're wrong,"" new study finds. People with autism showed weaker brain responses to negative feedback, and unlike others, their reactions didn't change with task difficulty, which may help explain why adapting to change feels harder.",6431,601,1793046224.0,0.0,0.0,0.0,0.0,0.0,-0.1883838383838384,lexicon
+2026-10-27T13:43:06Z,street_topics,science,"A simple liquid can stop cavities without drilling | Scientists have confirmed that silver diamine fluoride, an inexpensive liquid can stop tooth decay in seconds without drilling or anesthesia, potentially transforming cavity treatment for millions.",18525,626,1793024166.0,0.0,0.0,0.0,0.0,0.0,0.13333333333333333,lexicon
+2026-10-27T13:43:06Z,street_topics,science,Adventurous play linked to better physical and mental health in children,2365,33,1793040404.0,0.0,0.0,0.0,0.0,0.0,0.225,lexicon
+2026-10-27T13:43:06Z,street_topics,science,"When the UK made teens stay in school one extra year (until age 16) in 1972, people who got that extra year had fewer dementia diagnoses nearly 50 years later. The benefit even held for people with high genetic risk, suggesting schooling itself protects the brain and your genes aren't your destiny.",9163,80,1793014155.0,0.0,0.0,1.0,0.0,0.0,0.052000000000000005,lexicon
+2026-10-27T13:43:06Z,street_topics,science,"Young adults who fear relationship rejection suffer from higher death anxiety, which triggers increased depression, anxiety, and OCD symptoms, especially if they believe death is the absolute end of existence, a new study claims.",4930,422,1793009018.0,0.0,0.0,0.25,0.75,0.0,0.13727272727272727,lexicon
+2026-10-27T13:43:06Z,street_topics,science,"After one night without sleep, people made more mistakes and were less likely to notice them. In a study of 30 adults, both effects became stronger the longer participants continued the task.",1992,59,1793024634.0,0.0,0.0,0.0,0.0,0.0,0.11111111111111112,lexicon
+2026-10-27T13:43:06Z,street_topics,science,"US drinking water could contain double the reported PFAS levels, model estimates",3822,102,1793011769.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,science,"A study using genetic, health and Fitbit data found that higher physical activity was associated with weaker links between genetic risk for depression and symptom severity. Both daily steps and moderate-to-vigorous exercise showed this pattern, suggesting activity may help buffer inherited risk.",225,6,1793064749.0,0.0,0.0,1.0,0.0,0.0,0.0625,lexicon
+2026-10-27T13:43:06Z,street_topics,science,"People With Psychopathic Traits May Enjoy Fear Because They Experience Thrill and Excitement Rather Than Distress When Facing Frightening Situations, Offering Insights Into How Personality Traits Shape Emotional Responses to Fear",2025,121,1793018075.0,0.0,0.0,1.0,0.0,0.0,-0.033333333333333326,lexicon
+2026-10-27T13:43:06Z,street_topics,science,"A clinical trial found that a nasal spray made from a toad venom chemical can quickly ease severe depression for weeks, though some experts argue it isn't as fully effective as other treatments like ketamine.",1118,94,1793029020.0,0.0,0.0,0.0,0.0,0.0,0.26944444444444443,lexicon
+2026-10-27T13:43:06Z,street_topics,science,Some people who can't picture things while awake still report seeing images in their dreams. A study of 205 adults found wide differences in how waking imagination and dream sensations lined up in people with aphantasia.,413,98,1793046318.0,0.0,0.0,0.0,0.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,street_topics,science,"New tests using blurry pictures and hidden numbers have revealed visual processing difficulties in some people with Parkinson’s disease before they report wider problems with thinking, University of Queensland research has found.",168,1,1793061934.0,0.0,0.0,0.0,0.0,1.0,-0.010101010101010102,lexicon
+2026-10-27T13:43:06Z,street_topics,science,"Scientists made a 'low-oxygen hypoxia pill': two drugs that make blood release less oxygen into tissues. Given daily to mice that already had Parkinson's-like movement problems, it improved their movement within 1-2 weeks. It also more than doubled lifespan in mice with a rare energy disorder.",2794,43,1793004002.0,0.0,0.0,0.0,0.0,1.0,0.12666666666666665,lexicon
+2026-10-27T13:43:06Z,street_topics,science,Clouds on a lava planet challenge what astronomers expected | New analysis of James Webb Space Telescope observations points to a reflective cloudy sky on TOI-561 b,50,2,1793081282.0,0.0,0.0,0.0,0.0,0.0,0.018181818181818174,lexicon
+2026-10-27T13:43:06Z,street_topics,science,"A University of Queensland research team is challenging how we think about the brain’s bioenergetics, overturning the field to show that saturated free fatty acids contribute to both energy and signalling that powers synaptic plasticity.",43,1,1793083615.0,0.0,0.0,0.0,0.0,0.0,0.2333333333333333,lexicon
+2026-10-27T13:43:06Z,street_topics,science,Researchers from UQ’s Queensland Brain Institute and the Australian National University have identified a brain circuit linked to the flexible formation of memories that may help explain some of the differences in learning associated with autism spectrum disorder.,82,2,1793062170.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,soccer,"Kylian Mbappé statement: "" I apologise to everyone my words have upset. This was absolutely not my intention. I have deep respect for the Chinese people and their history, and I am sincerely sorry.""",2447,846,1793101614.0,0.0,0.0,0.0,0.0,0.0,0.028571428571428574,lexicon
+2026-10-27T13:43:06Z,street_topics,soccer,"Reporter on the red carpet asks Michael Owen: ""What was your best standing in the Ballon d'Or when you were active?"" Owen: ""Well I won it in 2001""",2595,215,1793097640.0,1.0,0.0,0.0,0.0,0.0,0.2888888888888889,lexicon
+2026-10-27T13:43:06Z,street_topics,soccer,China's state broadcaster suspends all La Liga broadcasts and removes ads featuring Kylian Mbappé,3446,727,1793090064.0,0.0,0.0,0.0,0.0,0.0,0.4,lexicon
+2026-10-27T13:43:06Z,street_topics,soccer,Chinese brands Dongpeng and Mengniu cancel sponsorship of Mbappé after he called Mao Zedong a dictator while discussing a meme.,6034,775,1793078667.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,soccer,Harry Kane’s Ballon d’Or after party,1768,314,1793096220.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,soccer,Harry Kane announced as the winner of the 2026 Ballon d'Or,57525,2700,1793055109.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,soccer,Harry Kane on his Instagram right after winning the Ballon d’Or,26676,802,1793056680.0,0.0,0.0,0.0,0.0,0.0,0.39285714285714285,lexicon
+2026-10-27T13:43:06Z,street_topics,soccer,Allianz Arena is celebrating Harry Kane's Ballon D'or win with Golden colours.,8490,80,1793063710.0,1.0,0.0,0.0,0.0,0.0,0.46666666666666673,lexicon
+2026-10-27T13:43:06Z,street_topics,soccer,[Jacobs] Michael Carrick set to be given time to turn things in around. Expected to be in charge for Chelsea.,935,354,1793102603.0,0.0,0.0,0.0,0.0,0.0,-0.175,lexicon
+2026-10-27T13:43:06Z,street_topics,soccer,"The two Ballon D'Or winners 2026, Alexia Putellas and Harry Kane",12411,293,1793055993.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,soccer,"[LALIGA] deeply regrets the offense caused to Chinese fans by Kylian Mbappé’s recent comments. These comments were made in a personal capacity and do not represent LALIGA. To the extent of our institutional responsibility, we apologize on behalf of LALIGA and all its clubs.",974,415,1793099754.0,0.0,0.0,0.0,0.0,0.0,-0.02,lexicon
+2026-10-27T13:43:06Z,street_topics,soccer,"Harry Kane became the first English Ballon d'Or winner since 2001. He joins previous English recipients Sir Stanley Matthews, Sir Bobby Charlton, Kevin Keegan, and Michael Owen in history.",7818,547,1793055378.0,0.0,0.0,0.0,0.0,1.0,0.020833333333333336,lexicon
+2026-10-27T13:43:06Z,street_topics,soccer,Harry Kane celebrates the Ballon d’Or with fans outside the London Palladium,4432,82,1793063122.0,1.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,soccer,"[Statsdufoot] Harry Kane is the only player among the Ballon d'Or winners over the past 30 years who has never won an international competition, either with his club or the national team.",1625,221,1793081990.0,1.0,0.0,0.0,0.0,0.0,-0.08333333333333333,lexicon
+2026-10-27T13:43:06Z,street_topics,soccer,[Tottenham Hotspur] tribute video for Harry Kane winning the Ballon D’or: A legacy built in the Spurs academy. Forever one of our own,3981,327,1793059211.0,0.0,0.0,0.0,0.0,0.0,0.55,lexicon
+2026-10-27T13:43:06Z,street_topics,soccer,"Scholes ""I think Conte’s the best one for the United job. I don’t care if he’s there short term. If he's there 18 months and he gets us challenging for the league, that would be a success. I know he's volatile and a bit of a madman, but Conte needs to come in and start banging some heads together""",589,422,1793095625.0,1.0,0.0,0.0,0.0,0.0,0.45,lexicon
+2026-10-27T13:43:06Z,street_topics,soccer,Salah's reaction to Rizespor player diving in front of him.,5591,154,1793051112.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,soccer,Thomas Müller‘s response to Harry Kane winning the Ballon d‘Or,2060,96,1793069451.0,0.0,0.0,0.0,0.0,0.0,0.5,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,"The Brewers scored 8 Runs in the 5th inning and became the first team in MLB history to have 7 consecutive batters get a hit in a postseason game, let alone the World Series.",4244,205,1793070201.0,0.0,0.0,0.0,0.0,1.0,-0.07500000000000001,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,Ronaldo announces Harry Kane as the 2026 Ballon d'Or winner,2107,146,1793055295.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,"Protestors unfurled banners condemning Israel and the US-Israel relationship at Tuesday's NHL game between the St. Louis Blues and Vegas Golden Knights. Now that Blues have put out a statement calling the signs ""antisemitic"" ""vile messages of hate.”",2713,47,1793047774.0,0.0,1.0,0.0,0.0,0.0,-0.30000000000000004,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,Brewers rout the Rays 10-1 to move within a win of their first World Series title,287,3,1793083021.0,0.5,0.0,0.0,0.0,0.5,0.525,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,First-round loss in China drops Venus to 0-13 in singles,43,11,1793106345.0,0.0,0.0,0.0,0.5,0.5,0.024999999999999994,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,Harry Kane is the Men's Ballon D'or Winner 2026,494,25,1793055351.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,NBA partners with Kalshi and Polymarket amid regulation fight,825,124,1793029388.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,England-Republic of Ireland U15 World Cup game ends over alleged racism,217,130,1793042896.0,0.0,0.0,0.0,0.0,0.0,-0.25,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,"Seahawks defense dominates Patrick Mahomes, Kenneth Walker III in big win",1051,34,1793010398.0,1.0,0.0,0.0,0.0,0.0,0.4,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,Thunder G Jalen Williams taken off with significant injury,311,37,1793021383.0,0.0,0.0,0.0,0.0,0.0,0.375,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,Joey Logano goes airborne in scary 15-car wreck at Talladega,357,27,1792998093.0,0.0,0.0,0.0,0.0,0.0,-0.5,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,Retired Rafael Nadal to play in Las Vegas exhibition in February,33,1,1793033508.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,UFL unveils Colorado Stampede as Colorado Springs’ new pro football team,370,36,1792974696.0,0.0,0.0,0.0,0.0,0.0,0.13636363636363635,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,"Shadab Khan was given out, and Pakistan appeared to have lost the match as players began shaking hands. However, a desperate review while handshakes were underway led to an extraordinary decision overturn.",1142,48,1792949157.0,0.0,0.0,0.0,1.0,0.0,-0.13333333333333333,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,"How Sal Frelick became Brewers' unlikely World Series hero with Game 2 blast: ""He has this edge about him""",171,1,1792955655.0,0.0,0.0,0.0,0.0,0.0,-0.45,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,Aaron Ashby strikes out Yandy Diaz who couldn't check his swing as the Brewers take Game 2 of the World Series,2229,182,1792901172.0,0.0,1.0,0.0,0.0,0.0,-0.4,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,IWF announces that Moscow will host the 2030 World Weightlifting Championships - First Olympic sport to select Russia to host a world championship since 2022.,0,6,1793064795.0,0.0,0.0,0.0,0.0,1.0,0.25,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,A great behind the back pass from Sacha Feinberg-Mngomezulu to Hassim Pead to score a try vs Scarlets,117,9,1792908789.0,1.0,0.0,0.0,0.0,0.0,0.13333333333333333,lexicon
+2026-10-27T13:43:06Z,street_topics,sports,Jay-Z announced as Super Bowl LXI halftime show performer,0,69,1793067777.0,0.0,0.0,0.0,0.0,0.0,0.3333333333333333,lexicon
+2026-10-27T13:43:06Z,street_topics,movies,"‘The Odyssey’ sets final acting categories for Oscar campaign: No Zendaya, Charlize Theron, Lupita Nyong’o, Elliot Page, or Jon Bernthal",5574,1543,1793058666.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,movies,"Walter Koenig, ‘Star Trek's Original Chekov, Dead at 90",10549,614,1793031797.0,0.0,0.0,0.0,1.0,0.0,0.0875,lexicon
+2026-10-27T13:43:06Z,street_topics,movies,"Skydance Is Offering Employees Voluntary Buyouts Ahead of Layoffs, Adopts 5-Days-per-Week In-Office Policy",4723,706,1793036722.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,movies,Zangeif Actor Claims He And His Street Fighter Co-Stars Signed Up For Three Movies,2250,311,1793044265.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,movies,"Remember, remember, the 5th of November. Hi reddit, I'm James McTeigue, director of V FOR VENDETTA. I'm here to celebrate the 20th anniversary re-release in theaters next week and answer your questions. Ask me anything!",105,35,1793106733.0,1.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,movies,New Character Posters for 'Dune: Part Three',3129,519,1793025430.0,0.0,0.0,0.0,0.0,0.0,0.13636363636363635,lexicon
+2026-10-27T13:43:06Z,street_topics,movies,Movies where the actors age changes your viewing of the film.,58,127,1793094222.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,movies,Less Than 1% Of SAG-AFTRA Members Have Qualified For Streaming Bonus So Far As Union Faces Reckoning Over Post-Strike Conditions,663,29,1793046707.0,0.0,1.0,0.0,0.0,0.0,-0.033333333333333326,lexicon
+2026-10-27T13:43:06Z,street_topics,movies,Keanu Reeves to Star in Netflix Action Movie ‘Maelstrom’ After Alan Ritchson Drops Out,1492,210,1793029618.0,0.0,0.0,0.0,0.0,0.0,0.1,lexicon
+2026-10-27T13:43:06Z,street_topics,movies,‘Donnie Darko’ Oral History: A Mind-Twisting Cult Classic Turns 25,85,24,1793076201.0,0.0,0.0,0.0,0.0,0.0,0.16666666666666666,lexicon
+2026-10-27T13:43:06Z,street_topics,movies,"Hey Reddit! <3 I'm Maika Monroe (Longlegs, It Follows, Victorian Psycho, The Guest). Ask me anything!",1480,407,1793017184.0,0.0,0.0,0.0,0.0,0.0,0.08712121212121211,lexicon
+2026-10-27T13:43:06Z,street_topics,movies,Are there any movies that had very bad test screenings amd extensive reshoots that ended being really good?,371,421,1793039680.0,1.0,0.0,0.0,0.0,0.0,-0.005454545454545429,lexicon
+2026-10-27T13:43:06Z,street_topics,movies,"AMA/Q&A Announcement - Ron Livingston - Thursday 10/29 at 11:15 AM ET - Actor in 'Band of Brothers', 'Office Space', 'Swingers', 'Adaptation', 'Christmas at the Kringles'",304,45,1793041145.0,0.0,0.0,0.0,0.0,0.0,0.06818181818181818,lexicon
+2026-10-27T13:43:06Z,street_topics,movies,Robert Eggers' ‘Werwulf’ Playing in 35mm in Select Theaters Christmas Day and Tickets Are On Sale Now,601,47,1793027536.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,movies,The Texas Chainsaw Massacre 2 (1986) | Dir: Tobe Hooper | Stretch (Caroline Williams) encounters Chop Top (Bill Moseley) and Leatherface in the radio station,593,115,1793026036.0,0.0,0.0,0.0,0.0,0.0,0.5,lexicon
+2026-10-27T13:43:06Z,street_topics,movies,"In The World’s End, in the scene where Gary tries to convince Andy to join, when he talks about his mom…",123,42,1793053995.0,0.0,0.0,0.0,1.0,0.0,-0.24,lexicon
+2026-10-27T13:43:06Z,street_topics,movies,Eric Bauza has passed away.,4266,276,1792984946.0,0.0,0.0,0.0,0.0,0.0,-0.05,lexicon
+2026-10-27T13:43:06Z,street_topics,music,"Neil Young Sues Trump for $10 Million Over Unauthorized Use of ""Rockin' in the Free World""",33528,466,1793057984.0,0.0,0.0,0.0,0.0,0.0,0.25,lexicon
+2026-10-27T13:43:06Z,street_topics,music,Neil Young suing Donald Trump committee for $10m – six years after first lawsuit,373,1,1793101699.0,0.0,0.0,0.0,0.0,1.0,0.175,lexicon
+2026-10-27T13:43:06Z,street_topics,music,"Despite Taylor Swift's New ""Patient Zero"" Version, Ella Langley Reclaims Hot 100 as Olivia Rodrigo Knocks ""The Life of a Showgirl"" Off Billboard 200 Throne",305,107,1793102735.0,0.0,0.0,0.0,0.0,0.0,0.19318181818181818,lexicon
+2026-10-27T13:43:06Z,street_topics,music,Macklemore vows to fight until his 'last breath' as he calls for freedom,422,290,1793096657.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,music,'Billionaires Are Constantly Telling Us What to Do': Jack Antonoff Criticises Elite Control Amid Macklemore Row,232,79,1793105477.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,music,"Jack Antonoff via The Guardian: ""We all live in a world where billionaires are constantly telling us what to do. So stand the fuck up.""",3458,209,1793048536.0,0.0,0.0,0.0,0.0,0.0,-0.08787878787878789,lexicon
+2026-10-27T13:43:06Z,street_topics,music,Moment Chris Brown attacks music producer with tequila bottle in Mayfair nightclub - as singer avoids jail,291,39,1793093465.0,0.0,1.0,0.0,0.0,0.0,-0.1,lexicon
+2026-10-27T13:43:06Z,street_topics,music,"Bono Concedes U2's iTunes Album Mess Went 'Too Far': 'Yeah, that was all on me'",2633,858,1793043228.0,0.0,0.0,0.0,0.0,0.0,-0.03749999999999999,lexicon
+2026-10-27T13:43:06Z,street_topics,music,Turnstile’s National Mall Show Raises $260K for Humanitarian Aid,2388,129,1793043328.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,music,Nicki Minaj Fights Demand for Private Texts After Ex-Employee Accuses Her of Backstage Assault,93,4,1793102624.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,music,"20 years ago today, Amy Winehouse's ""Back to Black"" was released.",36,1,1793100368.0,0.0,0.0,0.0,0.0,0.0,-0.08333333333333333,lexicon
+2026-10-27T13:43:06Z,street_topics,music,"Donnie Iris, Pittsburgh music legend, dies",246,18,1793058011.0,0.0,0.0,0.0,1.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,music,Soundgarden - Jesus Christ Pose [Grunge],176,19,1793060284.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,music,Donnie Iris - Ah! Leah [Rock],174,25,1793055787.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,music,"Nicki Minaj says she will endorse Trump if he runs in 2028, while Trump calls her ass “beautiful”",12718,1430,1792976145.0,1.0,0.0,0.0,0.0,0.0,0.85,lexicon
+2026-10-27T13:43:06Z,street_topics,music,"Anika Nilles on Her Rush Journey: ""I Have No Ego, So I Play What is Required""",567,46,1793030984.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,music,A$AP Rocky Accused of Copying Visuals From a 2019 Video for His AI-Generated ‘Shroom Clouds’ Music Video,716,53,1793023743.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,music,The Smiths - Bigmouth Strikes again [Indie Rock],15,0,1793095504.0,0.0,1.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,music,"Mötley Crüe's Nikki Sixx: Vince Neil Has ""Taken a Lot of Bricks in the Face Over the Years for His Vocals Live""",493,264,1793024485.0,0.0,0.0,0.0,0.0,0.0,0.13636363636363635,lexicon
+2026-10-27T13:43:06Z,street_topics,music,Bands with no original members,164,457,1793045109.0,0.0,0.0,0.0,0.0,0.0,-0.1875,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,What's a 'rich people' thing you tried once and immediately understood why they do it?,3729,2511,1793068138.0,0.0,0.0,0.0,0.0,0.0,0.375,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,"What's the most unbelievable excuse someone gave for being late, but later turned out to be true?",1153,350,1793083916.0,0.0,0.0,0.0,0.0,0.0,0.041666666666666664,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,What is some brutally honest dating advice for women in 2026?,1881,2975,1793064406.0,0.0,0.0,0.0,0.0,0.0,0.6,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,"You wake up and it’s October 27, 2006. What do you do?",282,860,1793101802.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,What are the advantages of having a large butt?,4374,1502,1793037579.0,0.0,0.0,0.0,0.0,0.0,0.21428571428571427,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,What's the most ridiculous workplace rule you've ever had to follow?,767,606,1793059239.0,0.0,0.0,0.0,0.0,0.0,0.08333333333333334,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,"Veterinarians of reddit, what are the most memorable pet names you've seen?",1661,2109,1793043416.0,0.0,0.0,0.0,0.0,0.0,0.5,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,What’s a line in a comedy movie that you will never forget?,429,1378,1793066895.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,What's the worst book you've ever read?,164,561,1793085767.0,0.0,0.0,0.0,0.0,0.0,-1.0,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,What's something you can say at a funeral and in your bedroom?,46,162,1793106350.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,What’s the worst cheating story you’ve ever heard?,5873,3238,1793013265.0,0.0,0.0,0.0,0.0,0.0,-1.0,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,"Why aren’t car batteries standardized and swappable by a machine at a gas station, where you could exchange your depleted battery for a fully charged one for a fee?",98,326,1793089893.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,What is an open secret in your line of work or industry that the general public is completely clueless about?,91,165,1793090851.0,0.0,0.0,0.0,0.0,0.0,-0.049999999999999996,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,If the US government became fully transparent overnight what unexpected thing do you think would shock the public the most?,53,122,1793101388.0,0.0,0.0,0.0,0.0,1.0,0.19999999999999998,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,"Today's Intersex Awareness Day. Intersex people of Reddit, what's something you wish people knew about you?",1092,642,1793039694.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,"Men who don't play video games, what do you honestly do with all your free time?",3082,3950,1793018261.0,0.0,0.0,0.0,0.0,0.0,0.5,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,"Hiring managers of Reddit, are younger applicants really showing up to interviews with zero social skills, or are companies just setting ridiculous expectations? What is actually happening in interviews right now?",6992,3961,1793003049.0,0.0,0.0,0.0,0.0,0.0,0.030952380952380953,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,What's the most painful injury/sickness you've experienced so far in life?,32,179,1793106931.0,0.0,0.0,0.0,0.0,0.0,0.17500000000000002,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,What’s something people spend money on to look rich but actually makes them look poor?,33,121,1793102202.0,0.0,0.0,0.0,0.0,0.0,-0.00833333333333334,lexicon
+2026-10-27T13:43:06Z,street_topics,AskReddit,Which video game name would sound ridicuolous if you removed or added one letter?,26,102,1793106780.0,0.0,0.0,0.0,0.0,0.0,0.0,lexicon
