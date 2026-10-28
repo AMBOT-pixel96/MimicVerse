@@ -1,0 +1,489 @@
+{
+  "version": "1.5.0",
+  "timestamp_utc": "2026-10-28T02:51:18Z",
+  "file_stem": "2026-10-28_0251",
+  "n_posts": 1050,
+  "n_subreddits": 57,
+  "n_regions": 8,
+  "score_source": "lexicon",
+  "methodology": {
+    "claim": "Reddit-stratified world panel, not planetary ground truth.",
+    "panel": "curated regional + topic subs, equal seats, not r/popular",
+    "unit": "hot titles + short selftext; no comment trees",
+    "emotions": [
+      "joy",
+      "anger",
+      "fear",
+      "sadness",
+      "surprise"
+    ],
+    "limitations": [
+      "Reddit is English-heavy and urban-platform-skewed",
+      "hot ranking is engagement, not population",
+      "lexicon scoring misses sarcasm and code-switching"
+    ]
+  },
+  "overall": {
+    "n": 1050,
+    "mood": {
+      "joy": 0.23137626262626268,
+      "anger": 0.28409090909090906,
+      "fear": 0.13794191919191923,
+      "sadness": 0.1382575757575758,
+      "surprise": 0.20833333333333337
+    },
+    "polarity": 0.03961206205570921,
+    "dominant": "anger"
+  },
+  "by_region": {
+    "global_news": {
+      "n": 134,
+      "mood": {
+        "joy": 0.145,
+        "anger": 0.32666666666666666,
+        "fear": 0.265,
+        "sadness": 0.1,
+        "surprise": 0.16333333333333333
+      },
+      "polarity": 0.02269981262518576,
+      "dominant": "anger"
+    },
+    "south_asia": {
+      "n": 110,
+      "mood": {
+        "joy": 0.21666666666666667,
+        "anger": 0.35000000000000003,
+        "fear": 0.0,
+        "sadness": 0.23333333333333334,
+        "surprise": 0.2
+      },
+      "polarity": 0.014718889629271861,
+      "dominant": "anger"
+    },
+    "east_asia": {
+      "n": 109,
+      "mood": {
+        "joy": 0.2857142857142857,
+        "anger": 0.2857142857142857,
+        "fear": 0.023809523809523808,
+        "sadness": 0.21428571428571427,
+        "surprise": 0.19047619047619047
+      },
+      "polarity": 0.042390886806024416,
+      "dominant": "joy"
+    },
+    "se_asia_oceania": {
+      "n": 109,
+      "mood": {
+        "joy": 0.28,
+        "anger": 0.16,
+        "fear": 0.08,
+        "sadness": 0.24,
+        "surprise": 0.24
+      },
+      "polarity": 0.03484992260967032,
+      "dominant": "joy"
+    },
+    "middle_east_africa": {
+      "n": 140,
+      "mood": {
+        "joy": 0.31666666666666665,
+        "anger": 0.3500000000000001,
+        "fear": 0.08333333333333334,
+        "sadness": 0.12916666666666668,
+        "surprise": 0.12083333333333332
+      },
+      "polarity": 0.04044137955298669,
+      "dominant": "anger"
+    },
+    "europe": {
+      "n": 166,
+      "mood": {
+        "joy": 0.09999999999999999,
+        "anger": 0.36111111111111116,
+        "fear": 0.2944444444444444,
+        "sadness": 0.04444444444444444,
+        "surprise": 0.19999999999999998
+      },
+      "polarity": 0.04170285398448049,
+      "dominant": "anger"
+    },
+    "americas": {
+      "n": 148,
+      "mood": {
+        "joy": 0.3409090909090909,
+        "anger": 0.2727272727272727,
+        "fear": 0.09090909090909091,
+        "sadness": 0.13636363636363635,
+        "surprise": 0.1590909090909091
+      },
+      "polarity": 0.04757700476450477,
+      "dominant": "joy"
+    },
+    "street_topics": {
+      "n": 134,
+      "mood": {
+        "joy": 0.2427536231884058,
+        "anger": 0.15942028985507248,
+        "fear": 0.14130434782608697,
+        "sadness": 0.09782608695652174,
+        "surprise": 0.358695652173913
+      },
+      "polarity": 0.06631866102388491,
+      "dominant": "surprise"
+    }
+  },
+  "by_subreddit_top": {
+    "news": {
+      "n": 20,
+      "mood": {
+        "joy": 0.0,
+        "anger": 0.4666666666666666,
+        "fear": 0.2,
+        "sadness": 0.2,
+        "surprise": 0.13333333333333333
+      },
+      "polarity": -0.034257575757575764,
+      "dominant": "anger"
+    },
+    "internationalpolitics": {
+      "n": 20,
+      "mood": {
+        "joy": 0.20833333333333331,
+        "anger": 0.5416666666666666,
+        "fear": 0.12499999999999997,
+        "sadness": 0.041666666666666664,
+        "surprise": 0.08333333333333333
+      },
+      "polarity": -0.03641964285714286,
+      "dominant": "anger"
+    },
+    "environment": {
+      "n": 20,
+      "mood": {
+        "joy": 0.28571428571428575,
+        "anger": 0.14285714285714288,
+        "fear": 0.28571428571428575,
+        "sadness": 0.0,
+        "surprise": 0.28571428571428575
+      },
+      "polarity": 0.03523358585858586,
+      "dominant": "joy"
+    },
+    "unitedkingdom": {
+      "n": 20,
+      "mood": {
+        "joy": 0.0,
+        "anger": 0.22222222222222224,
+        "fear": 0.5555555555555557,
+        "sadness": 0.05555555555555556,
+        "surprise": 0.16666666666666669
+      },
+      "polarity": 0.04515151515151515,
+      "dominant": "fear"
+    },
+    "spain": {
+      "n": 20,
+      "mood": {
+        "joy": 0.0,
+        "anger": 0.0,
+        "fear": 0.0,
+        "sadness": 0.0,
+        "surprise": 1.0
+      },
+      "polarity": 0.0008333333333333332,
+      "dominant": "surprise"
+    },
+    "technology": {
+      "n": 20,
+      "mood": {
+        "joy": 0.0,
+        "anger": 0.12500000000000003,
+        "fear": 0.4375,
+        "sadness": 0.0,
+        "surprise": 0.4375
+      },
+      "polarity": -0.01753367003367003,
+      "dominant": "fear"
+    },
+    "music": {
+      "n": 20,
+      "mood": {
+        "joy": 0.16666666666666666,
+        "anger": 0.3333333333333333,
+        "fear": 0.0,
+        "sadness": 0.16666666666666666,
+        "surprise": 0.3333333333333333
+      },
+      "polarity": 0.08230248917748917,
+      "dominant": "anger"
+    },
+    "AskReddit": {
+      "n": 20,
+      "mood": {
+        "joy": 0.2,
+        "anger": 0.4,
+        "fear": 0.1,
+        "sadness": 0.1,
+        "surprise": 0.2
+      },
+      "polarity": 0.135200968013468,
+      "dominant": "anger"
+    },
+    "geopolitics": {
+      "n": 19,
+      "mood": {
+        "joy": 0.05555555555555555,
+        "anger": 0.1111111111111111,
+        "fear": 0.3888888888888889,
+        "sadness": 0.1111111111111111,
+        "surprise": 0.3333333333333333
+      },
+      "polarity": 0.03763955342902711,
+      "dominant": "fear"
+    },
+    "climate": {
+      "n": 19,
+      "mood": {
+        "joy": 0.3214285714285714,
+        "anger": 0.0,
+        "fear": 0.39285714285714285,
+        "sadness": 0.07142857142857142,
+        "surprise": 0.21428571428571425
+      },
+      "polarity": 0.0567844801397433,
+      "dominant": "fear"
+    },
+    "india": {
+      "n": 19,
+      "mood": {
+        "joy": 0.0,
+        "anger": 0.2857142857142857,
+        "fear": 0.0,
+        "sadness": 0.42857142857142855,
+        "surprise": 0.2857142857142857
+      },
+      "polarity": 0.027109440267335007,
+      "dominant": "sadness"
+    },
+    "bangladesh": {
+      "n": 19,
+      "mood": {
+        "joy": 0.38888888888888884,
+        "anger": 0.2222222222222222,
+        "fear": 0.0,
+        "sadness": 0.2222222222222222,
+        "surprise": 0.16666666666666666
+      },
+      "polarity": -0.018697881066302113,
+      "dominant": "joy"
+    },
+    "srilanka": {
+      "n": 19,
+      "mood": {
+        "joy": 1.0,
+        "anger": 0.0,
+        "fear": 0.0,
+        "sadness": 0.0,
+        "surprise": 0.0
+      },
+      "polarity": 0.031467701623204024,
+      "dominant": "joy"
+    },
+    "japan": {
+      "n": 19,
+      "mood": {
+        "joy": 0.0,
+        "anger": 0.16666666666666666,
+        "fear": 0.08333333333333333,
+        "sadness": 0.5833333333333334,
+        "surprise": 0.16666666666666666
+      },
+      "polarity": 0.006981658692185007,
+      "dominant": "sadness"
+    },
+    "korea": {
+      "n": 19,
+      "mood": {
+        "joy": 0.0,
+        "anger": 0.6666666666666666,
+        "fear": 0.0,
+        "sadness": 0.0,
+        "surprise": 0.3333333333333333
+      },
+      "polarity": 0.0655858395989975,
+      "dominant": "anger"
+    },
+    "singapore": {
+      "n": 19,
+      "mood": {
+        "joy": 1.0,
+        "anger": 0.0,
+        "fear": 0.0,
+        "sadness": 0.0,
+        "surprise": 0.0
+      },
+      "polarity": 0.004378654970760231,
+      "dominant": "joy"
+    },
+    "malaysia": {
+      "n": 19,
+      "mood": {
+        "joy": 0.4,
+        "anger": 0.2,
+        "fear": 0.0,
+        "sadness": 0.2,
+        "surprise": 0.2
+      },
+      "polarity": 0.08963002202475888,
+      "dominant": "joy"
+    },
+    "pacific": {
+      "n": 19,
+      "mood": {
+        "joy": 0.6666666666666666,
+        "anger": 0.0,
+        "fear": 0.0,
+        "sadness": 0.0,
+        "surprise": 0.3333333333333333
+      },
+      "polarity": 0.10984848484848489,
+      "dominant": "joy"
+    },
+    "europe": {
+      "n": 19,
+      "mood": {
+        "joy": 0.125,
+        "anger": 0.25,
+        "fear": 0.25,
+        "sadness": 0.125,
+        "surprise": 0.25
+      },
+      "polarity": 0.06339712918660285,
+      "dominant": "anger"
+    },
+    "canada": {
+      "n": 19,
+      "mood": {
+        "joy": 0.0,
+        "anger": 0.6666666666666666,
+        "fear": 0.3333333333333333,
+        "sadness": 0.0,
+        "surprise": 0.0
+      },
+      "polarity": -0.024658869395711484,
+      "dominant": "anger"
+    },
+    "mexico": {
+      "n": 19,
+      "mood": {
+        "joy": 0.0,
+        "anger": 0.0,
+        "fear": 0.0,
+        "sadness": 0.0,
+        "surprise": 0.0
+      },
+      "polarity": 0.031578947368421054,
+      "dominant": "neutral"
+    },
+    "brazil": {
+      "n": 19,
+      "mood": {
+        "joy": 0.55,
+        "anger": 0.0,
+        "fear": 0.1,
+        "sadness": 0.1,
+        "surprise": 0.25
+      },
+      "polarity": 0.12719298245614033,
+      "dominant": "joy"
+    },
+    "chile": {
+      "n": 19,
+      "mood": {
+        "joy": 0.0,
+        "anger": 0.0,
+        "fear": 0.0,
+        "sadness": 0.0,
+        "surprise": 0.0
+      },
+      "polarity": -0.007017543859649124,
+      "dominant": "neutral"
+    },
+    "nyc": {
+      "n": 19,
+      "mood": {
+        "joy": 0.4,
+        "anger": 0.2,
+        "fear": 0.0,
+        "sadness": 0.4,
+        "surprise": 0.0
+      },
+      "polarity": 0.1103693893825473,
+      "dominant": "joy"
+    },
+    "science": {
+      "n": 19,
+      "mood": {
+        "joy": 0.21428571428571427,
+        "anger": 0.0,
+        "fear": 0.35714285714285715,
+        "sadness": 0.07142857142857142,
+        "surprise": 0.35714285714285715
+      },
+      "polarity": 0.06368599529125846,
+      "dominant": "fear"
+    }
+  },
+  "themes": [
+    {
+      "term": "trump",
+      "n": 36
+    },
+    {
+      "term": "more",
+      "n": 33
+    },
+    {
+      "term": "says",
+      "n": 31
+    },
+    {
+      "term": "first",
+      "n": 26
+    },
+    {
+      "term": "people",
+      "n": 24
+    },
+    {
+      "term": "election",
+      "n": 22
+    },
+    {
+      "term": "year",
+      "n": 22
+    },
+    {
+      "term": "than",
+      "n": 21
+    },
+    {
+      "term": "china",
+      "n": 21
+    },
+    {
+      "term": "iran",
+      "n": 21
+    },
+    {
+      "term": "years",
+      "n": 20
+    },
+    {
+      "term": "israel",
+      "n": 20
+    }
+  ],
+  "street_line": "The street is running anger (28%) \u2014 themes: trump, more, says, first. Loudest desk: europe."
+}
