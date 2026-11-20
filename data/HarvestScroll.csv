@@ -180,3 +180,4 @@ seq_id,file_name,timestamp_utc,posts,subreddits,harvester_type,size_bytes
 179,reddit_2026-11-18_1652.csv,2026-11-18 16:52:12,1035,57,v1.5-panel,190236
 180,reddit_2026-11-19_0449.csv,2026-11-19 04:49:52,1039,57,v1.5-panel,193760
 181,reddit_2026-11-19_1659.csv,2026-11-19 16:59:30,1042,57,v1.5-panel,193563
+182,reddit_2026-11-20_0440.csv,2026-11-20 04:40:49,1045,57,v1.5-panel,193155
